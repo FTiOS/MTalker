@@ -7,21 +7,32 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		EAF797FE1E89FB6200C19A27 /* Combine */ = {
+		EAF797FE1E89FB6200C19A27 /* CombineTalker */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = EAF797FF1E89FB6200C19A27 /* Build configuration list for PBXAggregateTarget "Combine" */;
+			buildConfigurationList = EAF797FF1E89FB6200C19A27 /* Build configuration list for PBXAggregateTarget "CombineTalker" */;
 			buildPhases = (
-				EAF798021E89FB9000C19A27 /* ShellScript */,
+				EAF8EC901E8A5DC40032155E /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = Combine;
+			name = CombineTalker;
 			productName = Combine;
+		};
+		EAF8EC871E8A5BC40032155E /* CombineCommand */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EAF8EC881E8A5BC40032155E /* Build configuration list for PBXAggregateTarget "CombineCommand" */;
+			buildPhases = (
+				EAF8EC8C1E8A5BD60032155E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = CombineCommand;
+			productName = CombineCommand;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		576251EAD6F1A98862DEE0A4 /* libPods-MTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E861A8C65B96C538AF1567A /* libPods-MTalkerClient.a */; };
+		58A9228B7A66B2B0FA0295A8 /* libPods-MTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E861A8C65B96C538AF1567A /* libPods-MTalkerClient.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -75,9 +86,19 @@
 		EAF797EF1E8903C200C19A27 /* MTTalkerSetting.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3A1E826AB100DDA4CF /* MTTalkerSetting.h */; };
 		EAF797F01E8903C800C19A27 /* MTModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A7B1E82141700DDA4CF /* MTModel.h */; };
 		EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3D1E8364D200DDA4CF /* MTTalkerCommandDelegate.h */; };
-		EAF798031E89FE2600C19A27 /* libFTCommandClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD06A8A1E8262D700DDA4CF /* libFTCommandClient.a */; };
-		EAF798051E89FE3A00C19A27 /* libPods-MTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF798041E89FE3A00C19A27 /* libPods-MTalkerClient.a */; };
 		EAF798061E8A019C00C19A27 /* FTCommandClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A931E82630400DDA4CF /* FTCommandClient.h */; };
+		EAF7980B1E8A122100C19A27 /* FTTcpClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A9D1E82638900DDA4CF /* FTTcpClient.h */; };
+		EAF7980C1E8A122800C19A27 /* FTCommandHead.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A9B1E82638900DDA4CF /* FTCommandHead.h */; };
+		EAF7980D1E8A124700C19A27 /* FTAVControlParam.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06AA51E8263B100DDA4CF /* FTAVControlParam.h */; };
+		EAF7980E1E8A124700C19A27 /* FTCoordinateInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06AA71E8263B100DDA4CF /* FTCoordinateInfo.h */; };
+		EAF7980F1E8A124700C19A27 /* FTDrugInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06AA91E8263B100DDA4CF /* FTDrugInfo.h */; };
+		EAF798101E8A124700C19A27 /* FTJsonSerializable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06AAB1E8263B100DDA4CF /* FTJsonSerializable.h */; };
+		EAF798111E8A124700C19A27 /* FTLoginParam.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06AAC1E8263B100DDA4CF /* FTLoginParam.h */; };
+		EAF798121E8A124700C19A27 /* FTRecommendDrug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06AAE1E8263B100DDA4CF /* FTRecommendDrug.h */; };
+		EAF798131E8A124700C19A27 /* FTUnit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06AA21E82639F00DDA4CF /* FTUnit.h */; };
+		EAF798141E8A124700C19A27 /* business.pb.cc in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A991E82638900DDA4CF /* business.pb.cc */; };
+		EAF798151E8A124700C19A27 /* business.pb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A9A1E82638900DDA4CF /* business.pb.h */; };
+		EAF8EC8E1E8A5CAE0032155E /* libFTCommandClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8EC8D1E8A5CAE0032155E /* libFTCommandClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +138,17 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				EAF7980D1E8A124700C19A27 /* FTAVControlParam.h in CopyFiles */,
+				EAF7980E1E8A124700C19A27 /* FTCoordinateInfo.h in CopyFiles */,
+				EAF7980F1E8A124700C19A27 /* FTDrugInfo.h in CopyFiles */,
+				EAF798101E8A124700C19A27 /* FTJsonSerializable.h in CopyFiles */,
+				EAF798111E8A124700C19A27 /* FTLoginParam.h in CopyFiles */,
+				EAF798121E8A124700C19A27 /* FTRecommendDrug.h in CopyFiles */,
+				EAF798131E8A124700C19A27 /* FTUnit.h in CopyFiles */,
+				EAF798141E8A124700C19A27 /* business.pb.cc in CopyFiles */,
+				EAF798151E8A124700C19A27 /* business.pb.h in CopyFiles */,
+				EAF7980C1E8A122800C19A27 /* FTCommandHead.h in CopyFiles */,
+				EAF7980B1E8A122100C19A27 /* FTTcpClient.h in CopyFiles */,
 				EAF798061E8A019C00C19A27 /* FTCommandClient.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +297,8 @@
 		EAF797A71E88B77B00C19A27 /* MTAddressMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddressMonitor.h; sourceTree = "<group>"; };
 		EAF797A81E88B77B00C19A27 /* MTAddressMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddressMonitor.m; sourceTree = "<group>"; };
 		EAF798041E89FE3A00C19A27 /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MTalkerClient.a"; path = "Pods/../build/Debug-iphoneos/libPods-MTalkerClient.a"; sourceTree = "<group>"; };
+		EAF798091E8A10D500C19A27 /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MTalkerClient.a"; path = "Pods/../build/Debug-iphoneos/libPods-MTalkerClient.a"; sourceTree = "<group>"; };
+		EAF8EC8D1E8A5CAE0032155E /* libFTCommandClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFTCommandClient.a; path = FTCommandClient_Products/libFTCommandClient.a; sourceTree = "<group>"; };
 		FF40B49AC46C0BADB2726603 /* Pods-MTalker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTalker_Tests/Pods-MTalker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -295,11 +329,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF798051E89FE3A00C19A27 /* libPods-MTalkerClient.a in Frameworks */,
-				EAF798031E89FE2600C19A27 /* libFTCommandClient.a in Frameworks */,
+				EAF8EC8E1E8A5CAE0032155E /* libFTCommandClient.a in Frameworks */,
+				58A9228B7A66B2B0FA0295A8 /* libPods-MTalkerClient.a in Frameworks */,
 				EAD06B441E83786100DDA4CF /* AudioToolbox.framework in Frameworks */,
 				EAD06B421E8374A200DDA4CF /* AVFoundation.framework in Frameworks */,
-				576251EAD6F1A98862DEE0A4 /* libPods-MTalkerClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +375,8 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAF8EC8D1E8A5CAE0032155E /* libFTCommandClient.a */,
+				EAF798091E8A10D500C19A27 /* libPods-MTalkerClient.a */,
 				EAF798041E89FE3A00C19A27 /* libPods-MTalkerClient.a */,
 				EAD06B431E83786100DDA4CF /* AudioToolbox.framework */,
 				EAD06B411E8374A200DDA4CF /* AVFoundation.framework */,
@@ -763,6 +798,11 @@
 						DevelopmentTeam = 63DD5UWBGN;
 						ProvisioningStyle = Automatic;
 					};
+					EAF8EC871E8A5BC40032155E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 63DD5UWBGN;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "MTalker" */;
@@ -782,7 +822,8 @@
 				6003F5AD195388D20070C39A /* MTalker_Tests */,
 				EA7D575E1E8122150072B7AE /* MTalkerClient */,
 				EAD06A891E8262D700DDA4CF /* FTCommandClient */,
-				EAF797FE1E89FB6200C19A27 /* Combine */,
+				EAF797FE1E89FB6200C19A27 /* CombineTalker */,
+				EAF8EC871E8A5BC40032155E /* CombineCommand */,
 			);
 		};
 /* End PBXProject section */
@@ -930,7 +971,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EAF798021E89FB9000C19A27 /* ShellScript */ = {
+		EAF8EC8C1E8A5BD60032155E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -941,7 +982,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#要build的target名\ntarget_Name=\"MTalkerClient\"\n//if [[ $1 ]]\n//then\n//target_Name=$1\n//fi\n\nUNIVERSAL_OUTPUT_FOLDER=\"${SRCROOT}/${PROJECT_NAME}_Products\"\n\n# 创建输出目录，并删除之前的文件\nrm -rf \"${UNIVERSAL_OUTPUT_FOLDER}\"\nmkdir -p \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\n# 分别编译真机和模拟器版本\nxcodebuild -target \"${target_Name}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${target_Name}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n#复制头文件到目标文件夹\nHEADER_FOLDER=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/include/${target_Name}\"\nif [[ -d \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/usr/local/include\" ]]\nthen\nHEADER_FOLDER=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/usr/local/include\"\nfi\ncp -R \"${HEADER_FOLDER}\" \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\n#合成模拟器和真机.a包\nlipo -create \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${target_Name}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${target_Name}.a\" -output \"${UNIVERSAL_OUTPUT_FOLDER}/lib${target_Name}.a\"\n\n# 判断build文件夹是否存在，存在则删除\nif [ -d \"${SRCROOT}/build\" ]\nthen\nrm -rf \"${SRCROOT}/build\"\nfi\n\n#打开目标文件夹\nopen \"${UNIVERSAL_OUTPUT_FOLDER}\"";
+			shellScript = "#要build的target名\ntarget_Name=\"FTCommandClient\"\n//if [[ $1 ]]\n//then\n//target_Name=$1\n//fi\n\nUNIVERSAL_OUTPUT_FOLDER=\"${SRCROOT}/${target_Name}_Products\"\n\n# 创建输出目录，并删除之前的文件\nrm -rf \"${UNIVERSAL_OUTPUT_FOLDER}\"\nmkdir -p \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\n# 分别编译真机和模拟器版本\n# xcodebuild -target \"${target_Name}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n# xcodebuild -target \"${target_Name}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n#复制头文件到目标文件夹\nHEADER_FOLDER=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/include/${target_Name}\"\nif [[ -d \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/usr/local/include\" ]]\nthen\nHEADER_FOLDER=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/usr/local/include\"\nfi\ncp -R \"${HEADER_FOLDER}\" \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\n#合成模拟器和真机.a包\nlipo -create \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${target_Name}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${target_Name}.a\" -output \"${UNIVERSAL_OUTPUT_FOLDER}/lib${target_Name}.a\"\n\n# 判断build文件夹是否存在，存在则删除\nif [ -d \"${SRCROOT}/build\" ]\nthen\nrm -rf \"${SRCROOT}/build\"\nfi\n\n#打开目标文件夹\nopen \"${UNIVERSAL_OUTPUT_FOLDER}\"";
+		};
+		EAF8EC901E8A5DC40032155E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#要build的target名\ntarget_Name=\"MTalkerClient\"\n//if [[ $1 ]]\n//then\n//target_Name=$1\n//fi\n\nUNIVERSAL_OUTPUT_FOLDER=\"${SRCROOT}/${PROJECT_NAME}_Products\"\n\n# 创建输出目录，并删除之前的文件\nrm -rf \"${UNIVERSAL_OUTPUT_FOLDER}\"\nmkdir -p \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\n# 分别编译真机和模拟器版本\n#xcodebuild -target \"${target_Name}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n#xcodebuild -target \"${target_Name}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n#复制头文件到目标文件夹\nHEADER_FOLDER=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/include/${target_Name}\"\nif [[ -d \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/usr/local/include\" ]]\nthen\nHEADER_FOLDER=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/usr/local/include\"\nfi\ncp -R \"${HEADER_FOLDER}\" \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\n#合成模拟器和真机.a包\nlipo -create \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${target_Name}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${target_Name}.a\" -output \"${UNIVERSAL_OUTPUT_FOLDER}/lib${target_Name}.a\"\n\n# 判断build文件夹是否存在，存在则删除\nif [ -d \"${SRCROOT}/build\" ]\nthen\nrm -rf \"${SRCROOT}/build\"\nfi\n\n#打开目标文件夹\nopen \"${UNIVERSAL_OUTPUT_FOLDER}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1199,6 +1253,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A5AFF9732E7356C9BADCA2C /* Pods-MTalkerClient.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -1207,20 +1262,19 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 63DD5UWBGN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/EasyUI/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/FTCommandClient_Products",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FTCommandClient_Products";
 			};
 			name = Debug;
 		};
@@ -1228,6 +1282,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A69A69392660D84487CADB6A /* Pods-MTalkerClient.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -1237,20 +1292,19 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 63DD5UWBGN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/EasyUI/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/FTCommandClient_Products",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FTCommandClient_Products";
 			};
 			name = Release;
 		};
@@ -1267,7 +1321,7 @@
 				DEVELOPMENT_TEAM = 63DD5UWBGN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FTCommandClient",
@@ -1294,7 +1348,7 @@
 				DEVELOPMENT_TEAM = 63DD5UWBGN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FTCommandClient",
@@ -1322,6 +1376,22 @@
 				DEVELOPMENT_TEAM = 63DD5UWBGN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		EAF8EC891E8A5BC40032155E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EAF8EC8A1E8A5BC40032155E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -1373,7 +1443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EAF797FF1E89FB6200C19A27 /* Build configuration list for PBXAggregateTarget "Combine" */ = {
+		EAF797FF1E89FB6200C19A27 /* Build configuration list for PBXAggregateTarget "CombineTalker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAF798001E89FB6200C19A27 /* Debug */,
@@ -1381,6 +1451,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EAF8EC881E8A5BC40032155E /* Build configuration list for PBXAggregateTarget "CombineCommand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAF8EC891E8A5BC40032155E /* Debug */,
+				EAF8EC8A1E8A5BC40032155E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

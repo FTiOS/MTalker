@@ -28,12 +28,12 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/rrun/MTalker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Example/MTalker_Products／MTalkerClient/**/*.h'
-  s.public_header_files = "Example/MTalker_Products／MTalkerClient/**/*.h"
-  s.vendored_libraries = "Example/MTalker_Products／libMTalkerClient.a"
-  s.preserve_paths = "Example/MTalker_Products／libMTalkerClient.a"
+  s.source_files = 'MTalker/Classes/**/*.h'
+  s.public_header_files = "MTalker/Classes/**/*.h"
+  s.vendored_libraries = "MTalker/Assets/libMTalkerClient.a"
+  s.preserve_paths = "MTalker/Assets/libMTalkerClient.a"
 
   # s.resource_bundles = {
   #   'MTalker' => ['MTalker/Assets/*.png']

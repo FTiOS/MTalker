@@ -1,8 +1,8 @@
 {
   "name": "MTalker",
   "version": "0.1.0",
-  "summary": "A short description of MTalker.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "咨询医生的音视频服务",
+  "description": "咨询医生的音视频服务，底层封装成静态库，支持pod",
   "homepage": "https://github.com/rrun/MTalker",
   "license": {
     "type": "MIT",
@@ -16,10 +16,10 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
-  "source_files": "Example/MTalker_Products／MTalkerClient/**/*.h",
-  "public_header_files": "Example/MTalker_Products／MTalkerClient/**/*.h",
-  "vendored_libraries": "Example/MTalker_Products／libMTalkerClient.a",
-  "preserve_paths": "Example/MTalker_Products／libMTalkerClient.a"
+  "source_files": "Example/MTalker_Products/MTalkerClient/**/*.h",
+  "public_header_files": "Example/MTalker_Products/MTalkerClient/**/*.h",
+  "vendored_libraries": "Example/MTalker_Products/libMTalkerClient.a",
+  "preserve_paths": "Example/MTalker_Products/libMTalkerClient.a"
 }

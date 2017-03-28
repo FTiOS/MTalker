@@ -188,6 +188,7 @@
 		30711ADAFC03CF158F889950546B60A0 /* OpenUDID.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OpenUDID.xcconfig; sourceTree = "<group>"; };
 		3149836D785B44AC5B672DC7635103F0 /* FTAudioDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTAudioDecoder.h; path = include/ftcodec/FTAudioDecoder.h; sourceTree = "<group>"; };
 		3185420A6E0FB954A0FECEFAA9EC27C7 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		3335E8BAE3680CDC51F8C1A094980813 /* MTPharmacy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTPharmacy.h; sourceTree = "<group>"; };
 		355AB0635E4711E30A6086D6DECE8615 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		3A54189C50E54A2D52BBBBC7B5C3D217 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
 		3AFD00C6E0ABB65150D613DDF9D71A1C /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
@@ -206,6 +207,8 @@
 		492C1CE8F5A629E3C9CFBE4FBCF0AA70 /* Pods-MTalker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTalker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4C7D4C6835D37AE51FB68534EC0D6A95 /* Pods-MTalker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTalker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		516F6D8946D6F9698449E68331E4EE0F /* OpenUDID-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OpenUDID-prefix.pch"; sourceTree = "<group>"; };
+		522BB1ADCA3232A7683FBAE8A38ADE88 /* MTLoginInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTLoginInfo.h; sourceTree = "<group>"; };
+		53E1EC27515B953CB443A9221005189B /* MTTalkerCommandDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTalkerCommandDelegate.h; sourceTree = "<group>"; };
 		54EABE433B1B3C0EBA0DBC05F4AEAB73 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
 		552674941E394C42A3F7637928776CBE /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
 		5601221EBA7379031630EE34BD2F1688 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -218,6 +221,7 @@
 		5F549F12ABD807CF5DE61BAC1C61B27A /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		61DA58A9B6979C3DFD74A1AACF2E0C23 /* Pods-MTalker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTalker_Example-frameworks.sh"; sourceTree = "<group>"; };
 		62AEE6DE28614A99A975123BE1883D1C /* KeychainItemWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainItemWrapper-prefix.pch"; sourceTree = "<group>"; };
+		63020A1BFA2468BF841A62A4383DB1EE /* MTalkerClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTalkerClient.h; sourceTree = "<group>"; };
 		63EFA179757FD04BD6DA83B68B1D6B55 /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MTalkerClient.a"; path = "libPods-MTalkerClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FE9E9F97300BECCC0C72264CFEB76B /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
 		696ED54CCF89299ACEA3571B0FA2F193 /* Pods-MTalkerClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTalkerClient-dummy.m"; sourceTree = "<group>"; };
@@ -233,9 +237,12 @@
 		7E38190D48D673B6D5539D59D3A9B522 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		80AD50888DCF88A0B4FD6A3C7BF68456 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
 		80C2D875F5E1984B7A1675B51E2FC3C7 /* KeychainItemWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainItemWrapper-dummy.m"; sourceTree = "<group>"; };
+		813B18303E7E78A0467E7CDF9D76509D /* MTUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTUser.h; sourceTree = "<group>"; };
 		82305AEBF8E40218A9854B7592879E95 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		8501CBAC295DADDFD7419AC885E4ACF3 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		88A0D654EE830D428BD9AC0B4A00204C /* MTRinger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTRinger.h; sourceTree = "<group>"; };
 		8EF98426DAD141AEF88979A6446198EA /* FTMediaDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTMediaDelegate.h; path = include/ftcodec/FTMediaDelegate.h; sourceTree = "<group>"; };
+		8FF55E1A4B2E02FE842589F097477B11 /* MTTalkInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTalkInfo.h; sourceTree = "<group>"; };
 		90A0A24219D1C482156055141FF77687 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
 		92486F69AA6E73300DBED8EECFFC8730 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -248,6 +255,7 @@
 		A33FA35FBCF18D15A3F0B78581BA0857 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
 		A35457F1B8AD3BF47CBF595C8B441033 /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
 		A397D1C57324C04124BFE28666AF10F1 /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
+		A66FB94FFE209A1FBD6E64CD3D56A354 /* MTServerAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTServerAddress.h; sourceTree = "<group>"; };
 		A6B6B1371D1BB86FB192697CDAE015EA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		A7A0135C24289FC17871D826D26881ED /* FTAudioUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTAudioUnit.h; path = include/ftcodec/FTAudioUnit.h; sourceTree = "<group>"; };
 		A847806DE476259973064C20F77AD0ED /* libOpenUDID.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libOpenUDID.a; path = libOpenUDID.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,10 +270,12 @@
 		BC9EC003CFD07B072E864400CE1D6F3F /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
 		C0452B64681D2F850DFF0C19C60AF7CE /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		C1372168379093E80590A81FF2D7BC99 /* Pods-MTalker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTalker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C18E083EA09F4141104AA7677AB18D81 /* MTTalkerSetting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTalkerSetting.h; sourceTree = "<group>"; };
 		C5C2FA1C847D53F72A8864DDE3C932DC /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		C78279A776CEB590DE3100C5229B74AA /* Pods-MTalkerClient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTalkerClient-acknowledgements.plist"; sourceTree = "<group>"; };
 		CAB1CA23CC450F17355B68580784F206 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		CB28AF953C20F69A360DA178A5F8280E /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		CC55C1429204EC56A8F0D9AD95FB8CC4 /* MTDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTDevice.h; sourceTree = "<group>"; };
 		CCA7EF762124FFCAA8B39B6F37CAB4BA /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
 		CFB848D118552FC8BE9E65D47B5C6053 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		D19CB2E3FA6F3D5504E6D10BB7578431 /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
@@ -296,6 +306,7 @@
 		F93CC722904160B7D7D4CBB29F361BD5 /* libPods-MTalker_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MTalker_Example.a"; path = "libPods-MTalker_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3269602C25C2ED71322E92752AE5BC /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
 		FAF0EFC97D64D70D946AABB2FAFAB4EF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		FB4747CF0E0F1177CFC06100E0168649 /* MTModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTModel.h; sourceTree = "<group>"; };
 		FBFF442120A6824C8597511581866706 /* NSDictionary+FTDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+FTDictionary.h"; path = "XY_NetworkClient/NSDictionary+FTDictionary.h"; sourceTree = "<group>"; };
 		FC8A5D788D3F1E0DF5D7DA8C85F60C04 /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
 		FEDDB04877262ADE581C3658E8BA0EE8 /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
@@ -393,6 +404,25 @@
 			path = "../Target Support Files/XY_NetWorkClient";
 			sourceTree = "<group>";
 		};
+		0596AF86D656C3ABF45996D3A12BDCF9 /* MTalkerClient */ = {
+			isa = PBXGroup;
+			children = (
+				63020A1BFA2468BF841A62A4383DB1EE /* MTalkerClient.h */,
+				CC55C1429204EC56A8F0D9AD95FB8CC4 /* MTDevice.h */,
+				522BB1ADCA3232A7683FBAE8A38ADE88 /* MTLoginInfo.h */,
+				FB4747CF0E0F1177CFC06100E0168649 /* MTModel.h */,
+				3335E8BAE3680CDC51F8C1A094980813 /* MTPharmacy.h */,
+				88A0D654EE830D428BD9AC0B4A00204C /* MTRinger.h */,
+				A66FB94FFE209A1FBD6E64CD3D56A354 /* MTServerAddress.h */,
+				53E1EC27515B953CB443A9221005189B /* MTTalkerCommandDelegate.h */,
+				C18E083EA09F4141104AA7677AB18D81 /* MTTalkerSetting.h */,
+				8FF55E1A4B2E02FE842589F097477B11 /* MTTalkInfo.h */,
+				813B18303E7E78A0467E7CDF9D76509D /* MTUser.h */,
+			);
+			name = MTalkerClient;
+			path = MTalkerClient;
+			sourceTree = "<group>";
+		};
 		075620A667FE9D96F5E660B1D5622465 /* XY_NetWorkClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +445,14 @@
 			);
 			name = XY_NetWorkClient;
 			path = XY_NetWorkClient;
+			sourceTree = "<group>";
+		};
+		08A51FF5D1427949E9AA020E061985FA /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A877E73B6ACCCD8A3C91F3EAF909C333 /* MTalker */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		0AAC6F59BD1E54D1F392EFF4DFA0001D /* Pods-MTalker_Example */ = {
@@ -468,6 +506,15 @@
 				5ECB444C137190811850690F74D7D9DE /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17668D820687BD810C5897D23B9385B0 /* MTalker_Products */ = {
+			isa = PBXGroup;
+			children = (
+				0596AF86D656C3ABF45996D3A12BDCF9 /* MTalkerClient */,
+			);
+			name = MTalker_Products;
+			path = MTalker_Products;
 			sourceTree = "<group>";
 		};
 		1EB642967217C9C58FB7E5BF8A58B267 /* UIKit */ = {
@@ -543,6 +590,15 @@
 			);
 			name = AFNetworking;
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		3F86A2F09CD9548D470DF8D891F10603 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				17668D820687BD810C5897D23B9385B0 /* MTalker_Products */,
+			);
+			name = Example;
+			path = Example;
 			sourceTree = "<group>";
 		};
 		426D7205DE42A6046D4BA16DA5FAD59C /* Pods-MTalker_Tests */ = {
@@ -664,20 +720,12 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				FE5A8042F4CB9E4EB7C8906FC66BF2C2 /* Development Pods */,
+				08A51FF5D1427949E9AA020E061985FA /* Development Pods */,
 				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
 				B4CC88C482D2EB57D6C331A5989312BF /* Pods */,
 				740BBDCF99CE4EC0D785176C12B10985 /* Products */,
 				A7C51BE8C74BF7FAEDA56C7C41293F17 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		88EDF360F6177F0DCB7A0A23A355E5C2 /* MTalker */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MTalker;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		8B516A50FB2FC749F73A12909BA38A59 /* Reachability */ = {
@@ -714,6 +762,15 @@
 				549101504C9FDA29BDE1CF6D668C3641 /* Pods-MTalkerClient */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A877E73B6ACCCD8A3C91F3EAF909C333 /* MTalker */ = {
+			isa = PBXGroup;
+			children = (
+				3F86A2F09CD9548D470DF8D891F10603 /* Example */,
+			);
+			name = MTalker;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		B4CC88C482D2EB57D6C331A5989312BF /* Pods */ = {
@@ -768,14 +825,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MJExtension";
-			sourceTree = "<group>";
-		};
-		FE5A8042F4CB9E4EB7C8906FC66BF2C2 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				88EDF360F6177F0DCB7A0A23A355E5C2 /* MTalker */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
