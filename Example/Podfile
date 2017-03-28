@@ -1,0 +1,32 @@
+#use_frameworks!
+
+source 'https://github.com/rRun/xy_podSepcs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+workspace 'MTalker.xcworkspace'
+
+target 'EasyUI' do
+    pod 'MTalker', :path => '../'
+     pod 'MJExtension', '~> 3.0.13'
+    project 'EasyUI/EasyUI.xcodeproj'
+end
+
+target 'MTalker_Example' do
+  pod 'MTalker', :path => '../'
+
+  target 'MTalker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
+
+target 'MTalkerClient' do
+    pod 'MJExtension', '~> 3.0.13'
+    pod 'OpenUDID', '~> 1.0.0'
+    pod 'KeychainItemWrapper', '~> 0.0.1'
+    
+    pod 'ftcodec', '~> 1.1.0.307'
+    pod 'XY_NetWorkClient', '~> 1.0.1'
+    
+end

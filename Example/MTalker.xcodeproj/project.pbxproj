@@ -1,0 +1,1388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		EAF797FE1E89FB6200C19A27 /* Combine */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EAF797FF1E89FB6200C19A27 /* Build configuration list for PBXAggregateTarget "Combine" */;
+			buildPhases = (
+				EAF798021E89FB9000C19A27 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Combine;
+			productName = Combine;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		576251EAD6F1A98862DEE0A4 /* libPods-MTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E861A8C65B96C538AF1567A /* libPods-MTalkerClient.a */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* MTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* MTAppDelegate.m */; };
+		6003F5A7195388D20070C39A /* MTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* MTViewController.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		731D940573245C52FC3A893F /* libPods-MTalker_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD7F035CD2B612532F8C886 /* libPods-MTalker_Example.a */; };
+		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		CA66594A0E31ABFFCDB8C774 /* libPods-MTalker_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCE7A0B876378AEBB48869E /* libPods-MTalker_Tests.a */; };
+		EA7D57631E8122150072B7AE /* MTalkerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D57621E8122150072B7AE /* MTalkerClient.m */; };
+		EA7D57641E8122150072B7AE /* MTalkerClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D57611E8122150072B7AE /* MTalkerClient.h */; };
+		EA7D57701E820A2C0072B7AE /* MTTalkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D576F1E820A2C0072B7AE /* MTTalkInfo.m */; };
+		EA7D57731E820BCA0072B7AE /* MTLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D57721E820BCA0072B7AE /* MTLoginInfo.m */; };
+		EA7D57761E820C260072B7AE /* MTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D57751E820C260072B7AE /* MTDevice.m */; };
+		EA7D57791E820C4B0072B7AE /* MTDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D57781E820C4B0072B7AE /* MTDoctor.m */; };
+		EA7D577C1E820C7A0072B7AE /* MTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D577B1E820C7A0072B7AE /* MTUser.m */; };
+		EAD06A7D1E82141700DDA4CF /* MTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06A7C1E82141700DDA4CF /* MTModel.m */; };
+		EAD06A801E822AA200DDA4CF /* MTPharmacy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06A7F1E822AA200DDA4CF /* MTPharmacy.m */; };
+		EAD06A831E822C4900DDA4CF /* MTServerAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06A821E822C4900DDA4CF /* MTServerAddress.m */; };
+		EAD06A951E82630400DDA4CF /* FTCommandClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAD06A941E82630400DDA4CF /* FTCommandClient.mm */; };
+		EAD06A9F1E82638900DDA4CF /* business.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = EAD06A991E82638900DDA4CF /* business.pb.cc */; };
+		EAD06AA01E82638900DDA4CF /* FTCommandHead.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06A9C1E82638900DDA4CF /* FTCommandHead.m */; };
+		EAD06AA11E82638900DDA4CF /* FTTcpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06A9E1E82638900DDA4CF /* FTTcpClient.m */; };
+		EAD06AA41E82639F00DDA4CF /* FTUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06AA31E82639F00DDA4CF /* FTUnit.m */; };
+		EAD06AB01E8263B100DDA4CF /* FTAVControlParam.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06AA61E8263B100DDA4CF /* FTAVControlParam.m */; };
+		EAD06AB11E8263B100DDA4CF /* FTCoordinateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06AA81E8263B100DDA4CF /* FTCoordinateInfo.m */; };
+		EAD06AB21E8263B100DDA4CF /* FTDrugInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06AAA1E8263B100DDA4CF /* FTDrugInfo.m */; };
+		EAD06AB31E8263B100DDA4CF /* FTLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06AAD1E8263B100DDA4CF /* FTLoginParam.m */; };
+		EAD06AB41E8263B100DDA4CF /* FTRecommendDrug.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06AAF1E8263B100DDA4CF /* FTRecommendDrug.m */; };
+		EAD06AB81E82640E00DDA4CF /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD06AB71E82640E00DDA4CF /* libprotobuf.a */; };
+		EAD06B3C1E826AB100DDA4CF /* MTTalkerSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06B3B1E826AB100DDA4CF /* MTTalkerSetting.m */; };
+		EAD06B401E8373F200DDA4CF /* MTRinger.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD06B3F1E8373F200DDA4CF /* MTRinger.m */; };
+		EAD06B421E8374A200DDA4CF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD06B411E8374A200DDA4CF /* AVFoundation.framework */; };
+		EAD06B441E83786100DDA4CF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD06B431E83786100DDA4CF /* AudioToolbox.framework */; };
+		EAF797A91E88B77B00C19A27 /* MTAddressMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF797A81E88B77B00C19A27 /* MTAddressMonitor.m */; };
+		EAF797E81E89039200C19A27 /* MTRinger.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3E1E8373F200DDA4CF /* MTRinger.h */; };
+		EAF797E91E8903A200C19A27 /* MTTalkInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D576E1E820A2C0072B7AE /* MTTalkInfo.h */; };
+		EAF797EA1E8903A800C19A27 /* MTDevice.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D57741E820C260072B7AE /* MTDevice.h */; };
+		EAF797EB1E8903AE00C19A27 /* MTLoginInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D57711E820BCA0072B7AE /* MTLoginInfo.h */; };
+		EAF797EC1E8903B200C19A27 /* MTUser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D577A1E820C7A0072B7AE /* MTUser.h */; };
+		EAF797ED1E8903B600C19A27 /* MTPharmacy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A7E1E822AA200DDA4CF /* MTPharmacy.h */; };
+		EAF797EE1E8903BC00C19A27 /* MTServerAddress.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A811E822C4900DDA4CF /* MTServerAddress.h */; };
+		EAF797EF1E8903C200C19A27 /* MTTalkerSetting.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3A1E826AB100DDA4CF /* MTTalkerSetting.h */; };
+		EAF797F01E8903C800C19A27 /* MTModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A7B1E82141700DDA4CF /* MTModel.h */; };
+		EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3D1E8364D200DDA4CF /* MTTalkerCommandDelegate.h */; };
+		EAF798031E89FE2600C19A27 /* libFTCommandClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD06A8A1E8262D700DDA4CF /* libFTCommandClient.a */; };
+		EAF798051E89FE3A00C19A27 /* libPods-MTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF798041E89FE3A00C19A27 /* libPods-MTalkerClient.a */; };
+		EAF798061E8A019C00C19A27 /* FTCommandClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A931E82630400DDA4CF /* FTCommandClient.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = MTalker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA7D575D1E8122150072B7AE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in CopyFiles */,
+				EAF797F01E8903C800C19A27 /* MTModel.h in CopyFiles */,
+				EAF797EF1E8903C200C19A27 /* MTTalkerSetting.h in CopyFiles */,
+				EAF797EE1E8903BC00C19A27 /* MTServerAddress.h in CopyFiles */,
+				EAF797ED1E8903B600C19A27 /* MTPharmacy.h in CopyFiles */,
+				EAF797EC1E8903B200C19A27 /* MTUser.h in CopyFiles */,
+				EAF797EB1E8903AE00C19A27 /* MTLoginInfo.h in CopyFiles */,
+				EAF797EA1E8903A800C19A27 /* MTDevice.h in CopyFiles */,
+				EAF797E91E8903A200C19A27 /* MTTalkInfo.h in CopyFiles */,
+				EAF797E81E89039200C19A27 /* MTRinger.h in CopyFiles */,
+				EA7D57641E8122150072B7AE /* MTalkerClient.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD06A881E8262D700DDA4CF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EAF798061E8A019C00C19A27 /* FTCommandClient.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0DD7F035CD2B612532F8C886 /* libPods-MTalker_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTalker_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		185CD759DEF7BD4463803740 /* Pods-MTalker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTalker_Example/Pods-MTalker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2A406A7124A24D2779522370 /* Pods-MTalker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTalker_Tests/Pods-MTalker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		314E2E7F6227D74C0BE6B45C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5D4D1D40322EE7383A38B5A1 /* MTalker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MTalker.podspec; path = ../MTalker.podspec; sourceTree = "<group>"; };
+		5E861A8C65B96C538AF1567A /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTalkerClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* MTalker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTalker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* MTalker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MTalker-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* MTalker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTalker-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* MTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* MTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* MTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* MTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTViewController.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* MTalker_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTalker_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		6DCE7A0B876378AEBB48869E /* libPods-MTalker_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTalker_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E4F0FBC2EFE2B54FE4D67E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A5AFF9732E7356C9BADCA2C /* Pods-MTalkerClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalkerClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTalkerClient/Pods-MTalkerClient.debug.xcconfig"; sourceTree = "<group>"; };
+		A69A69392660D84487CADB6A /* Pods-MTalkerClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalkerClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTalkerClient/Pods-MTalkerClient.release.xcconfig"; sourceTree = "<group>"; };
+		C3C437EC6C4E7902A41E2F58 /* Pods-MTalker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTalker_Example/Pods-MTalker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EA7D575F1E8122150072B7AE /* libMTalkerClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMTalkerClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7D57611E8122150072B7AE /* MTalkerClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTalkerClient.h; sourceTree = "<group>"; };
+		EA7D57621E8122150072B7AE /* MTalkerClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTalkerClient.m; sourceTree = "<group>"; usesTabs = 0; };
+		EA7D576B1E81250A0072B7AE /* EasyUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyUI.framework; path = "EasyUI/build/Debug-iphoneos/EasyUI.framework"; sourceTree = "<group>"; };
+		EA7D576E1E820A2C0072B7AE /* MTTalkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTalkInfo.h; sourceTree = "<group>"; };
+		EA7D576F1E820A2C0072B7AE /* MTTalkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTalkInfo.m; sourceTree = "<group>"; };
+		EA7D57711E820BCA0072B7AE /* MTLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLoginInfo.h; sourceTree = "<group>"; };
+		EA7D57721E820BCA0072B7AE /* MTLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLoginInfo.m; sourceTree = "<group>"; };
+		EA7D57741E820C260072B7AE /* MTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDevice.h; sourceTree = "<group>"; };
+		EA7D57751E820C260072B7AE /* MTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDevice.m; sourceTree = "<group>"; };
+		EA7D57771E820C4B0072B7AE /* MTDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDoctor.h; sourceTree = "<group>"; };
+		EA7D57781E820C4B0072B7AE /* MTDoctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDoctor.m; sourceTree = "<group>"; };
+		EA7D577A1E820C7A0072B7AE /* MTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUser.h; sourceTree = "<group>"; };
+		EA7D577B1E820C7A0072B7AE /* MTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUser.m; sourceTree = "<group>"; };
+		EAD06A7B1E82141700DDA4CF /* MTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTModel.h; sourceTree = "<group>"; };
+		EAD06A7C1E82141700DDA4CF /* MTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTModel.m; sourceTree = "<group>"; };
+		EAD06A7E1E822AA200DDA4CF /* MTPharmacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPharmacy.h; sourceTree = "<group>"; };
+		EAD06A7F1E822AA200DDA4CF /* MTPharmacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPharmacy.m; sourceTree = "<group>"; };
+		EAD06A811E822C4900DDA4CF /* MTServerAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTServerAddress.h; sourceTree = "<group>"; };
+		EAD06A821E822C4900DDA4CF /* MTServerAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTServerAddress.m; sourceTree = "<group>"; };
+		EAD06A8A1E8262D700DDA4CF /* libFTCommandClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFTCommandClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAD06A931E82630400DDA4CF /* FTCommandClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCommandClient.h; sourceTree = "<group>"; };
+		EAD06A941E82630400DDA4CF /* FTCommandClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FTCommandClient.mm; sourceTree = "<group>"; };
+		EAD06A991E82638900DDA4CF /* business.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = business.pb.cc; sourceTree = "<group>"; };
+		EAD06A9A1E82638900DDA4CF /* business.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = business.pb.h; sourceTree = "<group>"; };
+		EAD06A9B1E82638900DDA4CF /* FTCommandHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCommandHead.h; sourceTree = "<group>"; };
+		EAD06A9C1E82638900DDA4CF /* FTCommandHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCommandHead.m; sourceTree = "<group>"; };
+		EAD06A9D1E82638900DDA4CF /* FTTcpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTcpClient.h; sourceTree = "<group>"; };
+		EAD06A9E1E82638900DDA4CF /* FTTcpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTcpClient.m; sourceTree = "<group>"; };
+		EAD06AA21E82639F00DDA4CF /* FTUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTUnit.h; sourceTree = "<group>"; };
+		EAD06AA31E82639F00DDA4CF /* FTUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTUnit.m; sourceTree = "<group>"; };
+		EAD06AA51E8263B100DDA4CF /* FTAVControlParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAVControlParam.h; sourceTree = "<group>"; };
+		EAD06AA61E8263B100DDA4CF /* FTAVControlParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAVControlParam.m; sourceTree = "<group>"; };
+		EAD06AA71E8263B100DDA4CF /* FTCoordinateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoordinateInfo.h; sourceTree = "<group>"; };
+		EAD06AA81E8263B100DDA4CF /* FTCoordinateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoordinateInfo.m; sourceTree = "<group>"; };
+		EAD06AA91E8263B100DDA4CF /* FTDrugInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTDrugInfo.h; sourceTree = "<group>"; };
+		EAD06AAA1E8263B100DDA4CF /* FTDrugInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTDrugInfo.m; sourceTree = "<group>"; };
+		EAD06AAB1E8263B100DDA4CF /* FTJsonSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTJsonSerializable.h; sourceTree = "<group>"; };
+		EAD06AAC1E8263B100DDA4CF /* FTLoginParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTLoginParam.h; sourceTree = "<group>"; };
+		EAD06AAD1E8263B100DDA4CF /* FTLoginParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTLoginParam.m; sourceTree = "<group>"; };
+		EAD06AAE1E8263B100DDA4CF /* FTRecommendDrug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRecommendDrug.h; sourceTree = "<group>"; };
+		EAD06AAF1E8263B100DDA4CF /* FTRecommendDrug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRecommendDrug.m; sourceTree = "<group>"; };
+		EAD06AB71E82640E00DDA4CF /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libprotobuf.a; sourceTree = "<group>"; };
+		EAD06AFC1E82657E00DDA4CF /* code_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code_generator.h; sourceTree = "<group>"; };
+		EAD06AFD1E82657E00DDA4CF /* command_line_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = command_line_interface.h; sourceTree = "<group>"; };
+		EAD06AFF1E82657E00DDA4CF /* cpp_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpp_generator.h; sourceTree = "<group>"; };
+		EAD06B001E82657E00DDA4CF /* importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = importer.h; sourceTree = "<group>"; };
+		EAD06B021E82657E00DDA4CF /* java_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_generator.h; sourceTree = "<group>"; };
+		EAD06B031E82657E00DDA4CF /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		EAD06B041E82657E00DDA4CF /* plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin.h; sourceTree = "<group>"; };
+		EAD06B051E82657E00DDA4CF /* plugin.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin.pb.h; sourceTree = "<group>"; };
+		EAD06B061E82657E00DDA4CF /* plugin.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plugin.proto; sourceTree = "<group>"; };
+		EAD06B081E82657E00DDA4CF /* python_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = python_generator.h; sourceTree = "<group>"; };
+		EAD06B091E82657E00DDA4CF /* descriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = descriptor.h; sourceTree = "<group>"; };
+		EAD06B0A1E82657E00DDA4CF /* descriptor.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = descriptor.pb.h; sourceTree = "<group>"; };
+		EAD06B0B1E82657E00DDA4CF /* descriptor.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = descriptor.proto; sourceTree = "<group>"; };
+		EAD06B0C1E82657E00DDA4CF /* descriptor_database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = descriptor_database.h; sourceTree = "<group>"; };
+		EAD06B0D1E82657E00DDA4CF /* dynamic_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamic_message.h; sourceTree = "<group>"; };
+		EAD06B0E1E82657E00DDA4CF /* extension_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extension_set.h; sourceTree = "<group>"; };
+		EAD06B0F1E82657E00DDA4CF /* generated_enum_reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generated_enum_reflection.h; sourceTree = "<group>"; };
+		EAD06B101E82657E00DDA4CF /* generated_message_reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generated_message_reflection.h; sourceTree = "<group>"; };
+		EAD06B111E82657E00DDA4CF /* generated_message_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generated_message_util.h; sourceTree = "<group>"; };
+		EAD06B131E82657E00DDA4CF /* coded_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coded_stream.h; sourceTree = "<group>"; };
+		EAD06B141E82657E00DDA4CF /* gzip_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gzip_stream.h; sourceTree = "<group>"; };
+		EAD06B151E82657E00DDA4CF /* printer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = printer.h; sourceTree = "<group>"; };
+		EAD06B161E82657E00DDA4CF /* strtod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strtod.h; sourceTree = "<group>"; };
+		EAD06B171E82657E00DDA4CF /* tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer.h; sourceTree = "<group>"; };
+		EAD06B181E82657E00DDA4CF /* zero_copy_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zero_copy_stream.h; sourceTree = "<group>"; };
+		EAD06B191E82657E00DDA4CF /* zero_copy_stream_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zero_copy_stream_impl.h; sourceTree = "<group>"; };
+		EAD06B1A1E82657E00DDA4CF /* zero_copy_stream_impl_lite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zero_copy_stream_impl_lite.h; sourceTree = "<group>"; };
+		EAD06B1B1E82657E00DDA4CF /* message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message.h; sourceTree = "<group>"; };
+		EAD06B1C1E82657E00DDA4CF /* message_lite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message_lite.h; sourceTree = "<group>"; };
+		EAD06B1D1E82657E00DDA4CF /* reflection_ops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reflection_ops.h; sourceTree = "<group>"; };
+		EAD06B1E1E82657E00DDA4CF /* repeated_field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = repeated_field.h; sourceTree = "<group>"; };
+		EAD06B1F1E82657E00DDA4CF /* service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = service.h; sourceTree = "<group>"; };
+		EAD06B211E82657E00DDA4CF /* atomicops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops.h; sourceTree = "<group>"; };
+		EAD06B221E82657E00DDA4CF /* atomicops_internals_arm64_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_arm64_gcc.h; sourceTree = "<group>"; };
+		EAD06B231E82657E00DDA4CF /* atomicops_internals_arm_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_arm_gcc.h; sourceTree = "<group>"; };
+		EAD06B241E82657E00DDA4CF /* atomicops_internals_arm_qnx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_arm_qnx.h; sourceTree = "<group>"; };
+		EAD06B251E82657E00DDA4CF /* atomicops_internals_atomicword_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_atomicword_compat.h; sourceTree = "<group>"; };
+		EAD06B261E82657E00DDA4CF /* atomicops_internals_generic_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_generic_gcc.h; sourceTree = "<group>"; };
+		EAD06B271E82657E00DDA4CF /* atomicops_internals_macosx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_macosx.h; sourceTree = "<group>"; };
+		EAD06B281E82657E00DDA4CF /* atomicops_internals_mips_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_mips_gcc.h; sourceTree = "<group>"; };
+		EAD06B291E82657E00DDA4CF /* atomicops_internals_pnacl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_pnacl.h; sourceTree = "<group>"; };
+		EAD06B2A1E82657E00DDA4CF /* atomicops_internals_solaris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_solaris.h; sourceTree = "<group>"; };
+		EAD06B2B1E82657E00DDA4CF /* atomicops_internals_tsan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_tsan.h; sourceTree = "<group>"; };
+		EAD06B2C1E82657E00DDA4CF /* atomicops_internals_x86_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_x86_gcc.h; sourceTree = "<group>"; };
+		EAD06B2D1E82657E00DDA4CF /* atomicops_internals_x86_msvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_x86_msvc.h; sourceTree = "<group>"; };
+		EAD06B2E1E82657E00DDA4CF /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		EAD06B2F1E82657E00DDA4CF /* once.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = once.h; sourceTree = "<group>"; };
+		EAD06B301E82657E00DDA4CF /* platform_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_macros.h; sourceTree = "<group>"; };
+		EAD06B311E82657E00DDA4CF /* stl_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_util.h; sourceTree = "<group>"; };
+		EAD06B321E82657E00DDA4CF /* template_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = template_util.h; sourceTree = "<group>"; };
+		EAD06B331E82657E00DDA4CF /* type_traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = type_traits.h; sourceTree = "<group>"; };
+		EAD06B341E82657E00DDA4CF /* text_format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = text_format.h; sourceTree = "<group>"; };
+		EAD06B351E82657E00DDA4CF /* unknown_field_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unknown_field_set.h; sourceTree = "<group>"; };
+		EAD06B361E82657E00DDA4CF /* wire_format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wire_format.h; sourceTree = "<group>"; };
+		EAD06B371E82657E00DDA4CF /* wire_format_lite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wire_format_lite.h; sourceTree = "<group>"; };
+		EAD06B381E82657E00DDA4CF /* wire_format_lite_inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wire_format_lite_inl.h; sourceTree = "<group>"; };
+		EAD06B3A1E826AB100DDA4CF /* MTTalkerSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTalkerSetting.h; sourceTree = "<group>"; };
+		EAD06B3B1E826AB100DDA4CF /* MTTalkerSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTalkerSetting.m; sourceTree = "<group>"; };
+		EAD06B3D1E8364D200DDA4CF /* MTTalkerCommandDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTalkerCommandDelegate.h; sourceTree = "<group>"; };
+		EAD06B3E1E8373F200DDA4CF /* MTRinger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRinger.h; sourceTree = "<group>"; };
+		EAD06B3F1E8373F200DDA4CF /* MTRinger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRinger.m; sourceTree = "<group>"; };
+		EAD06B411E8374A200DDA4CF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EAD06B431E83786100DDA4CF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EAF797A71E88B77B00C19A27 /* MTAddressMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddressMonitor.h; sourceTree = "<group>"; };
+		EAF797A81E88B77B00C19A27 /* MTAddressMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddressMonitor.m; sourceTree = "<group>"; };
+		EAF798041E89FE3A00C19A27 /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MTalkerClient.a"; path = "Pods/../build/Debug-iphoneos/libPods-MTalkerClient.a"; sourceTree = "<group>"; };
+		FF40B49AC46C0BADB2726603 /* Pods-MTalker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTalker_Tests/Pods-MTalker_Tests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				731D940573245C52FC3A893F /* libPods-MTalker_Example.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				CA66594A0E31ABFFCDB8C774 /* libPods-MTalker_Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7D575C1E8122150072B7AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF798051E89FE3A00C19A27 /* libPods-MTalkerClient.a in Frameworks */,
+				EAF798031E89FE2600C19A27 /* libFTCommandClient.a in Frameworks */,
+				EAD06B441E83786100DDA4CF /* AudioToolbox.framework in Frameworks */,
+				EAD06B421E8374A200DDA4CF /* AVFoundation.framework in Frameworks */,
+				576251EAD6F1A98862DEE0A4 /* libPods-MTalkerClient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD06A871E8262D700DDA4CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD06AB81E82640E00DDA4CF /* libprotobuf.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* Example for MTalker */,
+				6003F5B5195388D20070C39A /* Tests */,
+				EA7D57601E8122150072B7AE /* MTalkerClient */,
+				EAD06A8B1E8262D700DDA4CF /* FTCommandClient */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				B34C7F3875BE5B5BAB344BD1 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* MTalker_Example.app */,
+				6003F5AE195388D20070C39A /* MTalker_Tests.xctest */,
+				EA7D575F1E8122150072B7AE /* libMTalkerClient.a */,
+				EAD06A8A1E8262D700DDA4CF /* libFTCommandClient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAF798041E89FE3A00C19A27 /* libPods-MTalkerClient.a */,
+				EAD06B431E83786100DDA4CF /* AudioToolbox.framework */,
+				EAD06B411E8374A200DDA4CF /* AVFoundation.framework */,
+				EA7D576B1E81250A0072B7AE /* EasyUI.framework */,
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				0DD7F035CD2B612532F8C886 /* libPods-MTalker_Example.a */,
+				6DCE7A0B876378AEBB48869E /* libPods-MTalker_Tests.a */,
+				5E861A8C65B96C538AF1567A /* libPods-MTalkerClient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* Example for MTalker */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* MTAppDelegate.h */,
+				6003F59D195388D20070C39A /* MTAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				6003F5A5195388D20070C39A /* MTViewController.h */,
+				6003F5A6195388D20070C39A /* MTViewController.m */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = "Example for MTalker";
+			path = MTalker;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F595195388D20070C39A /* MTalker-Info.plist */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* MTalker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6003F5B5195388D20070C39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5BB195388D20070C39A /* Tests.m */,
+				6003F5B6195388D20070C39A /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6003F5B6195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B7195388D20070C39A /* Tests-Info.plist */,
+				6003F5B8195388D20070C39A /* InfoPlist.strings */,
+				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				5D4D1D40322EE7383A38B5A1 /* MTalker.podspec */,
+				6E4F0FBC2EFE2B54FE4D67E3 /* README.md */,
+				314E2E7F6227D74C0BE6B45C /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B34C7F3875BE5B5BAB344BD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				185CD759DEF7BD4463803740 /* Pods-MTalker_Example.debug.xcconfig */,
+				C3C437EC6C4E7902A41E2F58 /* Pods-MTalker_Example.release.xcconfig */,
+				2A406A7124A24D2779522370 /* Pods-MTalker_Tests.debug.xcconfig */,
+				FF40B49AC46C0BADB2726603 /* Pods-MTalker_Tests.release.xcconfig */,
+				8A5AFF9732E7356C9BADCA2C /* Pods-MTalkerClient.debug.xcconfig */,
+				A69A69392660D84487CADB6A /* Pods-MTalkerClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA7D57601E8122150072B7AE /* MTalkerClient */ = {
+			isa = PBXGroup;
+			children = (
+				EAF797A61E88B75C00C19A27 /* Tools */,
+				EA7D576D1E812ED40072B7AE /* Model */,
+				EA7D57611E8122150072B7AE /* MTalkerClient.h */,
+				EA7D57621E8122150072B7AE /* MTalkerClient.m */,
+				EAD06B3E1E8373F200DDA4CF /* MTRinger.h */,
+				EAD06B3F1E8373F200DDA4CF /* MTRinger.m */,
+				EAD06B3D1E8364D200DDA4CF /* MTTalkerCommandDelegate.h */,
+			);
+			path = MTalkerClient;
+			sourceTree = "<group>";
+		};
+		EA7D576D1E812ED40072B7AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA7D576E1E820A2C0072B7AE /* MTTalkInfo.h */,
+				EA7D576F1E820A2C0072B7AE /* MTTalkInfo.m */,
+				EA7D57711E820BCA0072B7AE /* MTLoginInfo.h */,
+				EA7D57721E820BCA0072B7AE /* MTLoginInfo.m */,
+				EA7D57741E820C260072B7AE /* MTDevice.h */,
+				EA7D57751E820C260072B7AE /* MTDevice.m */,
+				EA7D57771E820C4B0072B7AE /* MTDoctor.h */,
+				EA7D57781E820C4B0072B7AE /* MTDoctor.m */,
+				EA7D577A1E820C7A0072B7AE /* MTUser.h */,
+				EA7D577B1E820C7A0072B7AE /* MTUser.m */,
+				EAD06A7B1E82141700DDA4CF /* MTModel.h */,
+				EAD06A7C1E82141700DDA4CF /* MTModel.m */,
+				EAD06A7E1E822AA200DDA4CF /* MTPharmacy.h */,
+				EAD06A7F1E822AA200DDA4CF /* MTPharmacy.m */,
+				EAD06A811E822C4900DDA4CF /* MTServerAddress.h */,
+				EAD06A821E822C4900DDA4CF /* MTServerAddress.m */,
+				EAD06B3A1E826AB100DDA4CF /* MTTalkerSetting.h */,
+				EAD06B3B1E826AB100DDA4CF /* MTTalkerSetting.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EAD06A8B1E8262D700DDA4CF /* FTCommandClient */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06AB61E8263F000DDA4CF /* Framework */,
+				EAD06A981E82636A00DDA4CF /* Message */,
+				EAD06A971E82634800DDA4CF /* Util */,
+				EAD06A961E82633D00DDA4CF /* Client */,
+				EAD06A931E82630400DDA4CF /* FTCommandClient.h */,
+				EAD06A941E82630400DDA4CF /* FTCommandClient.mm */,
+			);
+			path = FTCommandClient;
+			sourceTree = "<group>";
+		};
+		EAD06A961E82633D00DDA4CF /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06A991E82638900DDA4CF /* business.pb.cc */,
+				EAD06A9A1E82638900DDA4CF /* business.pb.h */,
+				EAD06A9B1E82638900DDA4CF /* FTCommandHead.h */,
+				EAD06A9C1E82638900DDA4CF /* FTCommandHead.m */,
+				EAD06A9D1E82638900DDA4CF /* FTTcpClient.h */,
+				EAD06A9E1E82638900DDA4CF /* FTTcpClient.m */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		EAD06A971E82634800DDA4CF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06AA21E82639F00DDA4CF /* FTUnit.h */,
+				EAD06AA31E82639F00DDA4CF /* FTUnit.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		EAD06A981E82636A00DDA4CF /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06AA51E8263B100DDA4CF /* FTAVControlParam.h */,
+				EAD06AA61E8263B100DDA4CF /* FTAVControlParam.m */,
+				EAD06AA71E8263B100DDA4CF /* FTCoordinateInfo.h */,
+				EAD06AA81E8263B100DDA4CF /* FTCoordinateInfo.m */,
+				EAD06AA91E8263B100DDA4CF /* FTDrugInfo.h */,
+				EAD06AAA1E8263B100DDA4CF /* FTDrugInfo.m */,
+				EAD06AAB1E8263B100DDA4CF /* FTJsonSerializable.h */,
+				EAD06AAC1E8263B100DDA4CF /* FTLoginParam.h */,
+				EAD06AAD1E8263B100DDA4CF /* FTLoginParam.m */,
+				EAD06AAE1E8263B100DDA4CF /* FTRecommendDrug.h */,
+				EAD06AAF1E8263B100DDA4CF /* FTRecommendDrug.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		EAD06AB61E8263F000DDA4CF /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06AF91E82657E00DDA4CF /* google */,
+				EAD06AB71E82640E00DDA4CF /* libprotobuf.a */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		EAD06AF91E82657E00DDA4CF /* google */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06AFA1E82657E00DDA4CF /* protobuf */,
+			);
+			path = google;
+			sourceTree = "<group>";
+		};
+		EAD06AFA1E82657E00DDA4CF /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06AFB1E82657E00DDA4CF /* compiler */,
+				EAD06B091E82657E00DDA4CF /* descriptor.h */,
+				EAD06B0A1E82657E00DDA4CF /* descriptor.pb.h */,
+				EAD06B0B1E82657E00DDA4CF /* descriptor.proto */,
+				EAD06B0C1E82657E00DDA4CF /* descriptor_database.h */,
+				EAD06B0D1E82657E00DDA4CF /* dynamic_message.h */,
+				EAD06B0E1E82657E00DDA4CF /* extension_set.h */,
+				EAD06B0F1E82657E00DDA4CF /* generated_enum_reflection.h */,
+				EAD06B101E82657E00DDA4CF /* generated_message_reflection.h */,
+				EAD06B111E82657E00DDA4CF /* generated_message_util.h */,
+				EAD06B121E82657E00DDA4CF /* io */,
+				EAD06B1B1E82657E00DDA4CF /* message.h */,
+				EAD06B1C1E82657E00DDA4CF /* message_lite.h */,
+				EAD06B1D1E82657E00DDA4CF /* reflection_ops.h */,
+				EAD06B1E1E82657E00DDA4CF /* repeated_field.h */,
+				EAD06B1F1E82657E00DDA4CF /* service.h */,
+				EAD06B201E82657E00DDA4CF /* stubs */,
+				EAD06B341E82657E00DDA4CF /* text_format.h */,
+				EAD06B351E82657E00DDA4CF /* unknown_field_set.h */,
+				EAD06B361E82657E00DDA4CF /* wire_format.h */,
+				EAD06B371E82657E00DDA4CF /* wire_format_lite.h */,
+				EAD06B381E82657E00DDA4CF /* wire_format_lite_inl.h */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
+		EAD06AFB1E82657E00DDA4CF /* compiler */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06AFC1E82657E00DDA4CF /* code_generator.h */,
+				EAD06AFD1E82657E00DDA4CF /* command_line_interface.h */,
+				EAD06AFE1E82657E00DDA4CF /* cpp */,
+				EAD06B001E82657E00DDA4CF /* importer.h */,
+				EAD06B011E82657E00DDA4CF /* java */,
+				EAD06B031E82657E00DDA4CF /* parser.h */,
+				EAD06B041E82657E00DDA4CF /* plugin.h */,
+				EAD06B051E82657E00DDA4CF /* plugin.pb.h */,
+				EAD06B061E82657E00DDA4CF /* plugin.proto */,
+				EAD06B071E82657E00DDA4CF /* python */,
+			);
+			path = compiler;
+			sourceTree = "<group>";
+		};
+		EAD06AFE1E82657E00DDA4CF /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06AFF1E82657E00DDA4CF /* cpp_generator.h */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		EAD06B011E82657E00DDA4CF /* java */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06B021E82657E00DDA4CF /* java_generator.h */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		EAD06B071E82657E00DDA4CF /* python */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06B081E82657E00DDA4CF /* python_generator.h */,
+			);
+			path = python;
+			sourceTree = "<group>";
+		};
+		EAD06B121E82657E00DDA4CF /* io */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06B131E82657E00DDA4CF /* coded_stream.h */,
+				EAD06B141E82657E00DDA4CF /* gzip_stream.h */,
+				EAD06B151E82657E00DDA4CF /* printer.h */,
+				EAD06B161E82657E00DDA4CF /* strtod.h */,
+				EAD06B171E82657E00DDA4CF /* tokenizer.h */,
+				EAD06B181E82657E00DDA4CF /* zero_copy_stream.h */,
+				EAD06B191E82657E00DDA4CF /* zero_copy_stream_impl.h */,
+				EAD06B1A1E82657E00DDA4CF /* zero_copy_stream_impl_lite.h */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		EAD06B201E82657E00DDA4CF /* stubs */ = {
+			isa = PBXGroup;
+			children = (
+				EAD06B211E82657E00DDA4CF /* atomicops.h */,
+				EAD06B221E82657E00DDA4CF /* atomicops_internals_arm64_gcc.h */,
+				EAD06B231E82657E00DDA4CF /* atomicops_internals_arm_gcc.h */,
+				EAD06B241E82657E00DDA4CF /* atomicops_internals_arm_qnx.h */,
+				EAD06B251E82657E00DDA4CF /* atomicops_internals_atomicword_compat.h */,
+				EAD06B261E82657E00DDA4CF /* atomicops_internals_generic_gcc.h */,
+				EAD06B271E82657E00DDA4CF /* atomicops_internals_macosx.h */,
+				EAD06B281E82657E00DDA4CF /* atomicops_internals_mips_gcc.h */,
+				EAD06B291E82657E00DDA4CF /* atomicops_internals_pnacl.h */,
+				EAD06B2A1E82657E00DDA4CF /* atomicops_internals_solaris.h */,
+				EAD06B2B1E82657E00DDA4CF /* atomicops_internals_tsan.h */,
+				EAD06B2C1E82657E00DDA4CF /* atomicops_internals_x86_gcc.h */,
+				EAD06B2D1E82657E00DDA4CF /* atomicops_internals_x86_msvc.h */,
+				EAD06B2E1E82657E00DDA4CF /* common.h */,
+				EAD06B2F1E82657E00DDA4CF /* once.h */,
+				EAD06B301E82657E00DDA4CF /* platform_macros.h */,
+				EAD06B311E82657E00DDA4CF /* stl_util.h */,
+				EAD06B321E82657E00DDA4CF /* template_util.h */,
+				EAD06B331E82657E00DDA4CF /* type_traits.h */,
+			);
+			path = stubs;
+			sourceTree = "<group>";
+		};
+		EAF797A61E88B75C00C19A27 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				EAF797A71E88B77B00C19A27 /* MTAddressMonitor.h */,
+				EAF797A81E88B77B00C19A27 /* MTAddressMonitor.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* MTalker_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "MTalker_Example" */;
+			buildPhases = (
+				74E052049B80D76FF5C33D83 /* [CP] Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				8EC57F6F593A4B65C6447EBE /* [CP] Embed Pods Frameworks */,
+				68B55E971E58908A4A007213 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTalker_Example;
+			productName = MTalker;
+			productReference = 6003F58A195388D20070C39A /* MTalker_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* MTalker_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "MTalker_Tests" */;
+			buildPhases = (
+				C8C6709FB693804FC0A15B8C /* [CP] Check Pods Manifest.lock */,
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+				9C40FA66A29349060BEC88B3 /* [CP] Embed Pods Frameworks */,
+				6F9DB85D93C2572F58397D8D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = MTalker_Tests;
+			productName = MTalkerTests;
+			productReference = 6003F5AE195388D20070C39A /* MTalker_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA7D575E1E8122150072B7AE /* MTalkerClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA7D57651E8122150072B7AE /* Build configuration list for PBXNativeTarget "MTalkerClient" */;
+			buildPhases = (
+				4D30732D0395AB9486272244 /* [CP] Check Pods Manifest.lock */,
+				EA7D575B1E8122150072B7AE /* Sources */,
+				EA7D575C1E8122150072B7AE /* Frameworks */,
+				EA7D575D1E8122150072B7AE /* CopyFiles */,
+				5285B4BAC897F79E2837896A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTalkerClient;
+			productName = MTalkerClient;
+			productReference = EA7D575F1E8122150072B7AE /* libMTalkerClient.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EAD06A891E8262D700DDA4CF /* FTCommandClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAD06A901E8262D700DDA4CF /* Build configuration list for PBXNativeTarget "FTCommandClient" */;
+			buildPhases = (
+				EAD06A861E8262D700DDA4CF /* Sources */,
+				EAD06A871E8262D700DDA4CF /* Frameworks */,
+				EAD06A881E8262D700DDA4CF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTCommandClient;
+			productName = FTCommandClient;
+			productReference = EAD06A8A1E8262D700DDA4CF /* libFTCommandClient.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MT;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = rrun;
+				TargetAttributes = {
+					6003F5AD195388D20070C39A = {
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+					EA7D575E1E8122150072B7AE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 63DD5UWBGN;
+						ProvisioningStyle = Automatic;
+					};
+					EAD06A891E8262D700DDA4CF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 63DD5UWBGN;
+						ProvisioningStyle = Automatic;
+					};
+					EAF797FE1E89FB6200C19A27 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 63DD5UWBGN;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "MTalker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* MTalker_Example */,
+				6003F5AD195388D20070C39A /* MTalker_Tests */,
+				EA7D575E1E8122150072B7AE /* MTalkerClient */,
+				EAD06A891E8262D700DDA4CF /* FTCommandClient */,
+				EAF797FE1E89FB6200C19A27 /* Combine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D30732D0395AB9486272244 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5285B4BAC897F79E2837896A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTalkerClient/Pods-MTalkerClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68B55E971E58908A4A007213 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTalker_Example/Pods-MTalker_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F9DB85D93C2572F58397D8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTalker_Tests/Pods-MTalker_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74E052049B80D76FF5C33D83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC57F6F593A4B65C6447EBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTalker_Example/Pods-MTalker_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C40FA66A29349060BEC88B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTalker_Tests/Pods-MTalker_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8C6709FB693804FC0A15B8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAF798021E89FB9000C19A27 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#要build的target名\ntarget_Name=\"MTalkerClient\"\n//if [[ $1 ]]\n//then\n//target_Name=$1\n//fi\n\nUNIVERSAL_OUTPUT_FOLDER=\"${SRCROOT}/${PROJECT_NAME}_Products\"\n\n# 创建输出目录，并删除之前的文件\nrm -rf \"${UNIVERSAL_OUTPUT_FOLDER}\"\nmkdir -p \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\n# 分别编译真机和模拟器版本\nxcodebuild -target \"${target_Name}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${target_Name}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n#复制头文件到目标文件夹\nHEADER_FOLDER=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/include/${target_Name}\"\nif [[ -d \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/usr/local/include\" ]]\nthen\nHEADER_FOLDER=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/usr/local/include\"\nfi\ncp -R \"${HEADER_FOLDER}\" \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\n#合成模拟器和真机.a包\nlipo -create \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${target_Name}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${target_Name}.a\" -output \"${UNIVERSAL_OUTPUT_FOLDER}/lib${target_Name}.a\"\n\n# 判断build文件夹是否存在，存在则删除\nif [ -d \"${SRCROOT}/build\" ]\nthen\nrm -rf \"${SRCROOT}/build\"\nfi\n\n#打开目标文件夹\nopen \"${UNIVERSAL_OUTPUT_FOLDER}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F59E195388D20070C39A /* MTAppDelegate.m in Sources */,
+				6003F5A7195388D20070C39A /* MTViewController.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7D575B1E8122150072B7AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAF797A91E88B77B00C19A27 /* MTAddressMonitor.m in Sources */,
+				EA7D57791E820C4B0072B7AE /* MTDoctor.m in Sources */,
+				EA7D577C1E820C7A0072B7AE /* MTUser.m in Sources */,
+				EAD06B3C1E826AB100DDA4CF /* MTTalkerSetting.m in Sources */,
+				EAD06A7D1E82141700DDA4CF /* MTModel.m in Sources */,
+				EA7D57731E820BCA0072B7AE /* MTLoginInfo.m in Sources */,
+				EAD06A831E822C4900DDA4CF /* MTServerAddress.m in Sources */,
+				EAD06B401E8373F200DDA4CF /* MTRinger.m in Sources */,
+				EA7D57701E820A2C0072B7AE /* MTTalkInfo.m in Sources */,
+				EAD06A801E822AA200DDA4CF /* MTPharmacy.m in Sources */,
+				EA7D57761E820C260072B7AE /* MTDevice.m in Sources */,
+				EA7D57631E8122150072B7AE /* MTalkerClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAD06A861E8262D700DDA4CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAD06AB41E8263B100DDA4CF /* FTRecommendDrug.m in Sources */,
+				EAD06AB01E8263B100DDA4CF /* FTAVControlParam.m in Sources */,
+				EAD06AB11E8263B100DDA4CF /* FTCoordinateInfo.m in Sources */,
+				EAD06AA11E82638900DDA4CF /* FTTcpClient.m in Sources */,
+				EAD06AA01E82638900DDA4CF /* FTCommandHead.m in Sources */,
+				EAD06A9F1E82638900DDA4CF /* business.pb.cc in Sources */,
+				EAD06AB31E8263B100DDA4CF /* FTLoginParam.m in Sources */,
+				EAD06A951E82630400DDA4CF /* FTCommandClient.mm in Sources */,
+				EAD06AA41E82639F00DDA4CF /* FTUnit.m in Sources */,
+				EAD06AB21E8263B100DDA4CF /* FTDrugInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* MTalker_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F597195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F5B9195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71719F9E1E33DC2100824A3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 185CD759DEF7BD4463803740 /* Pods-MTalker_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTalker/MTalker-Prefix.pch";
+				INFOPLIST_FILE = "MTalker/MTalker-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C437EC6C4E7902A41E2F58 /* Pods-MTalker_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTalker/MTalker-Prefix.pch";
+				INFOPLIST_FILE = "MTalker/MTalker-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A406A7124A24D2779522370 /* Pods-MTalker_Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTalker_Example.app/MTalker_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF40B49AC46C0BADB2726603 /* Pods-MTalker_Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTalker_Example.app/MTalker_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		EA7D57661E8122150072B7AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A5AFF9732E7356C9BADCA2C /* Pods-MTalkerClient.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EasyUI/build/Debug-iphoneos",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EA7D57671E8122150072B7AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A69A69392660D84487CADB6A /* Pods-MTalkerClient.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EasyUI/build/Debug-iphoneos",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EAD06A911E8262D700DDA4CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FTCommandClient",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FTCommandClient";
+			};
+			name = Debug;
+		};
+		EAD06A921E8262D700DDA4CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FTCommandClient",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FTCommandClient";
+			};
+			name = Release;
+		};
+		EAF798001E89FB6200C19A27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EAF798011E89FB6200C19A27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "MTalker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "MTalker_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "MTalker_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA7D57651E8122150072B7AE /* Build configuration list for PBXNativeTarget "MTalkerClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA7D57661E8122150072B7AE /* Debug */,
+				EA7D57671E8122150072B7AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAD06A901E8262D700DDA4CF /* Build configuration list for PBXNativeTarget "FTCommandClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD06A911E8262D700DDA4CF /* Debug */,
+				EAD06A921E8262D700DDA4CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAF797FF1E89FB6200C19A27 /* Build configuration list for PBXAggregateTarget "Combine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAF798001E89FB6200C19A27 /* Debug */,
+				EAF798011E89FB6200C19A27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "MTalker",
+  "version": "0.1.0",
+  "summary": "A short description of MTalker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/rrun/MTalker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "rrun": "hxy_sky@foxmail.com"
+  },
+  "source": {
+    "git": "https://github.com/rrun/MTalker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": "Example/MTalker_Products／MTalkerClient/**/*.h",
+  "public_header_files": "Example/MTalker_Products／MTalkerClient/**/*.h",
+  "vendored_libraries": "Example/MTalker_Products／libMTalkerClient.a",
+  "preserve_paths": "Example/MTalker_Products／libMTalkerClient.a"
+}

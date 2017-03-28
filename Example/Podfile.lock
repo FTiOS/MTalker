@@ -1,0 +1,48 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - ftcodec (1.1.0.307)
+  - KeychainItemWrapper (0.0.1)
+  - MJExtension (3.0.13)
+  - MTalker (0.1.0)
+  - OpenUDID (1.0.0)
+  - XY_NetWorkClient (1.0.1):
+    - AFNetworking
+
+DEPENDENCIES:
+  - ftcodec (~> 1.1.0.307)
+  - KeychainItemWrapper (~> 0.0.1)
+  - MJExtension (~> 3.0.13)
+  - MTalker (from `../`)
+  - OpenUDID (~> 1.0.0)
+  - XY_NetWorkClient (~> 1.0.1)
+
+EXTERNAL SOURCES:
+  MTalker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ftcodec: edc72acfe6e8914d4f675d123840071b853d0042
+  KeychainItemWrapper: 6e3bf8f9246c798898173a5cda51631ba0a885c2
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MTalker: 44750e6e1473ccb7de87a2f44910985a63c7bbb0
+  OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
+  XY_NetWorkClient: 78254b54548dd0708aab832572b7b86f2b75317f
+
+PODFILE CHECKSUM: f1d70fbd6f930c2c0ca7983ef52e1105518e24d2
+
+COCOAPODS: 1.1.1
