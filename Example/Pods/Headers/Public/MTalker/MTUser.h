@@ -1,1 +1,1 @@
-../../../../MTalker_Products/MTalkerClient/MTUser.h
+../../../../../MTalker/Classes/MTUser.h

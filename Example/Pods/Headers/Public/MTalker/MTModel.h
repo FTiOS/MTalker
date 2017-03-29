@@ -1,1 +1,1 @@
-../../../../MTalker_Products/MTalkerClient/MTModel.h
+../../../../../MTalker/Classes/MTModel.h

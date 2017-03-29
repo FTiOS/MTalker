@@ -1,1 +1,1 @@
-../../../../MTalker_Products/MTalkerClient/MTRinger.h
+../../../../../MTalker/Classes/MTRinger.h

@@ -1,0 +1,32 @@
+{
+  "name": "EasyUI",
+  "version": "0.1.0",
+  "summary": "咨询医生的音视频服务UI",
+  "description": "咨询医生的音视频服务UI，底层封装成静态库，支持pod",
+  "homepage": "https://github.com/rrun/MTalker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "rrun": "hxy_sky@foxmail.com"
+  },
+  "source": {
+    "git": "https://github.com/rrun/MTalker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EasyUI/Classes/**/*.*",
+  "resource_bundles": {
+    "EasyUI": [
+      "EasyUI/Assets/*.*"
+    ]
+  },
+  "dependencies": {
+    "Masonry": [
+      "~> 1.0.2"
+    ]
+  }
+}

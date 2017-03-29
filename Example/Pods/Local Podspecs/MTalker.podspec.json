@@ -18,8 +18,25 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Example/MTalker_Products/MTalkerClient/**/*.h",
-  "public_header_files": "Example/MTalker_Products/MTalkerClient/**/*.h",
-  "vendored_libraries": "Example/MTalker_Products/libMTalkerClient.a",
-  "preserve_paths": "Example/MTalker_Products/libMTalkerClient.a"
+  "source_files": "MTalker/Classes/**/*.h",
+  "public_header_files": "MTalker/Classes/**/*.h",
+  "vendored_libraries": "MTalker/Assets/libMTalkerClient.a",
+  "preserve_paths": "MTalker/Assets/libMTalkerClient.a",
+  "dependencies": {
+    "MJExtension": [
+      "~> 3.0.13"
+    ],
+    "OpenUDID": [
+      "~> 1.0.0"
+    ],
+    "KeychainItemWrapper": [
+      "~> 0.0.1"
+    ],
+    "ftcodec": [
+      "~> 1.1.0.307"
+    ],
+    "XY_NetWorkClient": [
+      "~> 1.0.1"
+    ]
+  }
 }

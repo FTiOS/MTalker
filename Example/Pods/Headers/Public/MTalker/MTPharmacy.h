@@ -1,1 +1,1 @@
-../../../../MTalker_Products/MTalkerClient/MTPharmacy.h
+../../../../../MTalker/Classes/MTPharmacy.h

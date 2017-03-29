@@ -1,1 +1,1 @@
-../../../../MTalker_Products/MTalkerClient/MTTalkerSetting.h
+../../../../../MTalker/Classes/MTTalkerSetting.h

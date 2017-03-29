@@ -1,1 +1,1 @@
-../../../../MTalker_Products/MTalkerClient/MTTalkerCommandDelegate.h
+../../../../../MTalker/Classes/MTTalkerCommandDelegate.h

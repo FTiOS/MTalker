@@ -6,7 +6,7 @@
 //  Copyright (c) 2017 rrun. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface MTAppDelegate : UIResponder <UIApplicationDelegate>
 

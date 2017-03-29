@@ -7,18 +7,15 @@ workspace 'MTalker.xcworkspace'
 
 target 'EasyUI' do
     pod 'MTalker', :path => '../'
-     pod 'MJExtension', '~> 3.0.13'
+    pod 'Masonry', '~> 1.0.2'
+    
     project 'EasyUI/EasyUI.xcodeproj'
 end
 
-target 'MTalker_Example' do
-  pod 'MTalker', :path => '../'
-
-  target 'MTalker_Tests' do
-    inherit! :search_paths
-
+target 'EasyUI_Example' do
+    pod 'EasyUI', :path => '../'
+    project 'EasyUI/EasyUI.xcodeproj'
     
-  end
 end
 
 target 'MTalkerClient' do
@@ -29,4 +26,18 @@ target 'MTalkerClient' do
     pod 'ftcodec', '~> 1.1.0.307'
     pod 'XY_NetWorkClient', '~> 1.0.1'
     
+end
+
+target 'MTalker_Example' do
+  pod 'MTalker', :path => '../'
+
+  target 'MTalker_Tests' do
+    inherit! :search_paths
+  end
+end
+
+target 'ChatDemo' do
+    pod 'ftcodec', '~> 1.1.0.307'
+    
+    project 'FTCommandClient/FTCommandClient.xcodeproj'
 end

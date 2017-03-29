@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		213D65585B5C29CF11FE05B2 /* libPods-ChatDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC32791052332B3CFDF697F /* libPods-ChatDemo.a */; };
+		EA7802E11E8B4BFF00779DED /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACBAF901E66B09F00E2A632 /* libprotobuf.a */; };
+		EA7802E31E8B4F1900779DED /* libFTCommandClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACBAF241E66AEF600E2A632 /* libFTCommandClient.a */; };
+		EACBAF291E66AEF600E2A632 /* FTCommandClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF281E66AEF600E2A632 /* FTCommandClient.mm */; };
+		EACBAF2A1E66AEF600E2A632 /* FTCommandClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EACBAF271E66AEF600E2A632 /* FTCommandClient.h */; };
+		EACBAF3C1E66AF8100E2A632 /* FTAVControlParam.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF321E66AF8100E2A632 /* FTAVControlParam.m */; };
+		EACBAF3D1E66AF8100E2A632 /* FTCoordinateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF341E66AF8100E2A632 /* FTCoordinateInfo.m */; };
+		EACBAF3E1E66AF8100E2A632 /* FTDrugInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF361E66AF8100E2A632 /* FTDrugInfo.m */; };
+		EACBAF3F1E66AF8100E2A632 /* FTLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF391E66AF8100E2A632 /* FTLoginParam.m */; };
+		EACBAF401E66AF8100E2A632 /* FTRecommendDrug.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF3B1E66AF8100E2A632 /* FTRecommendDrug.m */; };
+		EACBAF451E66AFB000E2A632 /* FTUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF441E66AFB000E2A632 /* FTUnit.m */; };
+		EACBAF4C1E66AFBB00E2A632 /* business.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF461E66AFBB00E2A632 /* business.pb.cc */; };
+		EACBAF4D1E66AFBB00E2A632 /* FTCommandHead.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF491E66AFBB00E2A632 /* FTCommandHead.m */; };
+		EACBAF4E1E66AFBB00E2A632 /* FTTcpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF4B1E66AFBB00E2A632 /* FTTcpClient.m */; };
+		EACBAF951E66BA5F00E2A632 /* FTCommandHead.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EACBAF481E66AFBB00E2A632 /* FTCommandHead.h */; };
+		EACBAF971E66BA5F00E2A632 /* FTTcpClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EACBAF4A1E66AFBB00E2A632 /* FTTcpClient.h */; };
+		EACBAF981E66BA7100E2A632 /* FTAVControlParam.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EACBAF311E66AF8100E2A632 /* FTAVControlParam.h */; };
+		EACBAF991E66BA7100E2A632 /* FTCoordinateInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EACBAF331E66AF8100E2A632 /* FTCoordinateInfo.h */; };
+		EACBAF9A1E66BA7100E2A632 /* FTDrugInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EACBAF351E66AF8100E2A632 /* FTDrugInfo.h */; };
+		EACBAF9B1E66BA7100E2A632 /* FTLoginParam.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EACBAF381E66AF8100E2A632 /* FTLoginParam.h */; };
+		EACBAF9C1E66BA7100E2A632 /* FTRecommendDrug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EACBAF3A1E66AF8100E2A632 /* FTRecommendDrug.h */; };
+		EACBAF9D1E66BA7C00E2A632 /* FTJsonSerializable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EACBAF371E66AF8100E2A632 /* FTJsonSerializable.h */; };
+		EACBAFA61E66CC1200E2A632 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAFA51E66CC1200E2A632 /* main.m */; };
+		EACBAFA91E66CC1200E2A632 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAFA81E66CC1200E2A632 /* AppDelegate.m */; };
+		EACBAFAC1E66CC1200E2A632 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACBAFAB1E66CC1200E2A632 /* ViewController.m */; };
+		EACBAFAF1E66CC1200E2A632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACBAFAD1E66CC1200E2A632 /* Main.storyboard */; };
+		EACBAFB11E66CC1200E2A632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACBAFB01E66CC1200E2A632 /* Assets.xcassets */; };
+		EACBAFB41E66CC1200E2A632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACBAFB21E66CC1200E2A632 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EACBAF221E66AEF600E2A632 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EACBAF9D1E66BA7C00E2A632 /* FTJsonSerializable.h in CopyFiles */,
+				EACBAF981E66BA7100E2A632 /* FTAVControlParam.h in CopyFiles */,
+				EACBAF991E66BA7100E2A632 /* FTCoordinateInfo.h in CopyFiles */,
+				EACBAF9A1E66BA7100E2A632 /* FTDrugInfo.h in CopyFiles */,
+				EACBAF9B1E66BA7100E2A632 /* FTLoginParam.h in CopyFiles */,
+				EACBAF9C1E66BA7100E2A632 /* FTRecommendDrug.h in CopyFiles */,
+				EACBAF951E66BA5F00E2A632 /* FTCommandHead.h in CopyFiles */,
+				EACBAF971E66BA5F00E2A632 /* FTTcpClient.h in CopyFiles */,
+				EACBAF2A1E66AEF600E2A632 /* FTCommandClient.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A7248F50716D59B843581394 /* Pods-ChatDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D905DC081821272FF24EEC27 /* Pods-ChatDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		EACBAF241E66AEF600E2A632 /* libFTCommandClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFTCommandClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACBAF271E66AEF600E2A632 /* FTCommandClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCommandClient.h; sourceTree = "<group>"; };
+		EACBAF281E66AEF600E2A632 /* FTCommandClient.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FTCommandClient.mm; sourceTree = "<group>"; };
+		EACBAF311E66AF8100E2A632 /* FTAVControlParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTAVControlParam.h; sourceTree = "<group>"; };
+		EACBAF321E66AF8100E2A632 /* FTAVControlParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTAVControlParam.m; sourceTree = "<group>"; };
+		EACBAF331E66AF8100E2A632 /* FTCoordinateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCoordinateInfo.h; sourceTree = "<group>"; };
+		EACBAF341E66AF8100E2A632 /* FTCoordinateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCoordinateInfo.m; sourceTree = "<group>"; };
+		EACBAF351E66AF8100E2A632 /* FTDrugInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTDrugInfo.h; sourceTree = "<group>"; };
+		EACBAF361E66AF8100E2A632 /* FTDrugInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTDrugInfo.m; sourceTree = "<group>"; };
+		EACBAF371E66AF8100E2A632 /* FTJsonSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTJsonSerializable.h; sourceTree = "<group>"; };
+		EACBAF381E66AF8100E2A632 /* FTLoginParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTLoginParam.h; sourceTree = "<group>"; };
+		EACBAF391E66AF8100E2A632 /* FTLoginParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTLoginParam.m; sourceTree = "<group>"; };
+		EACBAF3A1E66AF8100E2A632 /* FTRecommendDrug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTRecommendDrug.h; sourceTree = "<group>"; };
+		EACBAF3B1E66AF8100E2A632 /* FTRecommendDrug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTRecommendDrug.m; sourceTree = "<group>"; };
+		EACBAF431E66AFB000E2A632 /* FTUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTUnit.h; sourceTree = "<group>"; };
+		EACBAF441E66AFB000E2A632 /* FTUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTUnit.m; sourceTree = "<group>"; };
+		EACBAF461E66AFBB00E2A632 /* business.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = business.pb.cc; sourceTree = "<group>"; };
+		EACBAF471E66AFBB00E2A632 /* business.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = business.pb.h; sourceTree = "<group>"; };
+		EACBAF481E66AFBB00E2A632 /* FTCommandHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCommandHead.h; sourceTree = "<group>"; };
+		EACBAF491E66AFBB00E2A632 /* FTCommandHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCommandHead.m; sourceTree = "<group>"; };
+		EACBAF4A1E66AFBB00E2A632 /* FTTcpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTcpClient.h; sourceTree = "<group>"; };
+		EACBAF4B1E66AFBB00E2A632 /* FTTcpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTTcpClient.m; sourceTree = "<group>"; };
+		EACBAF531E66B07800E2A632 /* code_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code_generator.h; sourceTree = "<group>"; };
+		EACBAF541E66B07800E2A632 /* command_line_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = command_line_interface.h; sourceTree = "<group>"; };
+		EACBAF561E66B07800E2A632 /* cpp_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpp_generator.h; sourceTree = "<group>"; };
+		EACBAF571E66B07800E2A632 /* importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = importer.h; sourceTree = "<group>"; };
+		EACBAF591E66B07800E2A632 /* java_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_generator.h; sourceTree = "<group>"; };
+		EACBAF5A1E66B07800E2A632 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		EACBAF5B1E66B07800E2A632 /* plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin.h; sourceTree = "<group>"; };
+		EACBAF5C1E66B07800E2A632 /* plugin.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin.pb.h; sourceTree = "<group>"; };
+		EACBAF5D1E66B07800E2A632 /* plugin.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plugin.proto; sourceTree = "<group>"; };
+		EACBAF5F1E66B07800E2A632 /* python_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = python_generator.h; sourceTree = "<group>"; };
+		EACBAF601E66B07800E2A632 /* descriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = descriptor.h; sourceTree = "<group>"; };
+		EACBAF611E66B07800E2A632 /* descriptor.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = descriptor.pb.h; sourceTree = "<group>"; };
+		EACBAF621E66B07800E2A632 /* descriptor.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = descriptor.proto; sourceTree = "<group>"; };
+		EACBAF631E66B07800E2A632 /* descriptor_database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = descriptor_database.h; sourceTree = "<group>"; };
+		EACBAF641E66B07800E2A632 /* dynamic_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamic_message.h; sourceTree = "<group>"; };
+		EACBAF651E66B07800E2A632 /* extension_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extension_set.h; sourceTree = "<group>"; };
+		EACBAF661E66B07800E2A632 /* generated_enum_reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generated_enum_reflection.h; sourceTree = "<group>"; };
+		EACBAF671E66B07800E2A632 /* generated_message_reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generated_message_reflection.h; sourceTree = "<group>"; };
+		EACBAF681E66B07800E2A632 /* generated_message_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generated_message_util.h; sourceTree = "<group>"; };
+		EACBAF6A1E66B07800E2A632 /* coded_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coded_stream.h; sourceTree = "<group>"; };
+		EACBAF6B1E66B07800E2A632 /* gzip_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gzip_stream.h; sourceTree = "<group>"; };
+		EACBAF6C1E66B07800E2A632 /* printer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = printer.h; sourceTree = "<group>"; };
+		EACBAF6D1E66B07800E2A632 /* strtod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strtod.h; sourceTree = "<group>"; };
+		EACBAF6E1E66B07800E2A632 /* tokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokenizer.h; sourceTree = "<group>"; };
+		EACBAF6F1E66B07800E2A632 /* zero_copy_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zero_copy_stream.h; sourceTree = "<group>"; };
+		EACBAF701E66B07800E2A632 /* zero_copy_stream_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zero_copy_stream_impl.h; sourceTree = "<group>"; };
+		EACBAF711E66B07800E2A632 /* zero_copy_stream_impl_lite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zero_copy_stream_impl_lite.h; sourceTree = "<group>"; };
+		EACBAF721E66B07800E2A632 /* message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message.h; sourceTree = "<group>"; };
+		EACBAF731E66B07800E2A632 /* message_lite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = message_lite.h; sourceTree = "<group>"; };
+		EACBAF741E66B07800E2A632 /* reflection_ops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reflection_ops.h; sourceTree = "<group>"; };
+		EACBAF751E66B07800E2A632 /* repeated_field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = repeated_field.h; sourceTree = "<group>"; };
+		EACBAF761E66B07800E2A632 /* service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = service.h; sourceTree = "<group>"; };
+		EACBAF781E66B07800E2A632 /* atomicops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops.h; sourceTree = "<group>"; };
+		EACBAF791E66B07800E2A632 /* atomicops_internals_arm64_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_arm64_gcc.h; sourceTree = "<group>"; };
+		EACBAF7A1E66B07800E2A632 /* atomicops_internals_arm_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_arm_gcc.h; sourceTree = "<group>"; };
+		EACBAF7B1E66B07800E2A632 /* atomicops_internals_arm_qnx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_arm_qnx.h; sourceTree = "<group>"; };
+		EACBAF7C1E66B07800E2A632 /* atomicops_internals_atomicword_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_atomicword_compat.h; sourceTree = "<group>"; };
+		EACBAF7D1E66B07800E2A632 /* atomicops_internals_generic_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_generic_gcc.h; sourceTree = "<group>"; };
+		EACBAF7E1E66B07800E2A632 /* atomicops_internals_macosx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_macosx.h; sourceTree = "<group>"; };
+		EACBAF7F1E66B07800E2A632 /* atomicops_internals_mips_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_mips_gcc.h; sourceTree = "<group>"; };
+		EACBAF801E66B07800E2A632 /* atomicops_internals_pnacl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_pnacl.h; sourceTree = "<group>"; };
+		EACBAF811E66B07800E2A632 /* atomicops_internals_solaris.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_solaris.h; sourceTree = "<group>"; };
+		EACBAF821E66B07800E2A632 /* atomicops_internals_tsan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_tsan.h; sourceTree = "<group>"; };
+		EACBAF831E66B07800E2A632 /* atomicops_internals_x86_gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_x86_gcc.h; sourceTree = "<group>"; };
+		EACBAF841E66B07800E2A632 /* atomicops_internals_x86_msvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = atomicops_internals_x86_msvc.h; sourceTree = "<group>"; };
+		EACBAF851E66B07800E2A632 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		EACBAF861E66B07800E2A632 /* once.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = once.h; sourceTree = "<group>"; };
+		EACBAF871E66B07800E2A632 /* platform_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_macros.h; sourceTree = "<group>"; };
+		EACBAF881E66B07800E2A632 /* stl_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stl_util.h; sourceTree = "<group>"; };
+		EACBAF891E66B07800E2A632 /* template_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = template_util.h; sourceTree = "<group>"; };
+		EACBAF8A1E66B07800E2A632 /* type_traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = type_traits.h; sourceTree = "<group>"; };
+		EACBAF8B1E66B07800E2A632 /* text_format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = text_format.h; sourceTree = "<group>"; };
+		EACBAF8C1E66B07800E2A632 /* unknown_field_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unknown_field_set.h; sourceTree = "<group>"; };
+		EACBAF8D1E66B07800E2A632 /* wire_format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wire_format.h; sourceTree = "<group>"; };
+		EACBAF8E1E66B07800E2A632 /* wire_format_lite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wire_format_lite.h; sourceTree = "<group>"; };
+		EACBAF8F1E66B07800E2A632 /* wire_format_lite_inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wire_format_lite_inl.h; sourceTree = "<group>"; };
+		EACBAF901E66B09F00E2A632 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libprotobuf.a; sourceTree = "<group>"; };
+		EACBAFA21E66CC1100E2A632 /* ChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACBAFA51E66CC1200E2A632 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EACBAFA71E66CC1200E2A632 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EACBAFA81E66CC1200E2A632 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EACBAFAA1E66CC1200E2A632 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EACBAFAB1E66CC1200E2A632 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EACBAFAE1E66CC1200E2A632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EACBAFB01E66CC1200E2A632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EACBAFB31E66CC1200E2A632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EACBAFB51E66CC1200E2A632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC32791052332B3CFDF697F /* libPods-ChatDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EACBAF211E66AEF600E2A632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA7802E11E8B4BFF00779DED /* libprotobuf.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EACBAF9F1E66CC1100E2A632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA7802E31E8B4F1900779DED /* libFTCommandClient.a in Frameworks */,
+				213D65585B5C29CF11FE05B2 /* libPods-ChatDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61AF77AF6AECCCA7E33A7BDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D905DC081821272FF24EEC27 /* Pods-ChatDemo.debug.xcconfig */,
+				A7248F50716D59B843581394 /* Pods-ChatDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EACBAF1B1E66AEF500E2A632 = {
+			isa = PBXGroup;
+			children = (
+				EACBAFA31E66CC1200E2A632 /* ChatDemo */,
+				EACBAF4F1E66B02400E2A632 /* Frameworks */,
+				EACBAF261E66AEF600E2A632 /* FTCommandClient */,
+				EACBAF251E66AEF600E2A632 /* Products */,
+				61AF77AF6AECCCA7E33A7BDB /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		EACBAF251E66AEF600E2A632 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF241E66AEF600E2A632 /* libFTCommandClient.a */,
+				EACBAFA21E66CC1100E2A632 /* ChatDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EACBAF261E66AEF600E2A632 /* FTCommandClient */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF421E66AFA400E2A632 /* Client */,
+				EACBAF411E66AF9000E2A632 /* Util */,
+				EACBAF301E66AF5400E2A632 /* Message */,
+				EACBAF271E66AEF600E2A632 /* FTCommandClient.h */,
+				EACBAF281E66AEF600E2A632 /* FTCommandClient.mm */,
+			);
+			path = FTCommandClient;
+			sourceTree = "<group>";
+		};
+		EACBAF301E66AF5400E2A632 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF311E66AF8100E2A632 /* FTAVControlParam.h */,
+				EACBAF321E66AF8100E2A632 /* FTAVControlParam.m */,
+				EACBAF331E66AF8100E2A632 /* FTCoordinateInfo.h */,
+				EACBAF341E66AF8100E2A632 /* FTCoordinateInfo.m */,
+				EACBAF351E66AF8100E2A632 /* FTDrugInfo.h */,
+				EACBAF361E66AF8100E2A632 /* FTDrugInfo.m */,
+				EACBAF371E66AF8100E2A632 /* FTJsonSerializable.h */,
+				EACBAF381E66AF8100E2A632 /* FTLoginParam.h */,
+				EACBAF391E66AF8100E2A632 /* FTLoginParam.m */,
+				EACBAF3A1E66AF8100E2A632 /* FTRecommendDrug.h */,
+				EACBAF3B1E66AF8100E2A632 /* FTRecommendDrug.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		EACBAF411E66AF9000E2A632 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF431E66AFB000E2A632 /* FTUnit.h */,
+				EACBAF441E66AFB000E2A632 /* FTUnit.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		EACBAF421E66AFA400E2A632 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF461E66AFBB00E2A632 /* business.pb.cc */,
+				EACBAF471E66AFBB00E2A632 /* business.pb.h */,
+				EACBAF481E66AFBB00E2A632 /* FTCommandHead.h */,
+				EACBAF491E66AFBB00E2A632 /* FTCommandHead.m */,
+				EACBAF4A1E66AFBB00E2A632 /* FTTcpClient.h */,
+				EACBAF4B1E66AFBB00E2A632 /* FTTcpClient.m */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		EACBAF4F1E66B02400E2A632 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF901E66B09F00E2A632 /* libprotobuf.a */,
+				EACBAF501E66B07800E2A632 /* google */,
+				EBC32791052332B3CFDF697F /* libPods-ChatDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EACBAF501E66B07800E2A632 /* google */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF511E66B07800E2A632 /* protobuf */,
+			);
+			path = google;
+			sourceTree = "<group>";
+		};
+		EACBAF511E66B07800E2A632 /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF521E66B07800E2A632 /* compiler */,
+				EACBAF601E66B07800E2A632 /* descriptor.h */,
+				EACBAF611E66B07800E2A632 /* descriptor.pb.h */,
+				EACBAF621E66B07800E2A632 /* descriptor.proto */,
+				EACBAF631E66B07800E2A632 /* descriptor_database.h */,
+				EACBAF641E66B07800E2A632 /* dynamic_message.h */,
+				EACBAF651E66B07800E2A632 /* extension_set.h */,
+				EACBAF661E66B07800E2A632 /* generated_enum_reflection.h */,
+				EACBAF671E66B07800E2A632 /* generated_message_reflection.h */,
+				EACBAF681E66B07800E2A632 /* generated_message_util.h */,
+				EACBAF691E66B07800E2A632 /* io */,
+				EACBAF721E66B07800E2A632 /* message.h */,
+				EACBAF731E66B07800E2A632 /* message_lite.h */,
+				EACBAF741E66B07800E2A632 /* reflection_ops.h */,
+				EACBAF751E66B07800E2A632 /* repeated_field.h */,
+				EACBAF761E66B07800E2A632 /* service.h */,
+				EACBAF771E66B07800E2A632 /* stubs */,
+				EACBAF8B1E66B07800E2A632 /* text_format.h */,
+				EACBAF8C1E66B07800E2A632 /* unknown_field_set.h */,
+				EACBAF8D1E66B07800E2A632 /* wire_format.h */,
+				EACBAF8E1E66B07800E2A632 /* wire_format_lite.h */,
+				EACBAF8F1E66B07800E2A632 /* wire_format_lite_inl.h */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
+		EACBAF521E66B07800E2A632 /* compiler */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF531E66B07800E2A632 /* code_generator.h */,
+				EACBAF541E66B07800E2A632 /* command_line_interface.h */,
+				EACBAF551E66B07800E2A632 /* cpp */,
+				EACBAF571E66B07800E2A632 /* importer.h */,
+				EACBAF581E66B07800E2A632 /* java */,
+				EACBAF5A1E66B07800E2A632 /* parser.h */,
+				EACBAF5B1E66B07800E2A632 /* plugin.h */,
+				EACBAF5C1E66B07800E2A632 /* plugin.pb.h */,
+				EACBAF5D1E66B07800E2A632 /* plugin.proto */,
+				EACBAF5E1E66B07800E2A632 /* python */,
+			);
+			path = compiler;
+			sourceTree = "<group>";
+		};
+		EACBAF551E66B07800E2A632 /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF561E66B07800E2A632 /* cpp_generator.h */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		EACBAF581E66B07800E2A632 /* java */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF591E66B07800E2A632 /* java_generator.h */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		EACBAF5E1E66B07800E2A632 /* python */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF5F1E66B07800E2A632 /* python_generator.h */,
+			);
+			path = python;
+			sourceTree = "<group>";
+		};
+		EACBAF691E66B07800E2A632 /* io */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF6A1E66B07800E2A632 /* coded_stream.h */,
+				EACBAF6B1E66B07800E2A632 /* gzip_stream.h */,
+				EACBAF6C1E66B07800E2A632 /* printer.h */,
+				EACBAF6D1E66B07800E2A632 /* strtod.h */,
+				EACBAF6E1E66B07800E2A632 /* tokenizer.h */,
+				EACBAF6F1E66B07800E2A632 /* zero_copy_stream.h */,
+				EACBAF701E66B07800E2A632 /* zero_copy_stream_impl.h */,
+				EACBAF711E66B07800E2A632 /* zero_copy_stream_impl_lite.h */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		EACBAF771E66B07800E2A632 /* stubs */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAF781E66B07800E2A632 /* atomicops.h */,
+				EACBAF791E66B07800E2A632 /* atomicops_internals_arm64_gcc.h */,
+				EACBAF7A1E66B07800E2A632 /* atomicops_internals_arm_gcc.h */,
+				EACBAF7B1E66B07800E2A632 /* atomicops_internals_arm_qnx.h */,
+				EACBAF7C1E66B07800E2A632 /* atomicops_internals_atomicword_compat.h */,
+				EACBAF7D1E66B07800E2A632 /* atomicops_internals_generic_gcc.h */,
+				EACBAF7E1E66B07800E2A632 /* atomicops_internals_macosx.h */,
+				EACBAF7F1E66B07800E2A632 /* atomicops_internals_mips_gcc.h */,
+				EACBAF801E66B07800E2A632 /* atomicops_internals_pnacl.h */,
+				EACBAF811E66B07800E2A632 /* atomicops_internals_solaris.h */,
+				EACBAF821E66B07800E2A632 /* atomicops_internals_tsan.h */,
+				EACBAF831E66B07800E2A632 /* atomicops_internals_x86_gcc.h */,
+				EACBAF841E66B07800E2A632 /* atomicops_internals_x86_msvc.h */,
+				EACBAF851E66B07800E2A632 /* common.h */,
+				EACBAF861E66B07800E2A632 /* once.h */,
+				EACBAF871E66B07800E2A632 /* platform_macros.h */,
+				EACBAF881E66B07800E2A632 /* stl_util.h */,
+				EACBAF891E66B07800E2A632 /* template_util.h */,
+				EACBAF8A1E66B07800E2A632 /* type_traits.h */,
+			);
+			path = stubs;
+			sourceTree = "<group>";
+		};
+		EACBAFA31E66CC1200E2A632 /* ChatDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAFA71E66CC1200E2A632 /* AppDelegate.h */,
+				EACBAFA81E66CC1200E2A632 /* AppDelegate.m */,
+				EACBAFAA1E66CC1200E2A632 /* ViewController.h */,
+				EACBAFAB1E66CC1200E2A632 /* ViewController.m */,
+				EACBAFAD1E66CC1200E2A632 /* Main.storyboard */,
+				EACBAFB01E66CC1200E2A632 /* Assets.xcassets */,
+				EACBAFB21E66CC1200E2A632 /* LaunchScreen.storyboard */,
+				EACBAFB51E66CC1200E2A632 /* Info.plist */,
+				EACBAFA41E66CC1200E2A632 /* Supporting Files */,
+			);
+			path = ChatDemo;
+			sourceTree = "<group>";
+		};
+		EACBAFA41E66CC1200E2A632 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EACBAFA51E66CC1200E2A632 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EACBAF231E66AEF600E2A632 /* FTCommandClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EACBAF2D1E66AEF600E2A632 /* Build configuration list for PBXNativeTarget "FTCommandClient" */;
+			buildPhases = (
+				EACBAF201E66AEF600E2A632 /* Sources */,
+				EACBAF211E66AEF600E2A632 /* Frameworks */,
+				EACBAF221E66AEF600E2A632 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTCommandClient;
+			productName = FTCommandClient;
+			productReference = EACBAF241E66AEF600E2A632 /* libFTCommandClient.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EACBAFA11E66CC1100E2A632 /* ChatDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EACBAFB61E66CC1200E2A632 /* Build configuration list for PBXNativeTarget "ChatDemo" */;
+			buildPhases = (
+				115F5F05DB1C2976B4C1BA8A /* [CP] Check Pods Manifest.lock */,
+				EACBAF9E1E66CC1100E2A632 /* Sources */,
+				EACBAF9F1E66CC1100E2A632 /* Frameworks */,
+				EACBAFA01E66CC1100E2A632 /* Resources */,
+				4BB436B05FD61C4F8B1D3015 /* [CP] Embed Pods Frameworks */,
+				B6F2A004A776DE11B4E0C5A2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatDemo;
+			productName = ChatDemo;
+			productReference = EACBAFA21E66CC1100E2A632 /* ChatDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EACBAF1C1E66AEF500E2A632 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "何霞雨";
+				TargetAttributes = {
+					EACBAF231E66AEF600E2A632 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 63DD5UWBGN;
+						ProvisioningStyle = Automatic;
+					};
+					EACBAFA11E66CC1100E2A632 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 63DD5UWBGN;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EACBAF1F1E66AEF500E2A632 /* Build configuration list for PBXProject "FTCommandClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EACBAF1B1E66AEF500E2A632;
+			productRefGroup = EACBAF251E66AEF600E2A632 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EACBAF231E66AEF600E2A632 /* FTCommandClient */,
+				EACBAFA11E66CC1100E2A632 /* ChatDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EACBAFA01E66CC1100E2A632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACBAFB41E66CC1200E2A632 /* LaunchScreen.storyboard in Resources */,
+				EACBAFB11E66CC1200E2A632 /* Assets.xcassets in Resources */,
+				EACBAFAF1E66CC1200E2A632 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		115F5F05DB1C2976B4C1BA8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4BB436B05FD61C4F8B1D3015 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6F2A004A776DE11B4E0C5A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EACBAF201E66AEF600E2A632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACBAF3C1E66AF8100E2A632 /* FTAVControlParam.m in Sources */,
+				EACBAF3D1E66AF8100E2A632 /* FTCoordinateInfo.m in Sources */,
+				EACBAF4E1E66AFBB00E2A632 /* FTTcpClient.m in Sources */,
+				EACBAF401E66AF8100E2A632 /* FTRecommendDrug.m in Sources */,
+				EACBAF291E66AEF600E2A632 /* FTCommandClient.mm in Sources */,
+				EACBAF3F1E66AF8100E2A632 /* FTLoginParam.m in Sources */,
+				EACBAF3E1E66AF8100E2A632 /* FTDrugInfo.m in Sources */,
+				EACBAF4D1E66AFBB00E2A632 /* FTCommandHead.m in Sources */,
+				EACBAF4C1E66AFBB00E2A632 /* business.pb.cc in Sources */,
+				EACBAF451E66AFB000E2A632 /* FTUnit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EACBAF9E1E66CC1100E2A632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACBAFAC1E66CC1200E2A632 /* ViewController.m in Sources */,
+				EACBAFA91E66CC1200E2A632 /* AppDelegate.m in Sources */,
+				EACBAFA61E66CC1200E2A632 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EACBAFAD1E66CC1200E2A632 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EACBAFAE1E66CC1200E2A632 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EACBAFB21E66CC1200E2A632 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EACBAFB31E66CC1200E2A632 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EACBAF2B1E66AEF600E2A632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EACBAF2C1E66AEF600E2A632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EACBAF2E1E66AEF600E2A632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)";
+			};
+			name = Debug;
+		};
+		EACBAF2F1E66AEF600E2A632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)";
+			};
+			name = Release;
+		};
+		EACBAFB71E66CC1200E2A632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D905DC081821272FF24EEC27 /* Pods-ChatDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				INFOPLIST_FILE = ChatDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cdfortis.ChatDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EACBAFB81E66CC1200E2A632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7248F50716D59B843581394 /* Pods-ChatDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				INFOPLIST_FILE = ChatDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cdfortis.ChatDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EACBAF1F1E66AEF500E2A632 /* Build configuration list for PBXProject "FTCommandClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACBAF2B1E66AEF600E2A632 /* Debug */,
+				EACBAF2C1E66AEF600E2A632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EACBAF2D1E66AEF600E2A632 /* Build configuration list for PBXNativeTarget "FTCommandClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACBAF2E1E66AEF600E2A632 /* Debug */,
+				EACBAF2F1E66AEF600E2A632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EACBAFB61E66CC1200E2A632 /* Build configuration list for PBXNativeTarget "ChatDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACBAFB71E66CC1200E2A632 /* Debug */,
+				EACBAFB81E66CC1200E2A632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EACBAF1C1E66AEF500E2A632 /* Project object */;
+}

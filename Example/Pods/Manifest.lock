@@ -14,35 +14,49 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - EasyUI (0.1.0):
+    - Masonry (~> 1.0.2)
   - ftcodec (1.1.0.307)
   - KeychainItemWrapper (0.0.1)
+  - Masonry (1.0.2)
   - MJExtension (3.0.13)
-  - MTalker (0.1.0)
+  - MTalker (0.1.0):
+    - ftcodec (~> 1.1.0.307)
+    - KeychainItemWrapper (~> 0.0.1)
+    - MJExtension (~> 3.0.13)
+    - OpenUDID (~> 1.0.0)
+    - XY_NetWorkClient (~> 1.0.1)
   - OpenUDID (1.0.0)
   - XY_NetWorkClient (1.0.1):
     - AFNetworking
 
 DEPENDENCIES:
+  - EasyUI (from `../`)
   - ftcodec (~> 1.1.0.307)
   - KeychainItemWrapper (~> 0.0.1)
+  - Masonry (~> 1.0.2)
   - MJExtension (~> 3.0.13)
   - MTalker (from `../`)
   - OpenUDID (~> 1.0.0)
   - XY_NetWorkClient (~> 1.0.1)
 
 EXTERNAL SOURCES:
+  EasyUI:
+    :path: ../
   MTalker:
     :path: ../
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  EasyUI: b54ec831deae8d4cac86acbd344afb98a13b166f
   ftcodec: edc72acfe6e8914d4f675d123840071b853d0042
   KeychainItemWrapper: 6e3bf8f9246c798898173a5cda51631ba0a885c2
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  MTalker: 3b03caf8ee556c5e7bb65a0e13a2dbd601859da4
+  MTalker: fceadbbfa8326b58c5d94fc7d5858038c5019162
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   XY_NetWorkClient: 78254b54548dd0708aab832572b7b86f2b75317f
 
-PODFILE CHECKSUM: f1d70fbd6f930c2c0ca7983ef52e1105518e24d2
+PODFILE CHECKSUM: 241f13d1e9232bc3b81ccdf26aabe73dafdfdd5b
 
 COCOAPODS: 1.1.1

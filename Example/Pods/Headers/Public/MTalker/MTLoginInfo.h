@@ -1,1 +1,1 @@
-../../../../MTalker_Products/MTalkerClient/MTLoginInfo.h
+../../../../../MTalker/Classes/MTLoginInfo.h

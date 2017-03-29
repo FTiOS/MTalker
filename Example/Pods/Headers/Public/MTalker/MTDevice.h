@@ -1,1 +1,1 @@
-../../../../MTalker_Products/MTalkerClient/MTDevice.h
+../../../../../MTalker/Classes/MTDevice.h
