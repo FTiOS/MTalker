@@ -9,5 +9,14 @@
 @import UIKit;
 
 @interface MTViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *decodeView;
+@property (weak, nonatomic) IBOutlet UIView *encodeView;
+
+
+- (IBAction)mute:(id)sender;
+- (IBAction)picture:(id)sender;
+- (IBAction)video:(id)sender;
+- (IBAction)start:(id)sender;
+- (IBAction)end:(id)sender;
 
 @end

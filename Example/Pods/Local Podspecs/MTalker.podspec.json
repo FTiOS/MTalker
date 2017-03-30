@@ -22,6 +22,11 @@
   "public_header_files": "MTalker/Classes/**/*.h",
   "vendored_libraries": "MTalker/Assets/libMTalkerClient.a",
   "preserve_paths": "MTalker/Assets/libMTalkerClient.a",
+  "frameworks": [
+    "UIKit",
+    "AudioToolbox",
+    "AVFoundation"
+  ],
   "dependencies": {
     "MJExtension": [
       "~> 3.0.13"

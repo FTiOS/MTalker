@@ -69,8 +69,9 @@ typedef NS_ENUM(NSUInteger,ConnectStatus) {
 
 -(void)startVideoWithEncoderView:(UIView *)encoderView DecoderView:(UIView *)decoderView;//初次打开视频，需要初始化
 -(void)changeVideo;//切换视频位置
+-(void)stopVideo;
 
-//-(void)sendImage:(ALAsset *)asset;
+-(void)sendImage:(NSString *)imageUrl;
 
 @end
 

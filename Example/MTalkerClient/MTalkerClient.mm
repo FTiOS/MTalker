@@ -46,7 +46,7 @@ static MTalkerClient *_instance;
 -(void)loadSettings:(MTTalkerSetting *)setting{
     self.setting = setting;
     [MTAddressMonitor instance].parmas = self.setting.parmas;
-    [MTAddressMonitor instance].api = [NSString stringWithFormat:@"%@:%d",self.setting.ip,self.setting.port];
+    [MTAddressMonitor instance].api = self.setting.api;
     [[MTAddressMonitor instance] patchAddressWithFinshiBlock:^(NSArray<MTServerAddress *> *addresses, NSError *error) {
         if (!error) {
             self.talkerAddress = [[MTAddressMonitor instance]getServerAddress:ServerType_Talker];
@@ -56,11 +56,51 @@ static MTalkerClient *_instance;
 
 #pragma mark - 登录控制
 -(void)login:(MTLoginInfo *)loginInfo finishBlock:(void(^)(BOOL loginSuccess))bolck{
-    NSDictionary * loginParams = [loginInfo joinSubModels];
-    [self.client login:loginParams];
+    if (self.tkStatus != ST_Default) {
+        return;
+    }
+    
+    _loginInfo = loginInfo;
+    
+    [self.ringer playRing];//开始铃声
+    
+    NSLog(@"开始连接调度！");
+    if ([self.talkerAddress.ip length]!=0&&self.talkerAddress.port!=0) {
+        NSLog(@"咨询连接,ip:%@,port:%ld,状态:%lu,%@",self.talkerAddress.ip,(long)self.talkerAddress.port,(unsigned long)self.tkStatus,_client);
+        if (self.csStatus != CS_Disconnected) {
+            return;
+        }
+        [self.client start:self.talkerAddress.ip port:self.talkerAddress.port];//连接命令台
+        _csStatus = CS_Connecting;
+        _tkStatus = ST_Wait;
+        if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
+            [self.delegate receiveCommand:command_login withInstance:nil withInfo:@"登录"];
+        }
+        NSMutableDictionary *params = [NSMutableDictionary new];
+        [params setObject:[NSNumber numberWithInteger:command_login] forKey:@"command"];
+        
+        [[NSNotificationCenter defaultCenter]postNotificationName:MT_NOTIC_COMMAND object:params];
+    }else{
+        bolck(NO);
+    }
+
+    
 }
 -(void)logout{
+    if (self.tkStatus == ST_Default) {
+        return;
+    }
     
+    [self.ringer stopRing];
+    
+    [self stopTalk];
+    
+    if (self.talkTime>0) {
+        if (self.info==nil) {
+            NSLog(@"“音视频咨询数据统计”为空");
+            return;
+        }
+    }
 }
 
 #pragma mark -咨询控制
@@ -108,6 +148,7 @@ static MTalkerClient *_instance;
     if(_client.businessId!=0){
         [_client endBusiness:0];
     }
+    
     if(_client.logined){
         [_client logout];
     }
@@ -120,14 +161,55 @@ static MTalkerClient *_instance;
     self.talkTime = _lastTalkTime - _startTalkTime;
     _startTalkTime = 0;
     _lastTalkTime = 0;
+    if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
+        [self.delegate receiveCommand:command_logout withInstance:nil withInfo:@"退出"];
+    }
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    [params setObject:[NSNumber numberWithInteger:command_logout] forKey:@"command"];
     
+    [[NSNotificationCenter defaultCenter]postNotificationName:MT_NOTIC_COMMAND object:params];
 }
 
 #pragma mark - 音视频控制
 -(void)startVideoWithEncoderView:(UIView *)encoderView DecoderView:(UIView *)decoderView{
+    if (encoderView) {
+        self.setting.encodeView = encoderView;
+    }
+    if (decoderView) {
+        self.setting.decodeView = decoderView;
+    }
     
+    if (self.tkStatus != ST_Talking) {
+        return;
+    }
+    
+    FTAVControlParam * param = [[FTAVControlParam alloc]init];
+    param.video = YES;
+    param.screenHeight = self.setting.decodeView.frame.size.height;
+    param.screenWidth =self.setting.decodeView.frame.size.width;
+    if (param.screenHeight==0) {
+        param.screenHeight=560;
+    }
+    if (param.screenWidth==0) {
+        param.screenHeight=320;
+    }
+    [self.client avControl:param];
+    [self.talker openVideo: self.setting.encodeView
+encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
+           decoderView:self.setting.decodeView];
+    _isVideo = YES;
 }
--(void)changeVideo{
+
+-(void)stopVideo{
+    if (self.tkStatus != ST_Talking) {
+        return;
+    }
+    
+    FTAVControlParam * param = [[FTAVControlParam alloc]init];
+    param.video = NO;
+    [_client avControl:param];
+    [_talker closeVideo];
+    _isVideo = NO;
     
 }
 
@@ -153,7 +235,7 @@ static MTalkerClient *_instance;
     }
 }
 
-#pragma mark - Getter
+#pragma mark - Getter or Setter
 
 //获取语音或视频调试信息
 -(void)getTalkInfo{
@@ -210,11 +292,127 @@ static MTalkerClient *_instance;
     }
     return _talkTime;
 }
+-(void)setAvType:(AudioType)avType{
+    _avType = avType;
+    switch (_avType) {
+        case AV_Normal:{
+            [self.talker setMuteMic:YES];
+            [self.talker setMutePlayer:YES];
+        }
+            break;
+        case AV_Mute:{
+            [self.talker setMuteMic:NO];
+            [self.talker setMutePlayer:YES];
+        }
+            break;
+        case AV_Silent:{
+            [self.talker setMuteMic:YES];
+            [self.talker setMutePlayer:NO];
+        }
+            break;
+        case AV_Silent|AV_Mute:{
+            [self.talker setMuteMic:NO];
+            [self.talker setMutePlayer:NO];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+-(void)setIsVideo:(BOOL)isVideo{
+    _isVideo = isVideo;
+    if (_isVideo) {
+        [self startVideoWithEncoderView:nil DecoderView:nil];
+    }else{
+        [self stopVideo];
+    }
+}
+
+-(BOOL)isRing{
+    return self.ringer.isRing;
+}
+#pragma mark - 发送数据
+//发送图片路径到医生端
+-(void)sendImage:(NSString *)imageUrl{
+    if (imageUrl) {
+        [self.client sendImage:imageUrl];
+    }
+}
+
+//发送药店地位数据
+-(void)sendCoordinateInfo:(MTPharmacy *)info {
+    NSLog(@"定位信息：");
+    NSLog(@"定位信息_经纬度:{%f,%f}",info.latitude,info.longitude);
+    if (info.latitude !=0 && info.longitude!=0) {
+        [self.client sendCoordinate:info.longitude latitude:info.latitude address:info.address chainId:info.chainId];
+    }
+}
+
+#pragma mark -药品信息
+- (void) deserializeRecommend:(FTRecommendDrug*)recommend{
+    if(recommend.drugInfos.count==0)
+        return;
+    //更新药店数据
+    if(!_loginInfo.pharmacy){
+        _loginInfo.pharmacy = [[MTPharmacy alloc]init];
+    }
+    _loginInfo.pharmacy.storeId=recommend.storeId;
+    _loginInfo.pharmacy.name=recommend.name;
+    _loginInfo.pharmacy.longitude=recommend.longitude;
+    _loginInfo.pharmacy.latitude=recommend.latitude;
+    _loginInfo.pharmacy.address=recommend.address;
+    double postage=recommend.postage; //获取邮费
+    
+    NSMutableArray *pushDrugss=[NSMutableArray array];
+    for(int i = 0 ; i < recommend.drugInfos.count;i++){
+        
+        MTDrug *drogToBy = [[MTDrug alloc]init];
+        FTDrugInfo *drug=recommend.drugInfos[i];
+        
+        drogToBy.onsellId=drug.onsellId;
+        drogToBy.drugName=drug.drugName;
+        drogToBy.dosage=drug.dosage;
+        drogToBy.company=drug.company;
+        drogToBy.drugNum=drug.drugNum;
+        drogToBy.pic=drug.pic;
+        drogToBy.price=drug.price;
+        drogToBy.type=drug.type;
+        drogToBy.packing=drug.packing;
+        drogToBy.isTax = drug.isTax;
+        [pushDrugss addObject:drogToBy];
+    }
+   _drugs=pushDrugss;//配送药品
+    
+    if ([self.delegate respondsToSelector:@selector(receiveDrugs:withPharmacy:withPostage:)]) {
+        [self.delegate receiveDrugs:_drugs withPharmacy:_loginInfo.pharmacy withPostage:postage];
+    }
+    
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    [params setObject:_drugs forKey:@"drugs"];
+    [params setObject:[NSNumber numberWithDouble:postage] forKey:@"postage"];
+    [params setObject:_loginInfo.pharmacy forKey:@"pharmacy"];
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:MT_NOTIC_DRUGS object:params];
+}
+-(NSString *)serializeRecommand{
+    if ([_drugs count]==0) {
+        return nil;
+    }
+    NSString *temp=[[NSString alloc]init];
+    for (MTDrug *drug in _drugs) {
+        temp=[temp stringByAppendingString:[NSString stringWithFormat:@"%@ (%ld)\n",drug.drugName,(long)drug.drugNum]];
+    }
+    return temp;
+}
 
 #pragma mark - FTCommandClientDelegate
+//收到命令
 -(void) onCommand:(int)command intValue:(int)intValue stringValue:(NSString*)stringValue jsonValue:(id<FTJsonSerializable>)jsonValue{
     
     if (_tkStatus == ST_Default) {//咨询结束
+        NSLog(@"咨询状态结束");
         return;
     }
     
@@ -227,13 +425,13 @@ static MTalkerClient *_instance;
         }
             break;
         case FT_PROTO_HEARTBEAT:{ //维持心跳
+            _recvHeartTime = [[NSDate date] timeIntervalSince1970];
             
+            _lastTalkTime =  [[NSDate date] timeIntervalSince1970]*1000;
+            _talkTime = _lastTalkTime - _startTalkTime;
         }
             break;
-        case FT_PROTO_LOGOUT:{ //登出
-            
-        }
-            break;
+        case FT_PROTO_LOGOUT://登出
         case FT_PROTO_END_BUSINESS:
         case FT_PROTO_LEAVE:
         case FT_PROTO_MATCHER_OFFLINE:
@@ -244,48 +442,92 @@ static MTalkerClient *_instance;
                                     //FT_PROTO_MATCHER_OFFLINE
                                     //FT_PROTO_MATCH_FAILURE*/
             
-            
+             [self stopTalk];
         }
             break;
         case FT_PROTO_MATCH_WAIT:{ //等待匹配医生
+             NSLog(@TAG"%@",[NSString stringWithFormat:@"您排在第%d位",intValue]);
+            if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
+                [self.delegate receiveCommand:command_talking withInstance:[NSString stringWithFormat:@"%d",intValue] withInfo:@"排在第几位"];
+            }
             
+            NSMutableDictionary *params = [NSMutableDictionary new];
+            [params setObject:[NSNumber numberWithInt:intValue] forKey:@"rank"];
+            [params setObject:[NSNumber numberWithInteger:command_waiting] forKey:@"command"];
+            
+            [[NSNotificationCenter defaultCenter]postNotificationName:MT_NOTIC_COMMAND object:params];
         }
             break;
         case FT_PROTO_MATCH_SUCCESS:{ //匹配医生成功
+              NSLog(@TAG"匹配医生成功，医生账号:%@",stringValue);
+            if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
+                [self.delegate receiveCommand:command_match withInstance:stringValue withInfo:@"医生账号"];
+            }
+            NSMutableDictionary *params = [NSMutableDictionary new];
+            [params setObject:stringValue forKey:@"doctorAccount"];
+            [params setObject:[NSNumber numberWithInteger:command_match] forKey:@"command"];
             
+            [[NSNotificationCenter defaultCenter]postNotificationName:MT_NOTIC_COMMAND object:params];
         }
             break;
         case FT_PROTO_AV_START:{ //开始咨询
+            NSLog(@TAG"咨询开始，数据库业务id:%@",stringValue);
+            _loginInfo.busiId=[NSString stringWithFormat:@"%@",stringValue];
+            [self startTalk];
             
+            if (self.loginInfo.pharmacy) {
+                [self sendCoordinateInfo:self.loginInfo.pharmacy];
+            }
+            if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
+                [self.delegate receiveCommand:command_talking withInstance:stringValue withInfo:@"本次咨询的业务id"];
+            }
+            NSMutableDictionary *params = [NSMutableDictionary new];
+            [params setObject:stringValue forKey:@"busiId"];
+            [params setObject:[NSNumber numberWithInteger:command_talking] forKey:@"command"];
+            
+            [[NSNotificationCenter defaultCenter]postNotificationName:MT_NOTIC_COMMAND object:params];
         }
             break;
         case FT_PROTO_PUSH_DRUG:{ //推荐药品
-            
+            NSLog(@TAG"收到推荐药品");
+            FTRecommendDrug *drugsInfo=(FTRecommendDrug *)jsonValue;
+            [self deserializeRecommend:drugsInfo];
+           
         }
             break;
         default:
             break;
     }
 }
+
+//连接状态
 -(void) onStatus:(int)status{
+    
+    if(self.tkStatus == ST_Default)
+    {
+        NSLog(@"咨询已结束");
+        return;
+    }
+    
     switch (status) {
         case TCP_STATUS_CONNECT_SUCCESS:{
-            
+            NSLog(@TAG"TCP连接成功");
+            [self.client login:[self.loginInfo joinSubModels]];
+            _csStatus = CS_Connect_Success;
         }
             break;
-        case TCP_STATUS_CONNECT_FAIL:{
-            
-        }
-            break;
+        case TCP_STATUS_CONNECT_FAIL:
         case TCP_STATUS_DISCONNECTED:{
-            
+            _csStatus = CS_Disconnected;
         }
             break;
-            
         default:
             break;
     }
+    
+    NSLog(@"TCP连接:%d",status);
 }
+
 @end
 
 @implementation TalkInfo

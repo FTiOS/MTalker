@@ -38,8 +38,11 @@ Pod::Spec.new do |s|
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+    s.frameworks = 'UIKit','Photos'
 
     s.dependency 'Masonry', '~> 1.0.2'
+    s.dependency 'Reachability', '~> 3.2'
+    s.dependency 'SDWebImage', '~> 4.0.0-beta2'
+    s.dependency 'Aspects', '~>  1.4.1'
 
 end

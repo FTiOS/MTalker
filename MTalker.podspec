@@ -29,7 +29,6 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, "8.0"
-  s.ios.deployment_target = '8.0'
 
   s.source_files = 'MTalker/Classes/**/*.h'
   s.public_header_files = "MTalker/Classes/**/*.h"
@@ -41,7 +40,7 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+    s.frameworks = 'UIKit', 'AudioToolbox','AVFoundation'
 
     s.dependency 'MJExtension', '~> 3.0.13'
     s.dependency 'OpenUDID', '~> 1.0.0'

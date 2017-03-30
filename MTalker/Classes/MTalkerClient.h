@@ -39,7 +39,6 @@ typedef NS_ENUM(NSUInteger,ConnectStatus) {
     CS_Disconnected = 0 ,//连接断开
     CS_Connecting       ,//连接中
     CS_Connect_Success  ,//连接成功
-    CS_Connect_Fail     ,//连接失败
 };
 
 @class TalkInfo;//咨询调试的信息
@@ -69,8 +68,9 @@ typedef NS_ENUM(NSUInteger,ConnectStatus) {
 
 -(void)startVideoWithEncoderView:(UIView *)encoderView DecoderView:(UIView *)decoderView;//初次打开视频，需要初始化
 -(void)changeVideo;//切换视频位置
+-(void)stopVideo;
 
-//-(void)sendImage:(ALAsset *)asset;
+-(void)sendImage:(NSString *)imageUrl;
 
 @end
 

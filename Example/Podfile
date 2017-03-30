@@ -1,4 +1,4 @@
-#use_frameworks!
+use_frameworks!
 
 source 'https://github.com/rRun/xy_podSepcs.git'
 source 'https://github.com/CocoaPods/Specs.git'
@@ -8,6 +8,9 @@ workspace 'MTalker.xcworkspace'
 target 'EasyUI' do
     pod 'MTalker', :path => '../'
     pod 'Masonry', '~> 1.0.2'
+    pod 'Reachability', '~> 3.2'
+    pod 'SDWebImage', '~> 4.0.0-beta2'
+    pod 'Aspects', '~> 1.4.1'
     
     project 'EasyUI/EasyUI.xcodeproj'
 end

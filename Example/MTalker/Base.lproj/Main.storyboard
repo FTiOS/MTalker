@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,14 +18,96 @@
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLk-qr-3tN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiB-6P-KZZ">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="125"/>
+                                        <color key="backgroundColor" red="1" green="0.58039215690000001" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="JE4-Qm-KbV"/>
+                                            <constraint firstAttribute="height" constant="125" id="fbM-lT-Dqv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.75686274509999996" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="uiB-6P-KZZ" firstAttribute="top" secondItem="WLk-qr-3tN" secondAttribute="top" id="FKt-oy-X6J"/>
+                                    <constraint firstAttribute="trailing" secondItem="uiB-6P-KZZ" secondAttribute="trailing" id="IdP-7j-4bf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xse-nz-SHH">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNh-GF-hQR">
+                                        <rect key="frame" x="28" y="12" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="静音"/>
+                                        <connections>
+                                            <action selector="mute:" destination="whP-gf-Uak" eventType="touchUpInside" id="zh1-to-2Rf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FER-ce-uAi">
+                                        <rect key="frame" x="156" y="10" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="上传图片"/>
+                                        <connections>
+                                            <action selector="picture:" destination="whP-gf-Uak" eventType="touchUpInside" id="IHT-ce-Qx3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaH-x4-YIg">
+                                        <rect key="frame" x="290" y="12" width="77" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="音频／视频"/>
+                                        <connections>
+                                            <action selector="video:" destination="whP-gf-Uak" eventType="touchUpInside" id="STF-tL-xbz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFN-ZU-tpj">
+                                        <rect key="frame" x="12" y="50" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="开始咨询"/>
+                                        <connections>
+                                            <action selector="start:" destination="whP-gf-Uak" eventType="touchUpInside" id="o8z-ef-7U2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uz-Y0-JAf">
+                                        <rect key="frame" x="156" y="50" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="结束咨询"/>
+                                        <connections>
+                                            <action selector="end:" destination="whP-gf-Uak" eventType="touchUpInside" id="8rs-Nn-Y06"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0r2-fD-OgN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WLk-qr-3tN" firstAttribute="top" secondItem="TpU-gO-2f1" secondAttribute="top" id="4Js-I7-ggU"/>
+                            <constraint firstAttribute="trailing" secondItem="Xse-nz-SHH" secondAttribute="trailing" id="DAE-XA-tnK"/>
+                            <constraint firstItem="WLk-qr-3tN" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="EGp-Vi-U4i"/>
+                            <constraint firstItem="Xse-nz-SHH" firstAttribute="top" secondItem="WLk-qr-3tN" secondAttribute="bottom" id="Yk5-Wc-2S0"/>
+                            <constraint firstAttribute="trailing" secondItem="WLk-qr-3tN" secondAttribute="trailing" id="qfR-pw-Bym"/>
+                            <constraint firstAttribute="bottom" secondItem="Xse-nz-SHH" secondAttribute="bottom" id="xby-L8-zzz"/>
+                            <constraint firstItem="Xse-nz-SHH" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="yex-cq-JKL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="decodeView" destination="WLk-qr-3tN" id="kbr-7p-oNY"/>
+                        <outlet property="encodeView" destination="uiB-6P-KZZ" id="X5f-05-3Om"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
 </document>

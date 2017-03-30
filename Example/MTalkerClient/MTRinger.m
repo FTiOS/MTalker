@@ -20,13 +20,15 @@
     self.basePlayer.numberOfLoops = -1;//设置音乐播放次数 -1为一直循环
     
     [self.basePlayer play]; //播放
+    
+    _isRing = YES;
 }
 
 //停止铃声
 -(void)stopRing{
 
     [self.basePlayer stop];
-
+    _isRing = NO;
 }
 
 //震动

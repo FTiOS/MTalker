@@ -82,3 +82,18 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking-iOS8.0/AFNetworking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KeychainItemWrapper-iOS8.0/KeychainItemWrapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/MJExtension-iOS8.0/MJExtension.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OpenUDID-iOS8.0/OpenUDID.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/XY_NetWorkClient-iOS8.0/XY_NetWorkClient.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking-iOS8.0/AFNetworking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KeychainItemWrapper-iOS8.0/KeychainItemWrapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/MJExtension-iOS8.0/MJExtension.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OpenUDID-iOS8.0/OpenUDID.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/XY_NetWorkClient-iOS8.0/XY_NetWorkClient.framework"
+fi

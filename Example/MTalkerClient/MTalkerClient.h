@@ -13,6 +13,7 @@
 #import "MTTalkInfo.h"
 #import "MTLoginInfo.h"
 #import "MTTalkerSetting.h"
+#import "MTDrug.h"
 
 #import "MTTalkerCommandDelegate.h"
 
@@ -39,7 +40,6 @@ typedef NS_ENUM(NSUInteger,ConnectStatus) {
     CS_Disconnected = 0 ,//连接断开
     CS_Connecting       ,//连接中
     CS_Connect_Success  ,//连接成功
-    CS_Connect_Fail     ,//连接失败
 };
 
 @class TalkInfo;//咨询调试的信息
@@ -48,7 +48,7 @@ typedef NS_ENUM(NSUInteger,ConnectStatus) {
 
 @property (nonatomic,assign) BOOL         isVideo;   //是否视频
 @property (nonatomic,assign) AudioType    avType;    //音频类型 @1
-@property (nonatomic,assign) BOOL         isRing;    //是否Ring
+@property (nonatomic,assign,readonly) BOOL         isRing;    //是否Ring
 @property (nonatomic,assign) BOOL         isVibrate; //是否震动
 
 @property (nonatomic,assign,readonly) TalkerStatus tkStatus;  //咨询状态 @2
@@ -56,10 +56,13 @@ typedef NS_ENUM(NSUInteger,ConnectStatus) {
 
 @property (nonatomic,strong)id<MTTalkerCommandDelegate> delegate;//回调，处理咨询状态
 
-@property(nonatomic,strong)MTRinger *ringer;//铃声|震动控制器
+@property (nonatomic,strong)MTRinger *ringer;//铃声|震动控制器
 
-@property(nonatomic,strong,readonly)TalkInfo *info;//通讯的调试数据
-@property(nonatomic,assign)NSTimeInterval talkTime;//通话时长
+@property (nonatomic,strong,readonly)MTLoginInfo *loginInfo;//登录信息
+@property (nonatomic,strong,readonly)TalkInfo *info;//通讯的调试数据
+@property (nonatomic,assign)NSTimeInterval talkTime;//通话时长
+
+@property (nonatomic,strong,readonly)NSArray<MTDrug *>* drugs;//推荐的药品
 
 +(instancetype)shareTalker;
 -(void)loadSettings:(MTTalkerSetting *)setting;
@@ -68,9 +71,10 @@ typedef NS_ENUM(NSUInteger,ConnectStatus) {
 -(void)logout;
 
 -(void)startVideoWithEncoderView:(UIView *)encoderView DecoderView:(UIView *)decoderView;//初次打开视频，需要初始化
--(void)changeVideo;//切换视频位置
+//-(void)changeVideo;//切换视频位置
+-(void)stopVideo;
 
-//-(void)sendImage:(ALAsset *)asset;
+-(void)sendImage:(NSString *)imageUrl;
 
 @end
 

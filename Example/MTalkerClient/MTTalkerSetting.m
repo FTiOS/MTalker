@@ -45,16 +45,11 @@
 }
 
 #pragma mark - 服务器地址
--(NSString *)ip{
-    if (!_ip) {
-        _ip = @"xxxxxx.xxxx.com";
+-(NSString *)api{
+    if (!_api) {
+        _api = @"xxxxxx.xxxx.com";
     }
-    return _ip;
+    return _api;
 }
--(int)port{
-    if (_port == 0) {
-        _port = 80;
-    }
-    return _port;
-}
+
 @end

@@ -82,3 +82,26 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking-iOS10.2/AFNetworking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Aspects/Aspects.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KeychainItemWrapper-iOS10.2/KeychainItemWrapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/MJExtension-iOS10.2/MJExtension.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Masonry/Masonry.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OpenUDID-iOS10.2/OpenUDID.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Reachability/Reachability.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/XY_NetWorkClient-iOS10.2/XY_NetWorkClient.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/AFNetworking-iOS10.2/AFNetworking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Aspects/Aspects.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/KeychainItemWrapper-iOS10.2/KeychainItemWrapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/MJExtension-iOS10.2/MJExtension.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Masonry/Masonry.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OpenUDID-iOS10.2/OpenUDID.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Reachability/Reachability.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/XY_NetWorkClient-iOS10.2/XY_NetWorkClient.framework"
+fi

@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FTCommandClient/FTCommandClient.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:EasyUI/EasyUI.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MTalker.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FTCommandClient/FTCommandClient.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

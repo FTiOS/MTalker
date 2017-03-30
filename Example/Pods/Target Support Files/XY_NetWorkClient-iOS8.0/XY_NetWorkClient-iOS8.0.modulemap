@@ -1,0 +1,6 @@
+framework module XY_NetWorkClient {
+  umbrella header "XY_NetWorkClient-iOS8.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

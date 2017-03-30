@@ -1,0 +1,6 @@
+framework module KeychainItemWrapper {
+  umbrella header "KeychainItemWrapper-iOS10.2-umbrella.h"
+
+  export *
+  module * { export * }
+}

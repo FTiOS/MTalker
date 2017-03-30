@@ -14,6 +14,8 @@
 @property (nonatomic,strong)NSString *ringPath;
 @property (nonatomic,strong)AVAudioPlayer *basePlayer;
 
+@property (nonatomic,assign,readonly)BOOL isRing;
+
 //开始铃声
 -(void)playRing;
 //停止铃声
