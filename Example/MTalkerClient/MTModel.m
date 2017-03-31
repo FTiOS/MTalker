@@ -10,4 +10,17 @@
 
 @implementation MTModel
 
++(NSDictionary *)joinSubModel:(MTModel *)model{
+    NSDictionary * temp = model.mj_keyValues;
+    NSMutableDictionary *result = [NSMutableDictionary new];
+    for (NSString *key in temp.allKeys) {
+        id value = [temp objectForKey:key];
+        if ([value isKindOfClass:[NSDictionary class]]) {
+            [result addEntriesFromDictionary:value];
+        }else
+            [result setObject:value forKey:key];
+    }
+    return result;
+}
+
 @end

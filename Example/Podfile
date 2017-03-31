@@ -27,7 +27,7 @@ target 'MTalkerClient' do
     pod 'KeychainItemWrapper', '~> 0.0.1'
     
     pod 'ftcodec', '~> 1.1.0.307'
-    pod 'XY_NetWorkClient', '~> 1.0.1'
+    pod 'XY_NetWorkClient', '~> 1.0.4'
     
 end
 

@@ -97,10 +97,6 @@ misrepresented as being the original software.
 distribution.
 
 
-## XY_NetWorkClient
-
-Copyright jpush.cn
-
 ## ftcodec
 
 Copyright 2017 Fortis Inc.

@@ -101,7 +101,7 @@
                                          accessGroup:nil];
     NSString *strUUID = [keychainItem objectForKey:(__bridge id)kSecValueData];
     
-    if ([strUUID isEqualToString:@""]||strUUID==nil)
+    if (![strUUID isKindOfClass:[NSString class]]||strUUID==nil)
     {
         NSError *error=nil;
         NSString *udid=[OpenUDID valueWithError:&error];

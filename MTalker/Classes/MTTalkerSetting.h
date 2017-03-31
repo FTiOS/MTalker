@@ -20,8 +20,7 @@
 @property(nonatomic,assign)  int channels;
 @property(nonatomic,assign)  int audioBitRate;
 
-@property(nonatomic,strong,nullable)  NSString     *ip   ;//获取调度服务和udp地址的api地址
-@property(nonatomic,assign)           int          port  ;//获取调度服务和udp地址的api端口
+@property(nonatomic,strong,nullable)  NSString     *api   ;//获取调度服务和udp地址的api地址
 @property (nonatomic,strong,nullable)          NSDictionary *parmas;//获取调度服务地址的参数
 
 

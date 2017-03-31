@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger,ServerAddressType) {
 @property (nonatomic,strong)NSString  *remark     ;//备注
 @property (nonatomic,strong)NSString  *ip         ;//ip
 @property (nonatomic,strong)NSString  *domain     ;//域名
-@property (nonatomic,assign)NSInteger port        ;//端口
+@property (nonatomic,assign)int port        ;//端口
 
 @property (nonatomic,assign)ServerAddressType type;//地址类型 @1
 

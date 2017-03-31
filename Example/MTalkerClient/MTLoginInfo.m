@@ -19,10 +19,9 @@
     }
     return self;
 }
-
--(NSDictionary *)joinSubModels{
-    NSMutableDictionary *result = [NSMutableDictionary new];
+-(NSDictionary *)joinSubModel{
     NSDictionary * temp = self.mj_keyValues;
+    NSMutableDictionary *result = [NSMutableDictionary new];
     for (NSString *key in temp.allKeys) {
         id value = [temp objectForKey:key];
         if ([value isKindOfClass:[NSDictionary class]]) {
@@ -32,11 +31,11 @@
     }
     return result;
 }
-
 +(instancetype)simpleLogin:(NSString *)doctor User:(NSString *)user{
     MTLoginInfo *info  = [[MTLoginInfo alloc]init];
-    info.doctor.druggistId = doctor;
+    info.doctor.doctorAccount = doctor;
     info.user.account = user;
+    info.strategy = POINT_DOCTOR;
     
     return info;
 }

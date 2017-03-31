@@ -13,8 +13,7 @@
 
 @property (nonatomic,strong)NSString *ringPath;
 @property (nonatomic,strong)AVAudioPlayer *basePlayer;
-
-@property (nonatomic,assign,readonly)BOOL isRing;
+@property (nonatomic,assign,readonly) BOOL isRing;    //是否Ring
 
 //开始铃声
 -(void)playRing;

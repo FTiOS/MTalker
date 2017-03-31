@@ -63,6 +63,10 @@ static MTalkerClient *_instance;
     _loginInfo = loginInfo;
     
     [self.ringer playRing];//开始铃声
+    //test
+    self.talkerAddress = [[MTServerAddress alloc]init];
+    self.talkerAddress.ip = @"114.215.253.88";
+    self.talkerAddress.port = 25000;
     
     NSLog(@"开始连接调度！");
     if ([self.talkerAddress.ip length]!=0&&self.talkerAddress.port!=0) {
@@ -115,10 +119,10 @@ static MTalkerClient *_instance;
     param.video = NO;
     
     [_client avControl:param];
-    [_talker openAudio:YES];
+    [self.talker openAudio:YES];
     _isVideo = NO;
 
-    [_talker startProxyStream:_client.proxyServerIp port:_client.proxyServerPort clientId:_client.businessId];
+    [self.talker startProxyStream:_client.proxyServerIp port:_client.proxyServerPort clientId:_client.businessId];
     NSLog(@"end startProxyStream");
     _tkStatus = ST_Talking;
     
@@ -156,6 +160,7 @@ static MTalkerClient *_instance;
     [_client stop];
     
     _tkStatus = ST_Default;
+    _csStatus = CS_Disconnected;
     
     //初始化通话时长
     self.talkTime = _lastTalkTime - _startTalkTime;
@@ -241,20 +246,20 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
 -(void)getTalkInfo{
     
     NSLog(@TAG"ar:%d,as:%d,vr:%d,vs:%d",
-          _talker.audioLastRecvSize,
-          _talker.audioLastSendSize,
-          _talker.videoLastRecvSize,
-          _talker.videoLastSendSize);
+          self.talker.audioLastRecvSize,
+          self.talker.audioLastSendSize,
+          self.talker.videoLastRecvSize,
+          self.talker.videoLastSendSize);
     
-    self.info.audioSendPackCount=_talker.audioSendPackCount;
-    self.info.audioSendDataSize=_talker.audioSendDataSize;
-    self.info.audioRecvPackCount=_talker.audioRecvPackCount;
-    self.info.audioRecvDataSize=_talker.audioRecvDataSize;
+    self.info.audioSendPackCount=self.talker.audioSendPackCount;
+    self.info.audioSendDataSize=self.talker.audioSendDataSize;
+    self.info.audioRecvPackCount=self.talker.audioRecvPackCount;
+    self.info.audioRecvDataSize=self.talker.audioRecvDataSize;
     
-    self.info.videoSendPackCount=_talker.videoSendPackCount;
-    self.info.videoSendDataSize=_talker.videoSendDataSize;
-    self.info.videoRecvPackCount=_talker.videoRecvPackCount;
-    self.info.videoRecvDataSize=_talker.videoRecvDataSize;
+    self.info.videoSendPackCount=self.talker.videoSendPackCount;
+    self.info.videoSendDataSize=self.talker.videoSendDataSize;
+    self.info.videoRecvPackCount=self.talker.videoRecvPackCount;
+    self.info.videoRecvDataSize=self.talker.videoRecvDataSize;
 }
 
 -(FTCommandClient *)client{
@@ -296,23 +301,23 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
     _avType = avType;
     switch (_avType) {
         case AV_Normal:{
-            [self.talker setMuteMic:YES];
-            [self.talker setMutePlayer:YES];
+            [self.talker setMuteMic:NO];
+            [self.talker setMutePlayer:NO];
         }
             break;
         case AV_Mute:{
-            [self.talker setMuteMic:NO];
-            [self.talker setMutePlayer:YES];
-        }
-            break;
-        case AV_Silent:{
             [self.talker setMuteMic:YES];
             [self.talker setMutePlayer:NO];
         }
             break;
-        case AV_Silent|AV_Mute:{
+        case AV_Silent:{
             [self.talker setMuteMic:NO];
-            [self.talker setMutePlayer:NO];
+            [self.talker setMutePlayer:YES];
+        }
+            break;
+        case AV_Silent|AV_Mute:{
+            [self.talker setMuteMic:YES];
+            [self.talker setMutePlayer:YES];
         }
             break;
             
@@ -512,13 +517,14 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
     switch (status) {
         case TCP_STATUS_CONNECT_SUCCESS:{
             NSLog(@TAG"TCP连接成功");
-            [self.client login:[self.loginInfo joinSubModels]];
+            [self.client login:[self.loginInfo joinSubModel]];
             _csStatus = CS_Connect_Success;
         }
             break;
         case TCP_STATUS_CONNECT_FAIL:
         case TCP_STATUS_DISCONNECTED:{
             _csStatus = CS_Disconnected;
+            [self stopTalk];
         }
             break;
         default:

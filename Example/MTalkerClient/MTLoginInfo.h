@@ -13,10 +13,19 @@
 #import "MTDevice.h"
 #import "MTPharmacy.h"
 
+typedef NS_ENUM(NSInteger,STRATEGY_TYPE){
+    RANDOM_ALL=0,//随机分配
+    RANDOM_DOCTOR,//随机分配医生
+    RANDOM_PHARMACEUTIST,//随机分配药师
+    POINT_DOCTOR,//指定医生
+    POINT_PHARMACEUTIST,//指定药师
+};
+
 //登陆信息
 @interface MTLoginInfo : MTModel
 
 @property (nonatomic,strong) NSString * busiId;//业务id,初始化无值,咨询成功,系统自动匹配
+@property (nonatomic,assign) STRATEGY_TYPE strategy;//服务类型
 
 @property (nonatomic,strong) MTDevice *device;//设备数据
 @property (nonatomic,strong) MTUser *user;//用户数据
@@ -26,6 +35,6 @@
 //简单登录
 +(instancetype)simpleLogin:(NSString *)doctor User:(NSString *)user;
 
--(NSDictionary *)joinSubModels;
+-(NSDictionary *)joinSubModel;
 
 @end

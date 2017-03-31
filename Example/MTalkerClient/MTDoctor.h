@@ -12,7 +12,7 @@
 @interface MTDoctor : MTModel
 
 @property(nonatomic,strong) NSString *hospitalId;//医院id
-@property(nonatomic,strong) NSString *druggistId;//医生帐号
+@property(nonatomic,strong) NSString *doctorAccount;//医生帐号
 @property(nonatomic,assign) int doctorType;//医生类型
 
 @property(nonatomic,strong) NSString *avatar;//医生头像

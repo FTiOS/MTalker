@@ -11,4 +11,6 @@
 
 @interface MTModel : NSObject
 
++(NSDictionary *)joinSubModel:(MTModel *)model;
+
 @end

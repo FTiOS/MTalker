@@ -47,7 +47,7 @@
 #pragma mark - 服务器地址
 -(NSString *)api{
     if (!_api) {
-        _api = @"xxxxxx.xxxx.com";
+        _api = @"https://171.cdfortis.com:9443/appService/appTwo!getServerAddress2.action";
     }
     return _api;
 }

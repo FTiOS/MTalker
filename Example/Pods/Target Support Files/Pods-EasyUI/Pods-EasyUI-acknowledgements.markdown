@@ -204,10 +204,6 @@ THE SOFTWARE.
 
 
 
-## XY_NetWorkClient
-
-Copyright jpush.cn
-
 ## ftcodec
 
 Copyright 2017 Fortis Inc.

@@ -163,16 +163,6 @@ distribution.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright jpush.cn</string>
-			<key>License</key>
-			<string>Copyright</string>
-			<key>Title</key>
-			<string>XY_NetWorkClient</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>Copyright 2017 Fortis Inc.</string>
 			<key>License</key>
 			<string>Copyright</string>

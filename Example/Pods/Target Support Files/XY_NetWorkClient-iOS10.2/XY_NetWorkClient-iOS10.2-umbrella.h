@@ -9,6 +9,7 @@
 #import "NSDictionary+FTDictionary.h"
 #import "NSMutableArray+FTMutableArray.h"
 #import "NSMutableDictionary+FTMutableDictionary.h"
+#import "XY_NetworkClient.h"
 
 FOUNDATION_EXPORT double XY_NetWorkClientVersionNumber;
 FOUNDATION_EXPORT const unsigned char XY_NetWorkClientVersionString[];

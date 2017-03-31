@@ -60,22 +60,24 @@
    MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
     settings.decodeView = self.decodeView;
     settings.encodeView = self.encodeView;
-    settings.api = @"xxx";
-    settings.parmas = nil;
+    settings.api = @"https://9.cdfortis.com:8443/appService/appTwo!getServerAddress2.action";
+    settings.parmas = [NSDictionary dictionaryWithObjectsAndKeys:@"iOS",@"__os",@"2.17.5.0328",@"__ver",nil];
     settings.defaultVideo = YES;
     settings.keepTalkerType = YES;
     return settings;
-}
+} 
 #pragma mark - login
 -(MTLoginInfo *)simpleLogin{
-    return [MTLoginInfo simpleLogin:@"account" User:@"demo"];
+    return [MTLoginInfo simpleLogin:@"gaofen" User:@"18200115355"];
 }
 
 #pragma mark - MTTalkerCommandDelegate
 //command-命令，instance-传递的参数，info-参数的作用解释说明
 -(void)receiveCommand:(CommandType)command withInstance:(NSString *)instance withInfo:(NSString*)info{
+    NSLog(@"%@:%ld,%@",info,(long)command,instance);
 }
 //drugs-药品数据，pharmacy-药店数据,postage-邮费
 -(void)receiveDrugs:(NSArray<MTDrug *> *)drugs withPharmacy:(MTPharmacy *)pharmacy withPostage:(double)postage{
+    
 }
 @end

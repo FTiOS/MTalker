@@ -27,14 +27,17 @@
     if (_addresses) {
         block(_addresses,nil);
     }
+    [BaseRequestClient defaultClient].rightCode = 0;
+    [BaseRequestClient defaultClient].statusKey = @"resultCode";
+    [BaseRequestClient defaultClient].resultKey = @"result";
     
     [[BaseRequestClient defaultClient] jsonPostGlobal:self.api forParams:self.parmas successCall:^(NSDictionary *responseObject) {
         NSArray *temp = [MTServerAddress mj_objectArrayWithKeyValuesArray:[responseObject objectForKey:VauleKey]];
+        
         if (!_addresses && [temp count]>0) {
+            _addresses = temp;
             block(temp,nil);
         }
-        _addresses = temp;
-        
     } failedCall:^(NSError *error) {
         if (!_addresses) {
             block(nil,error);
