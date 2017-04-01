@@ -44,3 +44,5 @@ target 'ChatDemo' do
     
     project 'FTCommandClient/FTCommandClient.xcodeproj'
 end
+
+install! 'cocoapods', :deterministic_uuids => false

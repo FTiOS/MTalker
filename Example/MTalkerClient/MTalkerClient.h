@@ -65,9 +65,9 @@ typedef NS_ENUM(NSUInteger,ConnectStatus) {
 @property (nonatomic,strong,readonly)NSArray<MTDrug *>* drugs;//推荐的药品
 
 +(instancetype)shareTalker;
--(void)loadSettings:(MTTalkerSetting *)setting;
+-(void)loadSettings:(MTTalkerSetting *)setting finishBlock:(void(^)(BOOL loadSuccess))bolck;
 
--(void)login:(MTLoginInfo *)loginInfo finishBlock:(void(^)(BOOL loginSuccess))bolck;
+-(void)login:(MTLoginInfo *)loginInfo;
 -(void)logout;
 
 -(void)startVideoWithEncoderView:(UIView *)encoderView DecoderView:(UIView *)decoderView;//初次打开视频，需要初始化

@@ -22,6 +22,11 @@
   "public_header_files": "MTalker/Classes/**/*.h",
   "vendored_libraries": "MTalker/Assets/libMTalkerClient.a",
   "preserve_paths": "MTalker/Assets/libMTalkerClient.a",
+  "resource_bundles": {
+    "MTalker": [
+      "MTalker/Resources/*.*"
+    ]
+  },
   "frameworks": [
     "UIKit",
     "AudioToolbox",

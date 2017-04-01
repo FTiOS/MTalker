@@ -39,7 +39,8 @@
 #pragma mark - Getter
 -(NSString *)ringPath{
     if (!_ringPath) {
-        _ringPath = [[NSBundle mainBundle] pathForResource:@"3583" ofType:@"mp3"]; //创建音乐文件路径
+        
+        _ringPath = [[NSBundle bundleWithURL:[[NSBundle bundleForClass:[self class]] URLForResource:@"MTalker" withExtension:@"bundle"]] pathForResource:@"3583" ofType:@"mp3"]; //创建音乐文件路径
     }
     return _ringPath;
 }

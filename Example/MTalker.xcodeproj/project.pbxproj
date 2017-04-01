@@ -68,6 +68,7 @@
 		EAF797EF1E8903C200C19A27 /* MTTalkerSetting.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3A1E826AB100DDA4CF /* MTTalkerSetting.h */; };
 		EAF797F01E8903C800C19A27 /* MTModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A7B1E82141700DDA4CF /* MTModel.h */; };
 		EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3D1E8364D200DDA4CF /* MTTalkerCommandDelegate.h */; };
+		EAFCBB6A1E8F551300BAF337 /* MTDrug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7B2ABA1E8CF72600E4B630 /* MTDrug.h */; };
 		EBF0D2B42949F8006E998C06 /* Pods_MTalker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915B1A65D825A90342803AD5 /* Pods_MTalker_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				EAFCBB6A1E8F551300BAF337 /* MTDrug.h in CopyFiles */,
 				EA7802E81E8B5E5F00779DED /* MTAddressMonitor.h in CopyFiles */,
 				EA7802E71E8B5E5600779DED /* MTDoctor.h in CopyFiles */,
 				EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in CopyFiles */,

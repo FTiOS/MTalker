@@ -9,5 +9,10 @@
 #import "EasyUI.h"
 
 @implementation EasyUI
-
++(ConsultViewController *)consultView{
+    return [ConsultViewController instance];
+}
++(MTalkerClient *)talkerClient{
+    return [MTalkerClient shareTalker];
+}
 @end

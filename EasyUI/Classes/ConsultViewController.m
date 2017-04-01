@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     consult_doctor_leave = 10, //工作站医生离开
 };
 
-@interface ConsultViewController (){
+@interface ConsultViewController ()<MTTalkerCommandDelegate>{
     int _duration;
     NSString *displayPushDrugs;
     CGFloat _toolViewHeight;
@@ -141,8 +141,6 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     
     [self.view addSubview:self.tipView];
     self.tipView.alpha = 0.0f;
-    
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doHangUp:) name:NOT_SUPPORT_MIC_PERISS object:nil];
     
     [self handleBackgroundView];
 }
@@ -490,31 +488,13 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
 {
     if(!self.shareTalker){
         self.shareTalker=[MTalkerClient shareTalker];
+        self.shareTalker.delegate = self;
         
-        /*[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(doCallProcess:) name:CALLSTATUS object:nil];
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(doGetUser:) name:GETTEDDOCTORINFO object:nil];
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(uploadSomeAssets:) name:@"UploadImage" object:nil];
-        
-        self.shareTalker.others = self.others;
-        
-        NSString *tokenId = [UserCenter shareUserCenter].token;
-        if(tokenId.length == 0){
-            tokenId = @"";
-        }
-        [self.shareTalker login:self.consultType
-                        orderId:self.orderId
-                       originId:self.orignId
-                       strategy:self.medType
-                         doctor:self.doctorModel
-                     CreditCard:self.card
-                    WithChainId:[self.thirdPartInfo ft_stringForKey:@"chainId"]
-                        tokenId:tokenId
-                         apptId:self.apptId];
-    }
-    if (self.shareTalker.pushDrugs && self.shareTalker.pushDrugs.count > 0) {
-        [self.shareTalker.pushDrugs removeAllObjects];
-    }
-    [self.shareTalker playRing];*/
+        [self.shareTalker loadSettings:[self settings] finishBlock:^(BOOL loadSuccess) {
+            if (loadSuccess) {
+                [self.shareTalker login:[self loginInfo]];
+            }
+        }];
     }
 }
 
@@ -526,176 +506,111 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     }
 }
 
-#pragma mark - recive Notification 接收命令
-- (void)doCallProcess:(NSNotification *)noti
-{
-    /*NSDictionary *refDic=noti.object;
-    int command=[[refDic ft_numberForKey:@"command"]intValue];
-    int value=[[refDic ft_numberForKey:@"value"]intValue];
-    
-    if(command == FT_PROTO_MOBILE_LOGIN){
-        if(value!=0){
-            
-            //连接失败 停止定时器，隐藏按钮选择
-            if(self.timingTimer){
-                [self.timingTimer invalidate];
-                self.timingTimer = nil;
-            }
-            [self hideCallBorad];
-            [self setConsultStatus:consult_net_connect_fail];
-            
-        }else{
-            [self setConsultStatus:consult_user_connecting]; //连接中
-        }
-    }else if(command==FT_PROTO_HEARTBEAT){ //心跳
-        
-    }else if(command==FT_PROTO_LOGOUT){
-        
-        [self setConsultStatus:consult_end];
-        [self hideCallBorad];
-        //        if(self && [self respondsToSelector:@selector(delayToHangUp)]){
-        //            [self performSelector:@selector(delayToHangUp) withObject:nil afterDelay:0.3];
-        //        }
-        
-    }else if(command==FT_PROTO_DISCONNECT){
-        //在收到以下命令以后会马上收到该命令
-        //FT_PROTO_END_BUSINESS
-        //FT_PROTO_LEAVE
-        //FT_PROTO_MATCHER_OFFLINE
-        //FT_PROTO_MATCH_FAILURE
-        //        status=@"连接断开";
-        [self hideCallBorad];
-        
-        //5秒之前处理完其他显示
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self setConsultStatus:consult_net_connect_fail];
-            if(self && [self respondsToSelector:@selector(delayToHangUp)]){
-                [self performSelector:@selector(delayToHangUp) withObject:nil afterDelay:0];
-            }
-        });
-        
-    }else if(command==FT_PROTO_MATCH_WAIT){
-        
-        //排在第几位
-        inLineNumber = (NSInteger)value;
-        [self setConsultStatus:consult_doctor_busy];
-        
-    }else if(command==FT_PROTO_MATCH_SUCCESS){
-        //等待医生接听
-        [self setConsultStatus:consult_wating_doctor];
-        
-    }else if(command==FT_PROTO_MATCH_FAILURE){
-        if (self.medType==1||self.medType==3) {
-            [self setConsultStatus:consult_doctor_offline];
-        }else if(self.medType==2||self.medType==4){
-            //status = LOCALIZATION(@"CsultMedtiorOffline");
-            [self setConsultStatus:consult_doctor_offline];
-        }else{
-            //status= LOCALIZATION(@"CsultBeOffline");
-            [self setConsultStatus:consult_doctor_offline];
-        }
-    }else if(command==FT_PROTO_AV_START){
-        
-        [self.shareTalker stopRing];
-        self.doctor = [TalkEngine shareTalkEngine].doctor;
-        
-        //        [self.rippleView stopAnimating];
-        [self.rippleView startRippleEffec];
-        
-        [self showViewWithCanTalkStatus];
-        
-        if ([self getInitConsultType]) { //根据网段切换视频咨询
-            [self changeVideoOrNot:YES];
-        }
-        _isTalking=YES;
-        [self setConsultStatus:consult_do_no_opreation];
-        
-        if (self.timingTimer) {
-            [self.timingTimer invalidate];
-            self.timingTimer=nil;
-        }
-        self.timingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTiming) userInfo:nil repeats:YES];
-        
-    }else if(command==FT_PROTO_PUSH_DRUG){
-        
-        //        NSLog(@TAG"收到推荐药品");
-        self.pushDrugs=self.shareTalker.pushDrugs;
-        _deliveryInfo=self.shareTalker.deliveryInfo;
-        
-        NSInteger allCount=self.pushDrugs.count;
-        
-        NSString *temp=[[NSString alloc]init];
-        for (Drug *drug in _pushDrugs) {
-            temp=[temp stringByAppendingString:[NSString stringWithFormat:@"%@  (X%ld)\n",drug.drugName, (long)drug.drugNum]];
-        }
-        if ([temp length]>2) {
-            displayPushDrugs=[temp substringToIndex:temp.length-1];
-        }
-        else
-            displayPushDrugs=temp;
-        
-        [self setNumber:allCount];
-        
-        [self showOrHidePushDrugView:YES];
-        
-        
-        //    [self pushLocalTip];
-    }else if(command==FT_PROTO_END_BUSINESS){
-        
-        [self hideCallBorad];
-        //结束业务 包含错误码
-        if(value == 0){
-            [self setConsultStatus:consult_end]; //结束业务  0
-            if(self && [self respondsToSelector:@selector(delayToHangUp)]){
-                [self performSelector:@selector(delayToHangUp) withObject:nil afterDelay:0];
-            }
-        }if(value == 32){//医生端接入异常
-            [self setConsultStatus:consult_termination];
-        }if(value == 33){//医生没有接受您咨询
-            NSLog(@"收到 33 命令");
-            [self setConsultStatus:consult_doctor_refuse];
-        }
-    }else if(command==FT_PROTO_LEAVE){
-        
-        [self setConsultStatus:consult_doctor_leave];
-        if (self.medType==1||self.medType==3) {
-            
-        }else if(self.medType==2||self.medType==4){
-            
-        }else{
-            //对方不在线
-        }
-    }else if(command==FT_PROTO_MATCHER_OFFLINE){
-        
-        [self setConsultStatus:consult_doctor_offline];
-        //        if (self.medType==1||self.medType==3) {
-        //            status = LOCALIZATION(@"CsultDoctorOffline");
-        //        }else if(self.medType==2||self.medType==4){
-        //            status = LOCALIZATION(@"CsultMedtiorOffline");
-        //        }else{
-        //            status=LOCALIZATION(@"CsultBeOffline");
-        //        }
-    }else if(command==CONNECT_STATUS_CONNECT_FAIL){
-        
-        [self setConsultStatus:consult_net_connect_fail]; //连接失败
-        [self hideCallBorad];
-        
-    }else if(command==CONNECT_STATUS_DISCONNECTED){ //连接断开
-        
-        [self setConsultStatus:consult_termination];
-        [self hideCallBorad];
-        if(self && [self respondsToSelector:@selector(delayToHangUp)]){
-            [self performSelector:@selector(delayToHangUp) withObject:nil afterDelay:5];
-        }
-        
-    }else if(command==32){ //FT_PROTO_AV_ERROR 医生端接入异常
-        
-        [self setConsultStatus:consult_technical_problem];
-        [self hideCallBorad];
-    }*/
+#pragma mark - setting
+-(MTTalkerSetting *)settings{
+    MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
+    settings.decodeView = self.doctorView;
+    settings.encodeView = self.mySelfView;
+    settings.api = @"https://9.cdfortis.com:8443/appService/appTwo!getServerAddress2.action";
+    settings.parmas = [NSDictionary dictionaryWithObjectsAndKeys:@"iOS",@"__os",@"2.17.5.0328",@"__ver",nil];
+    settings.defaultVideo = YES;
+    settings.keepTalkerType = YES;
+    return settings;
 }
 
-
+#pragma mark - MTTalkerCommandDelegate
+//command-命令，instance-传递的参数，info-参数的作用解释说明
+-(void)receiveCommand:(CommandType)command withInstance:(NSString *)instance withInfo:(NSString*)info{
+    switch (command) {
+        case command_login:{
+             [self setConsultStatus:consult_user_connecting]; //连接中
+        }
+            break;
+        case command_waiting:{
+            //排在第几位
+            inLineNumber = [instance integerValue];
+            [self setConsultStatus:consult_doctor_busy];
+        }
+            break;
+        case command_match:{
+            //等待医生接听
+            [self setConsultStatus:consult_wating_doctor];
+        }
+            break;
+        case command_talking:{
+            
+            [self.rippleView startRippleEffec];
+            
+            [self showViewWithCanTalkStatus];
+            
+            if ([self getInitConsultType]) { //根据网段切换视频咨询
+                [self changeVideoOrNot:YES];
+            }
+            _isTalking=YES;
+            [self setConsultStatus:consult_do_no_opreation];
+            
+            if (self.timingTimer) {
+                [self.timingTimer invalidate];
+                self.timingTimer=nil;
+            }
+            self.timingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTiming) userInfo:nil repeats:YES];
+        }
+            break;
+        case command_logout:{
+            [self hideCallBorad];
+            
+            LogoutType logoutType = [instance integerValue];
+            switch (logoutType) {
+                case logout_normal:{
+                    [self setConsultStatus:consult_end];
+                }
+                    break;
+                case logout_disconnect:{
+                    //5秒之前处理完其他显示
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [self setConsultStatus:consult_net_connect_fail];
+                        if(self && [self respondsToSelector:@selector(delayToHangUp)]){
+                            [self performSelector:@selector(delayToHangUp) withObject:nil afterDelay:0];
+                        }
+                    });
+                }
+                    break;
+                case logout_matchfail:{
+                    [self setConsultStatus:consult_doctor_offline];
+                }
+                    break;
+                default:
+                    break;
+            }
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+//drugs-药品数据，pharmacy-药店数据,postage-邮费
+-(void)receiveDrugs:(NSArray<MTDrug *> *)drugs withPharmacy:(MTPharmacy *)pharmacy withPostage:(double)postage{
+    self.pushDrugs = [NSMutableArray arrayWithArray:drugs];
+    
+    NSInteger allCount=self.pushDrugs.count;
+    
+    NSString *temp=[[NSString alloc]init];
+    for (MTDrug *drug in self.pushDrugs) {
+        temp=[temp stringByAppendingString:[NSString stringWithFormat:@"%@  (X%ld)\n",drug.drugName, (long)drug.drugNum]];
+    }
+    if ([temp length]>2) {
+        displayPushDrugs=[temp substringToIndex:temp.length-1];
+    }
+    else
+        displayPushDrugs=temp;
+    
+    [self setNumber:allCount];
+    
+    [self showOrHidePushDrugView:YES];
+    
+}
 #pragma mark - 上传多张图片
 - (void)uploadSomeAssets:(NSNotification *)noti
 {

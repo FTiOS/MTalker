@@ -51,6 +51,8 @@
 		EA7B2AB61E8CB50700E4B630 /* UITextField+AddLine.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2AB51E8CB50700E4B630 /* UITextField+AddLine.m */; };
 		EA7B2AB91E8CB52200E4B630 /* UIColor+MyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2AB81E8CB52200E4B630 /* UIColor+MyUtils.m */; };
 		EA7D57501E8121CC0072B7AE /* EasyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D574F1E8121CC0072B7AE /* EasyUITests.m */; };
+		EAFCBB6C1E8F55D700BAF337 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB6B1E8F55D700BAF337 /* CoreImage.framework */; };
+		EAFCBB6E1E8F562500BAF337 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB6D1E8F562500BAF337 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +232,8 @@
 		EA7D57511E8121CC0072B7AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA7D57691E8124FD0072B7AE /* libMTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMTalkerClient.a; path = "../build/Debug-iphoneos/libMTalkerClient.a"; sourceTree = "<group>"; };
 		EAD06A841E82604700DDA4CF /* libMTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMTalkerClient.a; path = "../../../../Library/Developer/Xcode/DerivedData/MTalker-djpqzqyavvfmdlcgekbljgcwqhff/Build/Products/Debug-iphonesimulator/libMTalkerClient.a"; sourceTree = "<group>"; };
+		EAFCBB6B1E8F55D700BAF337 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		EAFCBB6D1E8F562500BAF337 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE4B2E9B0BB38F407F8BEA35 /* Pods_EasyUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -238,6 +242,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFCBB6E1E8F562500BAF337 /* UIKit.framework in Frameworks */,
+				EAFCBB6C1E8F55D700BAF337 /* CoreImage.framework in Frameworks */,
 				EA7B2A561E8C996C00E4B630 /* AssetsLibrary.framework in Frameworks */,
 				215D1C9D52C1E8F0C0B1D9A0 /* Pods_EasyUI.framework in Frameworks */,
 			);
@@ -572,6 +578,8 @@
 		EA7D57681E8124FD0072B7AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAFCBB6D1E8F562500BAF337 /* UIKit.framework */,
+				EAFCBB6B1E8F55D700BAF337 /* CoreImage.framework */,
 				EA7B2A551E8C996C00E4B630 /* AssetsLibrary.framework */,
 				EA7B2A521E8BB9BE00E4B630 /* Photos.framework */,
 				EA7B2A501E8BB95200E4B630 /* AVFoundation.framework */,

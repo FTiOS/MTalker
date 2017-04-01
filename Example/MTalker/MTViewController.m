@@ -78,6 +78,6 @@
 }
 //drugs-药品数据，pharmacy-药店数据,postage-邮费
 -(void)receiveDrugs:(NSArray<MTDrug *> *)drugs withPharmacy:(MTPharmacy *)pharmacy withPostage:(double)postage{
-    
+    NSLog(@"收到药品:%f：%\n%@",postage,drugs,pharmacy);
 }
 @end

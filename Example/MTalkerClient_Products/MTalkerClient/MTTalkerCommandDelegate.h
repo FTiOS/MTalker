@@ -17,11 +17,17 @@
 #define MT_NOTIC_DRUGS @"mt_notice_drugs"
 
 typedef NS_ENUM(NSInteger,CommandType) {
-    command_login,
-    command_waiting,
-    command_match,
-    command_talking,
-    command_logout,
+    command_login,//开始登录咨询
+    command_waiting,//排队
+    command_match,//匹配了医生
+    command_talking,//开始咨询
+    command_logout,//退出咨询
+};
+
+typedef NS_ENUM(NSInteger,LogoutType) {
+    logout_normal,//正常登出
+    logout_disconnect,//断开链接
+    logout_matchfail,//匹配失败
 };
 
 @protocol MTTalkerCommandDelegate <NSObject>

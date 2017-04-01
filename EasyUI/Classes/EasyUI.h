@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ConsultViewController.h"
+#import "MTalkerClient.h"
 
 @interface EasyUI : NSObject
+
++(ConsultViewController *)consultView;
++(MTalkerClient *)talkerClient;
 
 @end

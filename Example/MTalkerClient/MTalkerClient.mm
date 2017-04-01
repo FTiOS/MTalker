@@ -43,19 +43,21 @@ static MTalkerClient *_instance;
 }
 
 #pragma mark - 配置
--(void)loadSettings:(MTTalkerSetting *)setting{
+-(void)loadSettings:(MTTalkerSetting *)setting finishBlock:(void(^)(BOOL loadSuccess))bolck{
     self.setting = setting;
     [MTAddressMonitor instance].parmas = self.setting.parmas;
     [MTAddressMonitor instance].api = self.setting.api;
     [[MTAddressMonitor instance] patchAddressWithFinshiBlock:^(NSArray<MTServerAddress *> *addresses, NSError *error) {
         if (!error) {
             self.talkerAddress = [[MTAddressMonitor instance]getServerAddress:ServerType_Talker];
-        }
+            bolck(YES);
+        }else
+            bolck(NO);
     }];
 }
 
 #pragma mark - 登录控制
--(void)login:(MTLoginInfo *)loginInfo finishBlock:(void(^)(BOOL loginSuccess))bolck{
+-(void)login:(MTLoginInfo *)loginInfo{
     if (self.tkStatus != ST_Default) {
         return;
     }
@@ -85,7 +87,15 @@ static MTalkerClient *_instance;
         
         [[NSNotificationCenter defaultCenter]postNotificationName:MT_NOTIC_COMMAND object:params];
     }else{
-        bolck(NO);
+        if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
+            [self.delegate receiveCommand:command_logout withInstance:[NSString stringWithFormat:@"%ld",(long)logout_disconnect] withInfo:@"登录失败"];
+            
+            NSMutableDictionary *params = [NSMutableDictionary new];
+            [params setObject:[NSNumber numberWithInteger:command_logout] forKey:@"command"];
+            [params setObject:[NSNumber numberWithInteger:logout_disconnect] forKey:@"logoutype"];
+            
+            [[NSNotificationCenter defaultCenter]postNotificationName:MT_NOTIC_COMMAND object:params];
+        }
     }
 
     
@@ -97,7 +107,7 @@ static MTalkerClient *_instance;
     
     [self.ringer stopRing];
     
-    [self stopTalk];
+    [self stopTalk:logout_normal];
     
     if (self.talkTime>0) {
         if (self.info==nil) {
@@ -133,10 +143,12 @@ static MTalkerClient *_instance;
 }
 
 //停止咨询
--(void)stopTalk{
+-(void)stopTalk:(LogoutType)code{
     
     if (self.tkStatus == ST_Default)
         return;
+    
+    [self.ringer stopRing];//停止铃声
     
     [self getTalkInfo];
     
@@ -167,10 +179,11 @@ static MTalkerClient *_instance;
     _startTalkTime = 0;
     _lastTalkTime = 0;
     if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
-        [self.delegate receiveCommand:command_logout withInstance:nil withInfo:@"退出"];
+        [self.delegate receiveCommand:command_logout withInstance:[NSString stringWithFormat:@"%d",code] withInfo:@"退出类型:LogoutType"];
     }
     NSMutableDictionary *params = [NSMutableDictionary new];
     [params setObject:[NSNumber numberWithInteger:command_logout] forKey:@"command"];
+    [params setObject:[NSNumber numberWithInteger:code] forKey:@"logoutype"];
     
     [[NSNotificationCenter defaultCenter]postNotificationName:MT_NOTIC_COMMAND object:params];
 }
@@ -228,7 +241,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
             _recvHeartTime =nowTime;
         }else if(nowTime - _recvHeartTime > HEART_TIME_OUT){
             NSLog(@TAG"调度服务心跳返回超时");
-            [self stopTalk];
+            [self stopTalk:logout_disconnect];
             return;
         }
         
@@ -281,6 +294,13 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
         _talker.frameRate = _setting.frameRate;
     }
     return _talker;
+}
+
+-(MTRinger *)ringer{
+    if (!_ringer) {
+        _ringer = [[MTRinger alloc]init];
+    }
+    return _ringer;
 }
 
 -(MTTalkerSetting *)setting{
@@ -446,8 +466,26 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
                                     //FT_PROTO_LEAVE
                                     //FT_PROTO_MATCHER_OFFLINE
                                     //FT_PROTO_MATCH_FAILURE*/
+            LogoutType logoutType = logout_normal;
+            switch (command) {
+                case FT_PROTO_DISCONNECT:{
+                    logoutType = logout_disconnect;
+                }
+                    break;
+                case FT_PROTO_LEAVE:
+                case FT_PROTO_MATCHER_OFFLINE:
+                case FT_PROTO_MATCH_FAILURE:{
+                    logoutType = logout_matchfail;
+                }
+                    break;
+                    
+                default:{
+                    logoutType = logout_normal;
+                }
+                    break;
+            }
             
-             [self stopTalk];
+            [self stopTalk:logoutType];
         }
             break;
         case FT_PROTO_MATCH_WAIT:{ //等待匹配医生
@@ -524,7 +562,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
         case TCP_STATUS_CONNECT_FAIL:
         case TCP_STATUS_DISCONNECTED:{
             _csStatus = CS_Disconnected;
-            [self stopTalk];
+            [self stopTalk:logout_disconnect];
         }
             break;
         default:
