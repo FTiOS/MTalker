@@ -1,6 +1,0 @@
-framework module OpenUDID {
-  umbrella header "OpenUDID-iOS8.0-umbrella.h"
-
-  export *
-  module * { export * }
-}

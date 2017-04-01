@@ -29,7 +29,6 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, "8.0"
-  s.ios.deployment_target = '8.0'
 
   s.source_files = 'EasyUI/Classes/**/*.*'
 
@@ -44,5 +43,6 @@ Pod::Spec.new do |s|
     s.dependency 'Reachability', '~> 3.2'
     s.dependency 'SDWebImage', '~> 4.0.0-beta2'
     s.dependency 'Aspects', '~>  1.4.1'
+    s.dependency 'MTalker', '~> 0.1.1'
 
 end

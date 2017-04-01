@@ -47,4 +47,5 @@ Pod::Spec.new do |s|
     s.dependency 'KeychainItemWrapper', '~> 0.0.1'
     s.dependency 'ftcodec', '~> 1.1.0.307'
     s.dependency 'XY_NetWorkClient', '~> 1.0.4'
+    
 end

@@ -1,6 +1,0 @@
-framework module Pods_MTalkerClient {
-  umbrella header "Pods-MTalkerClient-umbrella.h"
-
-  export *
-  module * { export * }
-}

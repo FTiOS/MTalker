@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F17A2DB66302F4EF3072ACE /* Pods_ChatDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C66A5A762F51B0545E7FEB /* Pods_ChatDemo.framework */; };
+		3A8A340E3F502FA77C1F70A6 /* libPods-ChatDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 579CF5A8BD5A38103CE9CF7C /* libPods-ChatDemo.a */; };
 		EA7802E11E8B4BFF00779DED /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACBAF901E66B09F00E2A632 /* libprotobuf.a */; };
 		EA7802E31E8B4F1900779DED /* libFTCommandClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACBAF241E66AEF600E2A632 /* libFTCommandClient.a */; };
 		EACBAF291E66AEF600E2A632 /* FTCommandClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACBAF281E66AEF600E2A632 /* FTCommandClient.mm */; };
@@ -59,8 +59,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		579CF5A8BD5A38103CE9CF7C /* libPods-ChatDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7248F50716D59B843581394 /* Pods-ChatDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo.release.xcconfig"; sourceTree = "<group>"; };
-		D1C66A5A762F51B0545E7FEB /* Pods_ChatDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D905DC081821272FF24EEC27 /* Pods-ChatDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EACBAF241E66AEF600E2A632 /* libFTCommandClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFTCommandClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACBAF271E66AEF600E2A632 /* FTCommandClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCommandClient.h; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA7802E31E8B4F1900779DED /* libFTCommandClient.a in Frameworks */,
-				1F17A2DB66302F4EF3072ACE /* Pods_ChatDemo.framework in Frameworks */,
+				3A8A340E3F502FA77C1F70A6 /* libPods-ChatDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +260,7 @@
 			children = (
 				EACBAF901E66B09F00E2A632 /* libprotobuf.a */,
 				EACBAF501E66B07800E2A632 /* google */,
-				D1C66A5A762F51B0545E7FEB /* Pods_ChatDemo.framework */,
+				579CF5A8BD5A38103CE9CF7C /* libPods-ChatDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

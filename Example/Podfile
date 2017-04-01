@@ -1,9 +1,10 @@
-use_frameworks!
+#use_frameworks!
 
 source 'https://github.com/rRun/xy_podSepcs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 workspace 'MTalker.xcworkspace'
+platform :ios, '8.0' 
 
 target 'EasyUI' do
     pod 'MTalker', :path => '../'

@@ -18,13 +18,14 @@ PODS:
   - EasyUI (0.1.0):
     - Aspects (~> 1.4.1)
     - Masonry (~> 1.0.2)
+    - MTalker (~> 0.1.1)
     - Reachability (~> 3.2)
     - SDWebImage (~> 4.0.0-beta2)
   - ftcodec (1.1.0.307)
   - KeychainItemWrapper (0.0.1)
   - Masonry (1.0.2)
   - MJExtension (3.0.13)
-  - MTalker (0.1.0):
+  - MTalker (0.1.1):
     - ftcodec (~> 1.1.0.307)
     - KeychainItemWrapper (~> 0.0.1)
     - MJExtension (~> 3.0.13)
@@ -60,17 +61,17 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  EasyUI: 12592dc07bfa665d010999125da7640be3d7af98
+  EasyUI: cb9b0ca1b41bc4772cfeafaeafe719ef9e65bcbf
   ftcodec: edc72acfe6e8914d4f675d123840071b853d0042
   KeychainItemWrapper: 6e3bf8f9246c798898173a5cda51631ba0a885c2
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  MTalker: 56f2993613a9c6d426dab181bebeb2690140a7e0
+  MTalker: cd76e3fe578a86f23cee4027b6be83d1cf821ba8
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: e379f33106cf8d6766f970c0ef1c3fb609c94d78
   XY_NetWorkClient: b122528ecf0d45410986ad184facdba2b9d1ef31
 
-PODFILE CHECKSUM: e44dd7378065f0795c4046cd444c0e382a7eeaf9
+PODFILE CHECKSUM: c850ce69bf49917ecd2ca97b9e46562579f0e8d9
 
 COCOAPODS: 1.1.1

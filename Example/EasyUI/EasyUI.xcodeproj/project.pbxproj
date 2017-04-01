@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		215D1C9D52C1E8F0C0B1D9A0 /* Pods_EasyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A270D35F32B8418477610E /* Pods_EasyUI.framework */; };
-		C7132F8B365D6B18AD376800 /* Pods_EasyUI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4B2E9B0BB38F407F8BEA35 /* Pods_EasyUI_Example.framework */; };
+		799B1B1D8136C7F01C5BAB12 /* libPods-EasyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE123CDBB5E5EE6D700442BB /* libPods-EasyUI.a */; };
 		EA78032E1E8B995A00779DED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78032D1E8B995A00779DED /* main.m */; };
 		EA7803311E8B995A00779DED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7803301E8B995A00779DED /* AppDelegate.m */; };
 		EA7803341E8B995A00779DED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7803331E8B995A00779DED /* ViewController.m */; };
@@ -53,6 +52,8 @@
 		EA7D57501E8121CC0072B7AE /* EasyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D574F1E8121CC0072B7AE /* EasyUITests.m */; };
 		EAFCBB6C1E8F55D700BAF337 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB6B1E8F55D700BAF337 /* CoreImage.framework */; };
 		EAFCBB6E1E8F562500BAF337 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB6D1E8F562500BAF337 /* UIKit.framework */; };
+		EAFCBB6F1E8FAB0A00BAF337 /* libEasyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7802FA1E8B977E00779DED /* libEasyUI.a */; };
+		FFBE5DCC1325DD97BC63BE6C /* libPods-EasyUI_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28554BB754021A520A0BCB3F /* libPods-EasyUI_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,11 +79,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		28554BB754021A520A0BCB3F /* libPods-EasyUI_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyUI_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C9C40BF67FD18ED7CA7736 /* Pods-EasyUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyUI.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-EasyUI/Pods-EasyUI.debug.xcconfig"; sourceTree = "<group>"; };
 		576A6ACB0FF1F9170BBB8E5A /* Pods-EasyUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyUI.release.xcconfig"; path = "../Pods/Target Support Files/Pods-EasyUI/Pods-EasyUI.release.xcconfig"; sourceTree = "<group>"; };
-		74A270D35F32B8418477610E /* Pods_EasyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C914EA322C646529BAEEF97C /* Pods-EasyUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyUI_Example.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-EasyUI_Example/Pods-EasyUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D2D7D61D6E23BEC6A49A417F /* Pods-EasyUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyUI_Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-EasyUI_Example/Pods-EasyUI_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9B875604D364EFFC98B9A227 /* Pods-EasyUI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyUI_Example.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-EasyUI_Example/Pods-EasyUI_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BE123CDBB5E5EE6D700442BB /* libPods-EasyUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3144C39570DCFE23C6F0291 /* Pods-EasyUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyUI_Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-EasyUI_Example/Pods-EasyUI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EA7802FA1E8B977E00779DED /* libEasyUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEasyUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA78032A1E8B995A00779DED /* EasyUI_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyUI_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA78032D1E8B995A00779DED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -234,7 +236,6 @@
 		EAD06A841E82604700DDA4CF /* libMTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMTalkerClient.a; path = "../../../../Library/Developer/Xcode/DerivedData/MTalker-djpqzqyavvfmdlcgekbljgcwqhff/Build/Products/Debug-iphonesimulator/libMTalkerClient.a"; sourceTree = "<group>"; };
 		EAFCBB6B1E8F55D700BAF337 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		EAFCBB6D1E8F562500BAF337 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		FE4B2E9B0BB38F407F8BEA35 /* Pods_EasyUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +246,7 @@
 				EAFCBB6E1E8F562500BAF337 /* UIKit.framework in Frameworks */,
 				EAFCBB6C1E8F55D700BAF337 /* CoreImage.framework in Frameworks */,
 				EA7B2A561E8C996C00E4B630 /* AssetsLibrary.framework in Frameworks */,
-				215D1C9D52C1E8F0C0B1D9A0 /* Pods_EasyUI.framework in Frameworks */,
+				799B1B1D8136C7F01C5BAB12 /* libPods-EasyUI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +254,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7132F8B365D6B18AD376800 /* Pods_EasyUI_Example.framework in Frameworks */,
+				EAFCBB6F1E8FAB0A00BAF337 /* libEasyUI.a in Frameworks */,
+				FFBE5DCC1325DD97BC63BE6C /* libPods-EasyUI_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +281,8 @@
 			children = (
 				52C9C40BF67FD18ED7CA7736 /* Pods-EasyUI.debug.xcconfig */,
 				576A6ACB0FF1F9170BBB8E5A /* Pods-EasyUI.release.xcconfig */,
-				C914EA322C646529BAEEF97C /* Pods-EasyUI_Example.debug.xcconfig */,
-				D2D7D61D6E23BEC6A49A417F /* Pods-EasyUI_Example.release.xcconfig */,
+				9B875604D364EFFC98B9A227 /* Pods-EasyUI_Example.debug.xcconfig */,
+				C3144C39570DCFE23C6F0291 /* Pods-EasyUI_Example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -585,8 +587,8 @@
 				EA7B2A501E8BB95200E4B630 /* AVFoundation.framework */,
 				EAD06A841E82604700DDA4CF /* libMTalkerClient.a */,
 				EA7D57691E8124FD0072B7AE /* libMTalkerClient.a */,
-				74A270D35F32B8418477610E /* Pods_EasyUI.framework */,
-				FE4B2E9B0BB38F407F8BEA35 /* Pods_EasyUI_Example.framework */,
+				BE123CDBB5E5EE6D700442BB /* libPods-EasyUI.a */,
+				28554BB754021A520A0BCB3F /* libPods-EasyUI_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -617,12 +619,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA7803541E8B995A00779DED /* Build configuration list for PBXNativeTarget "EasyUI_Example" */;
 			buildPhases = (
-				A5EEA634AE36FAC4D805098D /* [CP] Check Pods Manifest.lock */,
+				317E07EA1A551A787B11DD9B /* [CP] Check Pods Manifest.lock */,
 				EA7803261E8B995A00779DED /* Sources */,
 				EA7803271E8B995A00779DED /* Frameworks */,
 				EA7803281E8B995A00779DED /* Resources */,
-				479AFD1C26169AF0C99AA406 /* [CP] Embed Pods Frameworks */,
-				A7871221573D2D08A54FD04C /* [CP] Copy Pods Resources */,
+				5D40664776D44932FCD69D79 /* [CP] Embed Pods Frameworks */,
+				CC70CA580FDBA1FD2A108163 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -766,22 +768,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		479AFD1C26169AF0C99AA406 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-EasyUI_Example/Pods-EasyUI_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5EEA634AE36FAC4D805098D /* [CP] Check Pods Manifest.lock */ = {
+		317E07EA1A551A787B11DD9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -796,7 +783,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A7871221573D2D08A54FD04C /* [CP] Copy Pods Resources */ = {
+		5D40664776D44932FCD69D79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-EasyUI_Example/Pods-EasyUI_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC70CA580FDBA1FD2A108163 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -947,11 +949,13 @@
 		};
 		EA7803551E8B995A00779DED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C914EA322C646529BAEEF97C /* Pods-EasyUI_Example.debug.xcconfig */;
+			baseConfigurationReference = 9B875604D364EFFC98B9A227 /* Pods-EasyUI_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EasyUI_Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.EasyUI-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -960,11 +964,13 @@
 		};
 		EA7803561E8B995A00779DED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2D7D61D6E23BEC6A49A417F /* Pods-EasyUI_Example.release.xcconfig */;
+			baseConfigurationReference = C3144C39570DCFE23C6F0291 /* Pods-EasyUI_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 63DD5UWBGN;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EasyUI_Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.EasyUI-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1036,7 +1042,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1081,7 +1087,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
