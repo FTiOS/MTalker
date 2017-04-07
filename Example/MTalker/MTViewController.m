@@ -19,7 +19,9 @@
 {
     [super viewDidLoad];
     //配置
-    [[MTalkerClient shareTalker]loadSettings:[self settings]];
+    [[MTalkerClient shareTalker]loadSettings:[self settings] finishBlock:^(BOOL loadSuccess) {
+        
+    }];
     [MTalkerClient shareTalker].delegate = self;
 }
 
@@ -46,16 +48,14 @@
 }
 
 - (IBAction)start:(id)sender {
-    [[MTalkerClient shareTalker]login:[self simpleLogin] finishBlock:^(BOOL loginSuccess) {
-        
-    }];
+    [[MTalkerClient shareTalker]login:[self simpleLogin]];
 }
 
 - (IBAction)end:(id)sender {
     [[MTalkerClient shareTalker]logout];
 }
-
 #pragma mark - setting
+
 -(MTTalkerSetting *)settings{
    MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
     settings.decodeView = self.decodeView;

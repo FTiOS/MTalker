@@ -10,8 +10,7 @@
 
 //地址类型 @1
 typedef NS_ENUM(NSInteger,ServerAddressType) {
-    ServerType_Talker=1,//调度服务udp对讲地址
-    ServerType_Push=2  ,//消息推送地址
+    ServerType_Talker=7,//调度服务udp对讲地址
 };
 
 

@@ -123,6 +123,9 @@
     NSString *doctorAccount = [loginParam objectForKey:@"doctorAccount"];
     int strategy = [[loginParam objectForKey:@"strategy"] intValue];
     NSString *deviceId = [loginParam objectForKey:@"deviceId"];
+    if ([loginParam objectForKey:@"tokenId"]) {
+        deviceId = [loginParam objectForKey:@"tokenId"];
+    }
     
     if(deviceId.length<=0 && account.length<=0){
         NSLog(@TAG"deviceId and account is empty");

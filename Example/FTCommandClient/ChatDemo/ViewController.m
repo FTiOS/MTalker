@@ -25,12 +25,19 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)didConsult:(id)sender {
+}
+- (IBAction)startConsult:(id)sender {
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     [talker stopStream];
 }
+- (IBAction)doConsult:(id)sender {
+}
+
 
 
 @end

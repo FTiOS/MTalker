@@ -15,9 +15,9 @@
 
 +(instancetype)instance;
 
-@property(nonatomic,weak)MTalkerClient *shareTalker;//控制器
+@property(nonatomic,strong)MTalkerClient *shareTalker;//控制器
 
-@property(nonatomic,weak)MTLoginInfo *loginInfo;//登录信息
+@property(nonatomic,strong)MTLoginInfo *loginInfo;//登录信息
 @property(nonatomic,strong)NSArray *asserts;//上传选择的图片
 @property (nonatomic,strong)NSMutableArray *pushDrugs;//推荐的药品
 

@@ -65,10 +65,6 @@ static MTalkerClient *_instance;
     _loginInfo = loginInfo;
     
     [self.ringer playRing];//开始铃声
-    //test
-    self.talkerAddress = [[MTServerAddress alloc]init];
-    self.talkerAddress.ip = @"114.215.253.88";
-    self.talkerAddress.port = 25000;
     
     NSLog(@"开始连接调度！");
     if ([self.talkerAddress.ip length]!=0&&self.talkerAddress.port!=0) {

@@ -14,5 +14,6 @@
 @property (nonatomic,strong)NSString *account;//用户账号
 @property (nonatomic,strong)NSString *userAvatar;//用户头像地址
 @property (nonatomic,strong)NSString *userName;//用户名称
+@property (nonatomic,strong)NSString *tokenId;//用户唯一标示
 
 @end

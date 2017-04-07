@@ -8,11 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import "ConsultViewController.h"
-#import "MTalkerClient.h"
 
+@class EasyUISettings;
 @interface EasyUI : NSObject
 
-+(ConsultViewController *)consultView;
-+(MTalkerClient *)talkerClient;
++(instancetype)instance;
+-(void)setup:(EasyUISettings *)settings finishBlock:(void(^)(ConsultViewController *))block;
+
+@end
+
+
+@interface EasyUISettings : NSObject
+
+@property (nonatomic,strong)NSString *platformKey;//平台密钥
+@property (nonatomic,strong)NSString *appId;//应用id
+
+@property (nonatomic,strong)NSString *tel;//用户电话
+@property (nonatomic,strong)NSString *dUserId;//用户ID
+
+@property (nonatomic,strong)NSString *account;//医生账号
 
 @end

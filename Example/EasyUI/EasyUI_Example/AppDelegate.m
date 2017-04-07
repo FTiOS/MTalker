@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ConsultViewController.h"
+#import "ViewController.h"
 
 
 
@@ -17,11 +17,9 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    ConsultViewController *consultVC = [ConsultViewController instance];
-    self.window.rootViewController = consultVC;
+   self.window.rootViewController = [[ViewController alloc]init];
     
     return YES;
 }

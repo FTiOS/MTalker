@@ -1,6 +1,6 @@
 {
   "name": "MTalker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "咨询医生的音视频服务",
   "description": "咨询医生的音视频服务，底层封装成静态库，支持pod",
   "homepage": "https://github.com/rrun/MTalker",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/rrun/MTalker.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"
@@ -30,14 +30,12 @@
   "frameworks": [
     "UIKit",
     "AudioToolbox",
-    "AVFoundation"
+    "AVFoundation",
+    "AdSupport"
   ],
   "dependencies": {
     "MJExtension": [
       "~> 3.0.13"
-    ],
-    "OpenUDID": [
-      "~> 1.0.0"
     ],
     "KeychainItemWrapper": [
       "~> 0.0.1"

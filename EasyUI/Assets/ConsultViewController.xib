@@ -36,7 +36,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consult_backgroungImage" translatesAutoresizingMaskIntoConstraints="NO" id="MqU-L6-eKa">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consult_backgroungImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="MqU-L6-eKa">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
             </subviews>
@@ -53,7 +53,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consult_cover_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="mNo-qs-4U6">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consult_cover_bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="mNo-qs-4U6">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9p-fG-aGk">
@@ -65,7 +65,8 @@
                                 <constraint firstAttribute="width" constant="60" id="IQu-p0-VGr"/>
                                 <constraint firstAttribute="height" constant="60" id="pfH-3M-atn"/>
                             </constraints>
-                            <state key="normal" image="consult_hangUp_normal"/>
+                            <state key="normal" image="consult_hangUp_normal.png"/>
+                            <state key="selected" image="consult_hangUp_selected.png"/>
                             <connections>
                                 <action selector="doHangUp:" destination="-1" eventType="touchUpInside" id="f6I-F3-qDK"/>
                             </connections>
@@ -136,7 +137,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consult_cover_top" translatesAutoresizingMaskIntoConstraints="NO" id="1hP-tq-pMN">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consult_cover_top.png" translatesAutoresizingMaskIntoConstraints="NO" id="1hP-tq-pMN">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imT-fh-5Qg">
@@ -272,9 +273,10 @@
         </view>
     </objects>
     <resources>
-        <image name="consult_backgroungImage" width="375" height="667"/>
-        <image name="consult_cover_bottom" width="375" height="210"/>
-        <image name="consult_cover_top" width="375" height="210"/>
-        <image name="consult_hangUp_normal" width="60" height="60"/>
+        <image name="consult_backgroungImage.png" width="375" height="667"/>
+        <image name="consult_cover_bottom.png" width="375" height="210"/>
+        <image name="consult_cover_top.png" width="375" height="210"/>
+        <image name="consult_hangUp_normal.png" width="60" height="60"/>
+        <image name="consult_hangUp_selected.png" width="60" height="60"/>
     </resources>
 </document>

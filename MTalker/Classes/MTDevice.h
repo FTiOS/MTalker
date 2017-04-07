@@ -35,7 +35,7 @@
 @property(nonatomic) NSString *version;
 
 /**
- * 设备号 imei,使用的是 openudid+keychain
+ * 设备号 imei,使用的是 identifierForAdvertising+keychain
  * 和account必须设置其中之一
  */
 @property(nonatomic) NSString *deviceId;

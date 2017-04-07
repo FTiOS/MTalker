@@ -70,6 +70,7 @@
 		EAF797F01E8903C800C19A27 /* MTModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A7B1E82141700DDA4CF /* MTModel.h */; };
 		EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3D1E8364D200DDA4CF /* MTTalkerCommandDelegate.h */; };
 		EAFCBB6A1E8F551300BAF337 /* MTDrug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7B2ABA1E8CF72600E4B630 /* MTDrug.h */; };
+		EAFCBB751E92510C00BAF337 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB741E92510C00BAF337 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +187,7 @@
 		EAF798041E89FE3A00C19A27 /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MTalkerClient.a"; path = "Pods/../build/Debug-iphoneos/libPods-MTalkerClient.a"; sourceTree = "<group>"; };
 		EAF798091E8A10D500C19A27 /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MTalkerClient.a"; path = "Pods/../build/Debug-iphoneos/libPods-MTalkerClient.a"; sourceTree = "<group>"; };
 		EAF8EC8D1E8A5CAE0032155E /* libFTCommandClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFTCommandClient.a; path = FTCommandClient_Products/libFTCommandClient.a; sourceTree = "<group>"; };
+		EAFCBB741E92510C00BAF337 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		FF40B49AC46C0BADB2726603 /* Pods-MTalker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTalker_Tests/Pods-MTalker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFCBB751E92510C00BAF337 /* AdSupport.framework in Frameworks */,
 				EA7802E51E8B502C00779DED /* libFTCommandClient.a in Frameworks */,
 				EAD06B441E83786100DDA4CF /* AudioToolbox.framework in Frameworks */,
 				EAD06B421E8374A200DDA4CF /* AVFoundation.framework in Frameworks */,
@@ -252,6 +255,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAFCBB741E92510C00BAF337 /* AdSupport.framework */,
 				EA7802DF1E8B4A8D00779DED /* libFTCommandClient.a */,
 				EA7802D71E8A621400779DED /* libPods-MTalkerClient.a */,
 				EAF8EC8D1E8A5CAE0032155E /* libFTCommandClient.a */,
@@ -832,6 +836,7 @@
 				INFOPLIST_FILE = "MTalker/MTalker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/FTCommandClient";
@@ -851,6 +856,7 @@
 				INFOPLIST_FILE = "MTalker/MTalker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/FTCommandClient";

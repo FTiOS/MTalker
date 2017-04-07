@@ -13,9 +13,9 @@
 #import <mach/machine.h>
 #import <mach/mach_host.h>
 #import <sys/utsname.h>
+#import <AdSupport/ASIdentifierManager.h>
 
 #import "KeychainItemWrapper/KeychainItemWrapper.h"
-#import "OpenUDID/OpenUDID.h"
 
 #define UDID @"com.cdfortis.device"
 
@@ -104,7 +104,7 @@
     if (![strUUID isKindOfClass:[NSString class]]||strUUID==nil)
     {
         NSError *error=nil;
-        NSString *udid=[OpenUDID valueWithError:&error];
+        NSString *udid=[[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];;
         if (error) {
             NSLog(@"uiid:%@,error:%@",udid,[error localizedDescription]);
         }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MTalker'
-  s.version          = '0.1.1'
+  s.version          = '0.1.3'
   s.summary          = '咨询医生的音视频服务'
 
 # This description is used to generate tags and improve search results.
@@ -40,10 +40,9 @@ Pod::Spec.new do |s|
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-    s.frameworks = 'UIKit', 'AudioToolbox','AVFoundation'
+    s.frameworks = 'UIKit', 'AudioToolbox','AVFoundation','AdSupport'
 
     s.dependency 'MJExtension', '~> 3.0.13'
-    s.dependency 'OpenUDID', '~> 1.0.0'
     s.dependency 'KeychainItemWrapper', '~> 0.0.1'
     s.dependency 'ftcodec', '~> 1.1.0.307'
     s.dependency 'XY_NetWorkClient', '~> 1.0.4'
