@@ -85,9 +85,11 @@ To run the example project, clone the repo, and run `pod install --no-repo-updat
 
 The podfile needs point sources :
 
+
     source 'https://github.com/rRun/xy_podSepcs.git'
     source 'https://github.com/CocoaPods/Specs.git'
     
+
     please do not use 
     
     "use_frameworks!"```
