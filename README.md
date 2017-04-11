@@ -1,16 +1,14 @@
 # MTalker
 
-[![CI Status](http://img.shields.io/travis/rrun/MTalker.svg?style=flat)](https://travis-ci.org/rrun/MTalker)
-[![Version](https://img.shields.io/cocoapods/v/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/MTalker)
-[![License](https://img.shields.io/cocoapods/l/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/MTalker)
-[![Platform](https://img.shields.io/cocoapods/p/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/MTalker)
+[![Version](https://img.shields.io/cocoapods/v/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/tree/master/MTalker)
+[![License](https://img.shields.io/cocoapods/l/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/tree/master/MTalker)
+[![Platform](https://img.shields.io/cocoapods/p/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/tree/master/MTalker)
 
 # EasyUI
 
-[![CI Status](http://img.shields.io/travis/rrun/MTalker.svg?style=flat)](https://travis-ci.org/rrun/MTalker)
-[![Version](https://img.shields.io/cocoapods/v/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/MTalker)
-[![License](https://img.shields.io/cocoapods/l/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/MTalker)
-[![Platform](https://img.shields.io/cocoapods/p/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/MTalker)
+[![Version](https://img.shields.io/cocoapods/v/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/tree/master/EasyUI/)
+[![License](https://img.shields.io/cocoapods/l/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/tree/master/EasyUI/)
+[![Platform](https://img.shields.io/cocoapods/p/MTalker.svg?style=flat)](https://github.com/rRun/xy_podSepcs/tree/master/EasyUI/)
 
 
 ## Example
