@@ -15,7 +15,7 @@
 
 ## Example
 if need easy ui,code:
-"EasyUISettings *settings = [[EasyUISettings alloc]init];
+```EasyUISettings *settings = [[EasyUISettings alloc]init];
 
 settings.platformKey = @"0";
 settings.appId = @"suibian";
@@ -30,10 +30,10 @@ return ;
 [self presentViewController:consultVC animated:YES completion:nil];
 } finishBlock:^(ConsultViewController *consultVC, double callTime) {
 [consultVC dismissViewControllerAnimated:YES completion:nil];
-}];"
+}];```
 
 else just need mtalker libaray,code:
-"
+```
 1,
 [[MTalkerClient shareTalker]loadSettings:[self settings] finishBlock:^(BOOL loadSuccess) {}];
 [MTalkerClient shareTalker].delegate = self;
@@ -63,7 +63,7 @@ if ([MTalkerClient shareTalker].avType == AV_Normal) {
 MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
 settings.decodeView = self.decodeView;
 settings.encodeView = self.encodeView;
-settings.api = @"https://9.cdfortis.com:8443/appService/appTwo!getServerAddress2.action";
+settings.api = @"https://xxx.xxx.xx:xxx/appService/appTwo!getServerAddress2.action";
 settings.parmas = [NSDictionary dictionaryWithObjectsAndKeys:@"iOS",@"__os",@"2.17.5.0328",@"__ver",nil];
 settings.defaultVideo = YES;
 settings.keepTalkerType = YES;
@@ -74,7 +74,7 @@ return settings;
 return [MTLoginInfo simpleLogin:@"xxxx" User:@"13689098***"];
 }
 
-"
+```
 
 ## Requirements
 
