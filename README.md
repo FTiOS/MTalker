@@ -33,11 +33,11 @@ return ;
 }];```
 
 else just need mtalker libaray,code:
+
 ```
-1,
 [[MTalkerClient shareTalker]loadSettings:[self settings] finishBlock:^(BOOL loadSuccess) {}];
 [MTalkerClient shareTalker].delegate = self;
-2,
+
 - (IBAction)mute:(id)sender {//静音
 if ([MTalkerClient shareTalker].avType == AV_Normal) {
 [MTalkerClient shareTalker].avType = AV_Mute|AV_Silent;
@@ -56,9 +56,7 @@ if ([MTalkerClient shareTalker].avType == AV_Normal) {
 - (IBAction)end:(id)sender {//结束咨询
 [[MTalkerClient shareTalker]logout];
 }
-
 #pragma mark - setting
-
 -(MTTalkerSetting *)settings{
 MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
 settings.decodeView = self.decodeView;
@@ -73,7 +71,6 @@ return settings;
 -(MTLoginInfo *)simpleLogin{
 return [MTLoginInfo simpleLogin:@"xxxx" User:@"13689098***"];
 }
-
 ```
 
 ## Requirements
