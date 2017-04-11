@@ -84,11 +84,7 @@
     NSLog(@"网络请求参数为:%@",postParmas);
     
     //网络请求
-    NSURLSessionDataTask *currentTask = [self.manager POST:url parameters:postParmas constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        //mutilpart 数据
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
-        //一般网络请求不需要进度
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSURLSessionDataTask *currentTask = [self.manager POST:url parameters:postParmas success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (currentTask.state == NSURLSessionTaskStateCanceling) {
             return ;
         }

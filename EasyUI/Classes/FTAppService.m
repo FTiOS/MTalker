@@ -8,6 +8,7 @@
 
 #import "FTAppService.h"
 #import "XY_NetworkClient.h"
+#import "AFNetworking.h"
 
 @interface FTAppService()
 
@@ -34,16 +35,19 @@
     }
     return self;
 }
+
 #pragma mark - Public
 -(void)getUserTokenByTel:(NSString *_Nonnull)tel DUserId:(NSString *_Nonnull)dUserId FinshWithBlock:(void(^_Nullable)(FTUser * _Nullable user,NSError * _Nullable error)) block{
+    
+    [self setupClient];
     
     NSMutableDictionary *parmas = [NSMutableDictionary new];
     [parmas setObject:tel forKey:@"tel"];
     [parmas setObject:dUserId forKey:@"dUserId"];
 
     if (self.url) {
-        [[BaseRequestClient defaultClient]jsonPostGlobal:[NSString stringWithFormat:@"%@/%@",self.url.absoluteString,@"getUserToken"] forParams:parmas successCall:^(NSDictionary *responseObject) {
-            FTUser *user = [FTUser mj_objectWithKeyValues:responseObject];
+        [[BaseRequestClient defaultClient]jsonPostGlobal:[NSString stringWithFormat:@"%@/%@",self.url.absoluteString,@"user/getUserToken"] forParams:parmas successCall:^(NSDictionary *responseObject) {
+            FTUser *user = [FTUser mj_objectWithKeyValues:[responseObject objectForKey:@"result"]];
             block(user,nil);
         } failedCall:^(NSError *error) {
              block(nil,error);
@@ -53,13 +57,17 @@
         block(nil,error);
     }
 }
+
 -(void)getDoctorInfo:(NSString *_Nonnull)account FinshWithBlock:(void(^_Nullable)(FTDoctor * _Nullable user,NSError * _Nullable error)) block{
+    
+    [self setupClient];
+    
     NSMutableDictionary *parmas = [NSMutableDictionary new];
     [parmas setObject:account forKey:@"account"];
     
     if (self.url) {
-        [[BaseRequestClient defaultClient]jsonPostGlobal:[NSString stringWithFormat:@"%@/%@",self.url.absoluteString,@"getDoctorInfo"] forParams:parmas successCall:^(NSDictionary *responseObject) {
-            FTDoctor *doctor = [FTDoctor mj_objectWithKeyValues:responseObject];
+        [[BaseRequestClient defaultClient]jsonPostGlobal:[NSString stringWithFormat:@"%@/%@",self.url.absoluteString,@"hds/getDocInfo"] forParams:parmas successCall:^(NSDictionary *responseObject) {
+            FTDoctor *doctor = [FTDoctor mj_objectWithKeyValues:[responseObject objectForKey:@"result"]];
             block(doctor,nil);
         } failedCall:^(NSError *error) {
             block(nil,error);
@@ -83,8 +91,29 @@
     if (self.appId) {
         [[BaseRequestClient defaultClient]addInitParmarterWithKey:@"appId" Value:self.appId];
     }
+    
+    
+   [BaseRequestClient defaultClient].manager.responseSerializer = [AFJSONResponseSerializer
+                                                                   serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    
+    [BaseRequestClient defaultClient].manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    
+
+    
 }
 #pragma mark - Getter
+-(NSString *)ip{
+    if (!_ip) {
+        _ip = @"http://172.20.2.254";
+    }
+    return _ip;
+}
+-(int)port{
+    if (_port == 0) {
+        _port = 8089;
+    }
+    return _port;
+}
 -(NSString *)serviceName{
     if (!_serviceName) {
         _serviceName = @"sdkService";
@@ -94,7 +123,7 @@
 
 -(NSURL *)url{
     if (!_url) {
-        NSString *urlStr = [NSString stringWithFormat:@"%@/%@",self.ip,self.serviceName];
+        NSString *urlStr = [NSString stringWithFormat:@"%@:%d/%@",self.ip,self.port,self.serviceName];
         _url = [NSURL URLWithString:urlStr];
     }
     return _url;

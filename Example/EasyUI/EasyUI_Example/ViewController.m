@@ -7,10 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "ConsultViewController.h"
+#import "EasyUI.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
@@ -35,10 +34,27 @@
 }
 */
 - (IBAction)doConsult:(id)sender {
-    ConsultViewController *consultVC = [ConsultViewController instance];
-    consultVC.loginInfo = [MTLoginInfo simpleLogin:@"gaofen" User:@"18200115355"];
-    consultVC.loginInfo.doctor.name = @"高分";
-    [self presentViewController:consultVC animated:YES completion:nil];
+    
+    EasyUISettings *settings = [[EasyUISettings alloc]init];
+    
+    settings.platformKey = @"0";
+    settings.appId = @"suibian";
+    settings.tel = @"18200115355";
+    settings.account = @"hjh";
+    settings.dUserId = @"12";
+    
+    [[EasyUI instance] setup:settings startBlock:^(ConsultViewController *consultVC) {
+        if (!consultVC) {
+            return ;
+        }
+        [self presentViewController:consultVC animated:YES completion:nil];
+    } finishBlock:^(ConsultViewController *consultVC, double callTime) {
+        [consultVC dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
 }
+
+
+
 
 @end

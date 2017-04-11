@@ -9,5 +9,6 @@
 #import "MTDoctor.h"
 
 @interface FTDoctor : MTDoctor
-
+@property (nonatomic,strong)NSString *dpmtName;
+@property (nonatomic,strong)NSString *title;
 @end

@@ -27,7 +27,6 @@ static int const url_error = -1001;
 
 +(instancetype _Nonnull )instance;
 
-
 -(void)getUserTokenByTel:(NSString *_Nonnull)tel DUserId:(NSString *_Nonnull)dUserId FinshWithBlock:(void(^_Nullable)(FTUser * _Nullable user,NSError * _Nullable error)) block;
 -(void)getDoctorInfo:(NSString *_Nonnull)account FinshWithBlock:(void(^_Nullable)(FTDoctor * _Nullable user,NSError * _Nullable error)) block;
 

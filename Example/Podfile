@@ -12,7 +12,7 @@ target 'EasyUI' do
     pod 'Reachability', '~> 3.2'
     pod 'SDWebImage', '~> 4.0.0-beta2'
     pod 'Aspects', '~> 1.4.1'
-    pod 'XY_NetWorkClient', '~> 1.0.4'
+    pod 'XY_NetWorkClient', '~> 1.0.5'
     pod 'SDWebImage', '~> 4.0.0-beta2'
     
     project 'EasyUI/EasyUI.xcodeproj'
@@ -29,7 +29,7 @@ target 'MTalkerClient' do
     pod 'MJExtension', '~> 3.0.13'
     pod 'KeychainItemWrapper', '~> 0.0.1'
     pod 'ftcodec', '~> 1.1.0.307'
-    pod 'XY_NetWorkClient', '~> 1.0.4'
+    pod 'XY_NetWorkClient', '~> 1.0.5'
     
 end
 

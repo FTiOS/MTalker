@@ -62,9 +62,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     
     BOOL _isPresentVC;   //是否推出 图片选择视图 或者相机视图
     BOOL _sendingImage; //图片是否在上传中
-    BOOL _isNeedJumpEva; //设置只跳转一次 评价
     long inLineNumber; //排队列号数目
-    //MedicalStore * _deliveryInfo;
     
     NSInteger count; //已上传图片数目
     NSInteger totalCount; //图片总数
@@ -128,7 +126,6 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     [self setupFTAppService];
     
     _duration = 0;
-    _isNeedJumpEva = NO; //没有咨询部需要跳转
     _isTalking = NO;
     
     //排队号数
@@ -351,12 +348,26 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
         CGFloat menuViewWidth = 300.0f;
         CGFloat buttonWidth = 50;
         CGFloat leftMargin = 30.f;
-        CGFloat marginX = (menuViewWidth - buttonWidth*3 - leftMargin*2.0)*0.5;
+        CGFloat marginX ;
+        
+        //去掉推药按钮
+        if(self.needPushPicture){
+            marginX = (menuViewWidth - buttonWidth*3 - leftMargin*2.0)*0.5;
+        }else{
+            marginX = (menuViewWidth - buttonWidth*2 - leftMargin*2.0)*0.5;
+        }
+        
         for(int i = 0; i < 4; i ++){
             
             if(i == 2){
                 //not pushDrug button
             }else{
+                
+                if(i == 1 && !self.needPushPicture){
+                    //not SendImagebutton
+                    continue;
+                }
+        
                 FTConsultButton *ftConsultBtn = [[FTConsultButton alloc] initWithFrame:CGRectMake(0, 0, 50, 46)];
                 ftConsultBtn.ft_selectedImage = [UIImage imageNamed:iconsSelected[i]];
                 ftConsultBtn.ft_normalImage = [UIImage imageNamed:iconsNormal[i]];
@@ -390,8 +401,6 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     FTConsultButton *picBtn = [self.menuView viewWithTag:(1+1000)];
     if(picBtn){
         CirleProgressView *circle = [[CirleProgressView alloc] initWithFrame:CGRectMake(0, 0, picBtn.frame.size.width, picBtn.frame.size.height - 14)];
-        //        circle.totalCount = 5;
-        //        circle.currentCount = 0;
         [picBtn addSubview:circle];
         self.cirleView = circle;
         self.cirleView.hidden = YES;
@@ -638,7 +647,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
         NSLog(@"number = %d  progress = %@",number,progress);
         
     } success:^(NSString *path) {
-        //[self.shareTalker sendImage:path];
+        [self.shareTalker sendImage:path];
     } failed:^(NSError *error) {
         
     }];
@@ -729,28 +738,10 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     [self.shareTalker logout];
     
     //执行业务流程
-    if(self.shareTalker.talkTime > 0){ //接通成功后 执行评价
-        
-        /*if(self.medType == POINT_PHARMACEUTIST ||self.medType == RANDOM_PHARMACEUTIST){ //药师推药 不会跳转评价
-            if ([self.pushDrugs count]==0) {
-                [self.navigationController popViewControllerAnimated:YES];
-            }else{
-                DrugsOrderDetailViewController *drugsDC = [[DrugsOrderDetailViewController alloc] initWithNibName:@"DrugsOrderDetailViewController" bundle:nil];
-                drugsDC.consultId = [self.shareTalker.busiId integerValue];
-                drugsDC.isFromConsult = YES;
-                drugsDC.postage = self.shareTalker.deliveryInfo.postage; //传递服务器处理中 未同步的邮费。
-                drugsDC.drugs = [[NSArray alloc] initWithArray:self.pushDrugs];
-                [self.navigationController pushViewController:drugsDC animated:YES];
-            }
-        }else{ //医生评价
-            
-            _isNeedJumpEva = YES;
-            [self jumpNewEvaController];
-        }*/
-        
-    }else{
-        [self.navigationController popViewControllerAnimated:YES];
+    if ([self.delegate respondsToSelector:@selector(didHangUpCall:withCallTime:)]) {
+        [self.delegate didHangUpCall:self withCallTime:self.shareTalker.talkTime];
     }
+
     
     NSLog(@"hang up ending");
 }
@@ -1208,90 +1199,9 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
 
 #pragma mark - 上传图片网络请求 updatePic
 - (void)updatePic:(NSArray <__kindof UIImage *> *)avatars updateNumber:(int)number Progress:(void (^)(NSProgress * progress, int number))progresscall success:(void(^)(NSString * path))successCall failed:(void(^)(NSError *error)) failedCall {
-  /*  -- number;
-    if (number < 0) {
-        
-        [self resetCircleView];
-        return;
+    if ([self.delegate respondsToSelector:@selector(updatePic:updateNumber:Progress:success:failed:)]) {
+        [self.delegate updatePic:avatars updateNumber:number Progress:progresscall success:successCall failed:failedCall];
     }
-    UIImage *avatar = avatars[number];
-    
-    NSData *imageData = UIImageJPEGRepresentation(avatar, 1.0);
-    float length = [imageData length]/1024.0f;
-    NSLog(@"%f kb", length);
-    if (imageData.length>100*1024) {
-        if (imageData.length>1024*1024) {//1M以及以上
-            imageData=UIImageJPEGRepresentation(avatar, 0.1);
-        }else if (imageData.length>512*1024) {//0.5M-1M
-            imageData=UIImageJPEGRepresentation(avatar, 0.5);
-        }else if (imageData.length>200*1024) {//0.25M-0.5M
-            imageData=UIImageJPEGRepresentation(avatar, 0.9);
-        }
-    }
-    NSLog(@"图片压缩后%f kb", [imageData length]/1024.0f);
-    NSMutableDictionary *temp=[[NSMutableDictionary alloc]init];
-    [temp setObject:imageData forKey:@"file"];
-    [temp setObject:([TalkEngine shareTalkEngine].busiId.length == 0 ? @"0" : [TalkEngine shareTalkEngine].busiId) forKey:@"busiId"];
-    [temp setObject:@"jpg" forKey:FILETYPE];
-    [temp setObject:@"file" forKey:FILEKEY];
-    [temp setObject:@"image/jpeg" forKey:MIMETYPE];
-    
-    [temp ft_setObject:[UserCenter shareUserCenter].token forKey:@"tokenId"];
-    [temp ft_setObject:self.doctor.providerId forKey:@"providerId"];
-    
-    if (self.medType == RANDOM_DOCTOR || self.medType == POINT_DOCTOR) {
-        [temp ft_setObject:@"0" forKey:@"type"];
-    }else {
-        [temp ft_setObject:@"1" forKey:@"type"];
-    }
-    
-    __weak typeof(self)weakSelf = self;
-    NSString *countStr = [NSString stringWithFormat:@"%dnum", (int)(self.asserts.count - number)];
-    NSString *strSuccess = [NSString stringWithFormat:@"%@ %@", LOCALIZATION(countStr), LOCALIZATION(@"UploadSuccessText")];
-    NSString *strFialed = [NSString stringWithFormat:@"%@ %@", LOCALIZATION(countStr), LOCALIZATION(@"UploadFailedText")];
-    BaseURLRequest *request = [BaseURLRequest shareNetRequest];
-    request.maxDuration = 600;// 600s
-    
-    [request JsonPostSingleFile:[BaseUrl urlWithDoctorPath:@"addBusiPic"] forParams:temp forFile:imageData forProgress:^(NSProgress *progress) {
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if(number == 0 && avatars.count == 1){
-                [self showCircleViewWithIndex:0 totalCount:totalCount progress:progress.fractionCompleted];
-            }else{
-                float morePicProgress = (float)((avatars.count-number-1) + ((float)number/avatars.count)*progress.fractionCompleted)/avatars.count;
-                NSInteger numberPic = (avatars.count-number-1);//已传数目
-                [self showCircleViewWithIndex:numberPic totalCount:totalCount progress:morePicProgress];
-            }
-        });
-        
-    } successCall:^(NSDictionary *responseObject) {
-        NSString *path = [responseObject ft_stringForKey:@"result"];
-        successCall(path);
-        [weakSelf showToastMessage:strSuccess];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if(number <= 0){
-                [self showCircleViewWithIndex:avatars.count totalCount:avatars.count progress:1.0f];
-                [self resetCircleView];
-            }
-        });
-        [weakSelf updatePic:avatars updateNumber:number Progress:^(NSProgress *progress, int number) {
-            progresscall(progress,number);
-        } success:^(NSString *path) {
-            successCall(path);
-        } failed:^(NSError *error) {
-            failedCall(error);
-        }];
-    } failedCall:^(NSError *error) {
-        failedCall(error);
-        [weakSelf showToastMessage:strFialed];
-        [weakSelf updatePic:avatars updateNumber:number Progress:^(NSProgress *progress, int number) {
-            progresscall(progress,number);
-        } success:^(NSString *path) {
-            successCall(path);
-        } failed:^(NSError *error) {
-            failedCall(error);
-        }];
-    }];*/
 }
 
 - (void)resetCircleView
