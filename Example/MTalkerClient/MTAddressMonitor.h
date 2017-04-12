@@ -16,13 +16,12 @@ static NSString const *VauleKey = @"result";
 
 @property (nonatomic,strong)NSString *api;//接口
 @property (nonatomic,strong)NSDictionary *parmas;//参数
-@property (nonatomic,strong,readonly)NSArray<MTServerAddress *> *addresses;//获取的所有地址
+@property (nonatomic,strong,readonly)MTServerAddress *addresses;//获取的所有地址
 
 +(instancetype)instance;
 
 //获取网络配置，若本地有直接返回，再请求网络
--(void)patchAddressWithFinshiBlock:(void (^)(NSArray<MTServerAddress *> *addresses,NSError *error))block;
-//获取对应的网络地址
--(MTServerAddress *)getServerAddress:(ServerAddressType)type;
+-(void)patchAddressWithFinshiBlock:(void (^)(MTServerAddress *address,NSError *error))block;
+
 
 @end

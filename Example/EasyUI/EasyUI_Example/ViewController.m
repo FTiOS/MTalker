@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "EasyUI.h"
+#import "FTConsultUI.h"
 
 @interface ViewController ()
 @end
@@ -43,7 +43,7 @@
     settings.account = @"hjh";
     settings.dUserId = @"12";
     
-    [[EasyUI instance] setup:settings startBlock:^(ConsultViewController *consultVC) {
+    [[FTConsultUI instance] setup:settings startBlock:^(ConsultViewController *consultVC) {
         if (!consultVC) {
             return ;
         }

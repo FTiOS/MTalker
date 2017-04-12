@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DADCE17CFD16B9825DCBCBF /* libPods-EasyUI_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28554BB754021A520A0BCB3F /* libPods-EasyUI_Example.a */; };
+		50B208846E42845F1E44DDFB /* libPods-EasyUI_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28554BB754021A520A0BCB3F /* libPods-EasyUI_Example.a */; };
 		799B1B1D8136C7F01C5BAB12 /* libPods-EasyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE123CDBB5E5EE6D700442BB /* libPods-EasyUI.a */; };
 		EA5FE4281E97378D002C5841 /* FTAppService.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FE4271E97378D002C5841 /* FTAppService.m */; };
 		EA5FE42B1E977BDF002C5841 /* FTDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FE42A1E977BDF002C5841 /* FTDoctor.m */; };
@@ -17,7 +17,7 @@
 		EA7803391E8B995A00779DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7803381E8B995A00779DED /* Assets.xcassets */; };
 		EA78033C1E8B995A00779DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA78033A1E8B995A00779DED /* LaunchScreen.storyboard */; };
 		EA7803601E8B9BF400779DED /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EA78035F1E8B9BF400779DED /* README.md */; };
-		EA7803641E8B9C1700779DED /* EasyUI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7803631E8B9C1700779DED /* EasyUI.m */; };
+		EA7803641E8B9C1700779DED /* FTConsultUI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7803631E8B9C1700779DED /* FTConsultUI.m */; };
 		EA7B2A171E8B9DC400E4B630 /* ConsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2A151E8B9DC400E4B630 /* ConsultViewController.m */; };
 		EA7B2A1F1E8BA16800E4B630 /* NSBundle+EasyUI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2A1E1E8BA16800E4B630 /* NSBundle+EasyUI.m */; };
 		EA7B2A241E8BA3E900E4B630 /* btn_101b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7B2A221E8BA3E900E4B630 /* btn_101b@2x.png */; };
@@ -52,6 +52,8 @@
 		EA7B2AB61E8CB50700E4B630 /* UITextField+AddLine.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2AB51E8CB50700E4B630 /* UITextField+AddLine.m */; };
 		EA7B2AB91E8CB52200E4B630 /* UIColor+MyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2AB81E8CB52200E4B630 /* UIColor+MyUtils.m */; };
 		EA7D57501E8121CC0072B7AE /* EasyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D574F1E8121CC0072B7AE /* EasyUITests.m */; };
+		EAD6F4B11E9E7EEB00275FC4 /* libEasyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7802FA1E8B977E00779DED /* libEasyUI.a */; };
+		EAD6F4B31E9E7F9F00275FC4 /* libMTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD6F4B21E9E7F9F00275FC4 /* libMTalkerClient.a */; };
 		EAFCBB6C1E8F55D700BAF337 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB6B1E8F55D700BAF337 /* CoreImage.framework */; };
 		EAFCBB6E1E8F562500BAF337 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB6D1E8F562500BAF337 /* UIKit.framework */; };
 		EAFCBB791E94875300BAF337 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFCBB771E94875300BAF337 /* ViewController.m */; };
@@ -94,8 +96,8 @@
 		EA78035D1E8B9A8700779DED /* EasyUI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = EasyUI.podspec; path = ../../EasyUI.podspec; sourceTree = "<group>"; };
 		EA78035E1E8B9BEB00779DED /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		EA78035F1E8B9BF400779DED /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		EA7803621E8B9C1700779DED /* EasyUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyUI.h; sourceTree = "<group>"; };
-		EA7803631E8B9C1700779DED /* EasyUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyUI.m; sourceTree = "<group>"; };
+		EA7803621E8B9C1700779DED /* FTConsultUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTConsultUI.h; sourceTree = "<group>"; };
+		EA7803631E8B9C1700779DED /* FTConsultUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTConsultUI.m; sourceTree = "<group>"; };
 		EA7803661E8B9C1F00779DED /* consult_backgroungImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consult_backgroungImage@2x.png"; sourceTree = "<group>"; };
 		EA7803671E8B9C1F00779DED /* consult_backgroungImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consult_backgroungImage@3x.png"; sourceTree = "<group>"; };
 		EA7803681E8B9C1F00779DED /* consult_cover_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consult_cover_bottom@2x.png"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		EA7D57511E8121CC0072B7AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA7D57691E8124FD0072B7AE /* libMTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMTalkerClient.a; path = "../build/Debug-iphoneos/libMTalkerClient.a"; sourceTree = "<group>"; };
 		EAD06A841E82604700DDA4CF /* libMTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMTalkerClient.a; path = "../../../../Library/Developer/Xcode/DerivedData/MTalker-djpqzqyavvfmdlcgekbljgcwqhff/Build/Products/Debug-iphonesimulator/libMTalkerClient.a"; sourceTree = "<group>"; };
+		EAD6F4B21E9E7F9F00275FC4 /* libMTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMTalkerClient.a; path = "../build/Release-iphoneos/libMTalkerClient.a"; sourceTree = "<group>"; };
 		EAFCBB6B1E8F55D700BAF337 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		EAFCBB6D1E8F562500BAF337 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EAFCBB761E94875300BAF337 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -240,6 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD6F4B31E9E7F9F00275FC4 /* libMTalkerClient.a in Frameworks */,
 				EAFCBB6E1E8F562500BAF337 /* UIKit.framework in Frameworks */,
 				EAFCBB6C1E8F55D700BAF337 /* CoreImage.framework in Frameworks */,
 				EA7B2A561E8C996C00E4B630 /* AssetsLibrary.framework in Frameworks */,
@@ -251,7 +255,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DADCE17CFD16B9825DCBCBF /* libPods-EasyUI_Example.a in Frameworks */,
+				EAD6F4B11E9E7EEB00275FC4 /* libEasyUI.a in Frameworks */,
+				50B208846E42845F1E44DDFB /* libPods-EasyUI_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,8 +346,8 @@
 				EA7B2A4B1E8BB34400E4B630 /* FTConsultButton.m */,
 				EA7B2A4C1E8BB34400E4B630 /* FTWaterImageView.h */,
 				EA7B2A4D1E8BB34400E4B630 /* FTWaterImageView.m */,
-				EA7803621E8B9C1700779DED /* EasyUI.h */,
-				EA7803631E8B9C1700779DED /* EasyUI.m */,
+				EA7803621E8B9C1700779DED /* FTConsultUI.h */,
+				EA7803631E8B9C1700779DED /* FTConsultUI.m */,
 				EA7B2A471E8BB33900E4B630 /* CirleProgressView.h */,
 				EA7B2A481E8BB33900E4B630 /* CirleProgressView.m */,
 				EA7B2A141E8B9DC400E4B630 /* ConsultViewController.h */,
@@ -582,6 +587,7 @@
 		EA7D57681E8124FD0072B7AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAD6F4B21E9E7F9F00275FC4 /* libMTalkerClient.a */,
 				EAFCBB6D1E8F562500BAF337 /* UIKit.framework */,
 				EAFCBB6B1E8F55D700BAF337 /* CoreImage.framework */,
 				EA7B2A551E8C996C00E4B630 /* AssetsLibrary.framework */,
@@ -834,7 +840,7 @@
 				EA7B2AA41E8CAA3500E4B630 /* AssetsViewController.m in Sources */,
 				EA7B2A9F1E8CA8BB00E4B630 /* UIImage+KVNImageEffects.m in Sources */,
 				EA7B2A491E8BB33900E4B630 /* CirleProgressView.m in Sources */,
-				EA7803641E8B9C1700779DED /* EasyUI.m in Sources */,
+				EA7803641E8B9C1700779DED /* FTConsultUI.m in Sources */,
 				EA7B2A661E8C99F800E4B630 /* UIImage+FixOrientation.m in Sources */,
 				EA7B2A651E8C99F800E4B630 /* LLSimpleCamera.m in Sources */,
 				EA7B2A6E1E8C9A0C00E4B630 /* UIImage+Resize.m in Sources */,

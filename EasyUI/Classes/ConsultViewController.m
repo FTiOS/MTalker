@@ -123,7 +123,6 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initSubview];
-    [self setupFTAppService];
     
     _duration = 0;
     _isTalking = NO;
@@ -511,19 +510,12 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
     settings.decodeView = self.doctorView;
     settings.encodeView = self.mySelfView;
-    settings.api = @"http://172.20.2.254:8089/sdkService/busi/getDispatchAddr";
+    settings.api = [NSString stringWithFormat:@"%@:%d/%@/busi/getDispatchAddr",[FTAppService instance].ip,[FTAppService instance].port,[FTAppService instance].serviceName];
     settings.parmas = nil;
     settings.defaultVideo = YES;
     settings.keepTalkerType = YES;
     
     return settings;
-}
-
-//网络请求配置
--(void)setupFTAppService{
-    [FTAppService instance].ip=@"172.20.2.254";
-    [FTAppService instance].port=8089;
-    [FTAppService instance].serviceName=@"sdkService";
 }
 
 #pragma mark - MTTalkerCommandDelegate

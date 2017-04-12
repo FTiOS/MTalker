@@ -1,6 +1,6 @@
 {
   "name": "EasyUI",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "summary": "咨询医生的音视频服务UI",
   "description": "咨询医生的音视频服务UI，底层封装成静态库，支持pod",
   "homepage": "https://github.com/rrun/MTalker",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/rrun/MTalker.git",
-    "tag": "0.1.1"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "8.0"

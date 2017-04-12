@@ -1,6 +1,6 @@
 //
-//  EasyUI.h
-//  EasyUI
+//  FTConsultUI.h
+//  FTConsultUI
 //
 //  Created by 何霞雨 on 2017/3/29.
 //  Copyright © 2017年 何霞雨. All rights reserved.
@@ -34,13 +34,13 @@ typedef void (^SuccessBlock)(NSString * _Nullable imagePath);
 typedef void (^FailBlock)(NSError * _Nullable error);
 
 @class EasyUISettings;
-@interface EasyUI : NSObject
+@interface FTConsultUI : NSObject
 
 
 /**
  配置器创建
 
- @return easyui 配置器
+ @return FTConsultUI 配置器
  */
 +(instancetype _Nonnull )instance;
 

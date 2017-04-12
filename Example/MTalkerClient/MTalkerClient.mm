@@ -47,9 +47,9 @@ static MTalkerClient *_instance;
     self.setting = setting;
     [MTAddressMonitor instance].parmas = self.setting.parmas;
     [MTAddressMonitor instance].api = self.setting.api;
-    [[MTAddressMonitor instance] patchAddressWithFinshiBlock:^(NSArray<MTServerAddress *> *addresses, NSError *error) {
+    [[MTAddressMonitor instance] patchAddressWithFinshiBlock:^(MTServerAddress *address, NSError *error) {
         if (!error) {
-            self.talkerAddress = [[MTAddressMonitor instance]getServerAddress:ServerType_Talker];
+            self.talkerAddress = address;
             bolck(YES);
         }else
             bolck(NO);

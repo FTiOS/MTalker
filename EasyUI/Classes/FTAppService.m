@@ -104,13 +104,13 @@
 #pragma mark - Getter
 -(NSString *)ip{
     if (!_ip) {
-        _ip = @"http://172.20.2.254";
+        _ip = @"http://sdk.cdfortis.com";
     }
     return _ip;
 }
 -(int)port{
     if (_port == 0) {
-        _port = 8089;
+        _port = 80;
     }
     return _port;
 }

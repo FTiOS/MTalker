@@ -60,8 +60,8 @@
    MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
     settings.decodeView = self.decodeView;
     settings.encodeView = self.encodeView;
-    settings.api = @"https://9.cdfortis.com:8443/appService/appTwo!getServerAddress2.action";
-    settings.parmas = [NSDictionary dictionaryWithObjectsAndKeys:@"iOS",@"__os",@"2.17.5.0328",@"__ver",nil];
+    settings.api = @"http://sdk.cdfortis.com/sdkService/busi/getDispatchAddr";
+    settings.parmas = [NSDictionary dictionaryWithObjectsAndKeys:@"suibian",@"appId",@"0",@"platformKey",nil];
     settings.defaultVideo = YES;
     settings.keepTalkerType = YES;
     return settings;

@@ -22,7 +22,7 @@
 }
 
 //获取网络配置
--(void)patchAddressWithFinshiBlock:(void (^)(NSArray<MTServerAddress *> *addresses,NSError *error))block{
+-(void)patchAddressWithFinshiBlock:(void (^)(MTServerAddress *address,NSError *error))block{
     
     if (_addresses) {
         block(_addresses,nil);
@@ -32,9 +32,9 @@
     [BaseRequestClient defaultClient].resultKey = @"result";
     
     [[BaseRequestClient defaultClient] jsonPostGlobal:self.api forParams:self.parmas successCall:^(NSDictionary *responseObject) {
-        NSArray *temp = [MTServerAddress mj_objectArrayWithKeyValuesArray:[responseObject objectForKey:VauleKey]];
+        MTServerAddress *temp = [MTServerAddress mj_objectWithKeyValues:[responseObject objectForKey:@"result"]];
         
-        if (!_addresses && [temp count]>0) {
+        if (!_addresses && temp ) {
             _addresses = temp;
             block(temp,nil);
         }
@@ -46,16 +46,4 @@
     
 }
 
-//获取对应的网络地址
--(MTServerAddress *)getServerAddress:(ServerAddressType)type{
-    __block MTServerAddress *address = nil;
-   [_addresses enumerateObjectsUsingBlock:^(MTServerAddress * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-       if (type == obj.type) {
-           address = obj;
-           *stop = YES;
-       }
-   }];
-    
-    return address;
-}
 @end

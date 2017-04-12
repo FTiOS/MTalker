@@ -7,14 +7,14 @@
 //
 
 #import "NSBundle+EasyUI.h"
-#import "EasyUI.h"
+#import "FTConsultUI.h"
 
 @implementation NSBundle (EasyUI)
 + (NSBundle *)my_easyUIBundle {
     return [self bundleWithURL:[self my_myLibraryBundleURL]];
 }
 + (NSURL *)my_myLibraryBundleURL {
-    NSBundle *bundle = [NSBundle bundleForClass:[EasyUI class]];
+    NSBundle *bundle = [NSBundle bundleForClass:[FTConsultUI class]];
     return [bundle URLForResource:@"EasyUI" withExtension:@"bundle"];
 }
 

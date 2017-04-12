@@ -1,15 +1,15 @@
 //
-//  EasyUI.m
-//  EasyUI
+//  FTConsultUI.m
+//  FTConsultUI
 //
 //  Created by 何霞雨 on 2017/3/29.
 //  Copyright © 2017年 何霞雨. All rights reserved.
 //
 
-#import "EasyUI.h"
+#import "FTConsultUI.h"
 #import "FTAppService.h"
 
-@interface EasyUI()<ConsultViewControllerDelegate>
+@interface FTConsultUI()<ConsultViewControllerDelegate>
 
 @property (nonatomic,weak)ConsultViewController *consultVC;
 
@@ -22,13 +22,13 @@
 
 @end
 
-@implementation EasyUI
+@implementation FTConsultUI
 
 +(instancetype)instance{
-    static EasyUI *easyUI;
+    static FTConsultUI *easyUI;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        easyUI = [[EasyUI alloc]init];
+        easyUI = [[FTConsultUI alloc]init];
     });
     return easyUI;
 }
