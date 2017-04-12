@@ -7,7 +7,7 @@ workspace 'MTalker.xcworkspace'
 platform :ios, '8.0' 
 
 target 'EasyUI' do
-    #pod 'MTalker', :path => '../'
+    pod 'MTalker', :path => '../'
     pod 'Masonry', '~> 1.0.2'
     pod 'Reachability', '~> 3.2'
     pod 'SDWebImage', '~> 4.0.0-beta2'
@@ -19,7 +19,7 @@ target 'EasyUI' do
 end
 
 target 'EasyUI_Example' do
-    #pod 'EasyUI', :path => '../'
+    pod 'EasyUI', :path => '../'
     
     project 'EasyUI/EasyUI.xcodeproj'
     
@@ -28,7 +28,7 @@ end
 target 'MTalkerClient' do
     pod 'MJExtension', '~> 3.0.13'
     pod 'KeychainItemWrapper', '~> 0.0.1'
-    # pod 'ftcodec', '~> 1.1.0.307'
+    pod 'ftcodec', '~> 1.1.0.307'
     pod 'XY_NetWorkClient', '~> 1.0.5'
     
 end

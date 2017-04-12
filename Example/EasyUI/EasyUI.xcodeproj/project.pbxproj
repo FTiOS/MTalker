@@ -52,8 +52,6 @@
 		EA7B2AB61E8CB50700E4B630 /* UITextField+AddLine.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2AB51E8CB50700E4B630 /* UITextField+AddLine.m */; };
 		EA7B2AB91E8CB52200E4B630 /* UIColor+MyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2AB81E8CB52200E4B630 /* UIColor+MyUtils.m */; };
 		EA7D57501E8121CC0072B7AE /* EasyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D574F1E8121CC0072B7AE /* EasyUITests.m */; };
-		EAD6F4B11E9E7EEB00275FC4 /* libEasyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7802FA1E8B977E00779DED /* libEasyUI.a */; };
-		EAD6F4B31E9E7F9F00275FC4 /* libMTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD6F4B21E9E7F9F00275FC4 /* libMTalkerClient.a */; };
 		EAFCBB6C1E8F55D700BAF337 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB6B1E8F55D700BAF337 /* CoreImage.framework */; };
 		EAFCBB6E1E8F562500BAF337 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB6D1E8F562500BAF337 /* UIKit.framework */; };
 		EAFCBB791E94875300BAF337 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFCBB771E94875300BAF337 /* ViewController.m */; };
@@ -243,7 +241,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD6F4B31E9E7F9F00275FC4 /* libMTalkerClient.a in Frameworks */,
 				EAFCBB6E1E8F562500BAF337 /* UIKit.framework in Frameworks */,
 				EAFCBB6C1E8F55D700BAF337 /* CoreImage.framework in Frameworks */,
 				EA7B2A561E8C996C00E4B630 /* AssetsLibrary.framework in Frameworks */,
@@ -255,7 +252,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD6F4B11E9E7EEB00275FC4 /* libEasyUI.a in Frameworks */,
 				50B208846E42845F1E44DDFB /* libPods-EasyUI_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
