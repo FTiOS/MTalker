@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasyUI'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = '咨询医生的音视频服务UI'
 
 # This description is used to generate tags and improve search results.
