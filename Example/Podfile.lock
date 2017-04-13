@@ -15,11 +15,18 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - EasyUI (0.1.7):
+    - Aspects (~> 1.4.1)
+    - Masonry (~> 1.0.2)
+    - MTalker (~> 0.1.6)
+    - Reachability (~> 3.2)
+    - SDWebImage (~> 4.0.0-beta2)
+    - XY_NetWorkClient (~> 1.0.5)
   - ftcodec (1.1.0.307)
   - KeychainItemWrapper (0.0.1)
   - Masonry (1.0.2)
   - MJExtension (3.0.13)
-  - MTalker (0.1.3):
+  - MTalker (0.1.6):
     - ftcodec (~> 1.1.0.307)
     - KeychainItemWrapper (~> 0.0.1)
     - MJExtension (~> 3.0.13)
@@ -33,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - Aspects (~> 1.4.1)
+  - EasyUI (from `../`)
   - ftcodec (~> 1.1.0.307)
   - KeychainItemWrapper (~> 0.0.1)
   - Masonry (~> 1.0.2)
@@ -43,21 +51,24 @@ DEPENDENCIES:
   - XY_NetWorkClient (~> 1.0.5)
 
 EXTERNAL SOURCES:
+  EasyUI:
+    :path: ../
   MTalker:
     :path: ../
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  EasyUI: acd26f901f34e9f3c426ccf781e9663fe4d3e01e
   ftcodec: edc72acfe6e8914d4f675d123840071b853d0042
   KeychainItemWrapper: 6e3bf8f9246c798898173a5cda51631ba0a885c2
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  MTalker: 3ea387680a16f5c0e7ceacb81fd686449c46fc55
+  MTalker: 6d61bece6a3b64169a44e51432cb618f66b7419f
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   XY_NetWorkClient: 2c8d8d36d2162e7c6b13faea88f1e340dd7020f3
 
-PODFILE CHECKSUM: 73c65393c6ecb843c270908e446a8b8e744f249f
+PODFILE CHECKSUM: 94f3dced752268564655dbd1a9e6566845066f93
 
 COCOAPODS: 1.1.1
