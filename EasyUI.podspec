@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
     s.dependency 'SDWebImage', '~> 4.0.0-beta2'
     s.dependency 'Aspects', '~>  1.4.1'
     s.dependency 'MTalker', '~> 0.1.6'
-    s.dependency 'XY_NetWorkClient', '~> 1.0.5'
+    s.dependency 'XY_NetWorkClient', '~> 1.0.6'
     s.dependency 'SDWebImage', '~> 4.0.0-beta2'
 
 end
