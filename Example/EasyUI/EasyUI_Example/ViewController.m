@@ -49,6 +49,7 @@
         if (!consultVC) {
             return ;
         }
+        consultVC.loginInfo.device.deviceId = @"15000000203";
         [self presentViewController:consultVC animated:YES completion:nil];
     } finishBlock:^(ConsultViewController *consultVC, double callTime) {
         [consultVC dismissViewControllerAnimated:YES completion:nil];

@@ -17,7 +17,6 @@
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{
-             @"doctorAccount":@"account",
              @"name":@"fullName"
              };  
 }

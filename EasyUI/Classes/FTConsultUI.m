@@ -69,7 +69,6 @@
         
         loginInfo.user.tokenId = user.tokenId;
         consultVC.loginInfo = loginInfo;
-        NSDictionary *temp = [loginInfo joinSubModel];
         startBlock(consultVC);
         
     }];
