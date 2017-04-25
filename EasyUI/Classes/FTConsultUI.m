@@ -66,7 +66,7 @@
         consultVC.delegate = self;
         
         MTLoginInfo *loginInfo = [MTLoginInfo simpleLogin:settings.account User:settings.tel];
-        loginInfo.user = user;
+        loginInfo.user.tokenId = user.tokenId;
         consultVC.loginInfo = loginInfo;
         startBlock(consultVC);
         
