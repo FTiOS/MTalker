@@ -35,6 +35,7 @@
     MTLoginInfo *info  = [[MTLoginInfo alloc]init];
     info.doctor.doctorAccount = doctor;
     info.user.account = user;
+    info.device.deviceId = user;
     info.strategy = POINT_DOCTOR;
     
     return info;

@@ -15,7 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - EasyUI (0.2.2):
+  - EasyUI (0.2.3):
     - Aspects (~> 1.4.1)
     - Masonry (~> 1.0.2)
     - MTalker
@@ -60,7 +60,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  EasyUI: 6ac6519dd6e91eca2a16354d207c128868d181af
+  EasyUI: 24dbd73f094a307a1981fe869c281da8e2c12b5b
   ftcodec: 9ccb75f978b7367d1908adc4e3ca4b79baa69950
   KeychainItemWrapper: 6e3bf8f9246c798898173a5cda51631ba0a885c2
   KeychainItemWrapper-hicool: 880c603d8d0acfcc5b87d22bc45b49d3283dce1d

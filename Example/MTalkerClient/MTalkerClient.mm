@@ -152,9 +152,6 @@ static MTalkerClient *_instance;
     [_talker closeVideo];
     [_talker closeAudio];
     [_talker stopStream];
-
-    //停止心跳
-     _heart=NO;
     
     //停止命令台
     if(_client.businessId!=0){
@@ -167,6 +164,9 @@ static MTalkerClient *_instance;
     
     [_client stop];
     
+    //停止心跳
+    _heart=NO;
+    
     _tkStatus = ST_Default;
     _csStatus = CS_Disconnected;
     
@@ -174,6 +174,8 @@ static MTalkerClient *_instance;
     self.talkTime = _lastTalkTime - _startTalkTime;
     _startTalkTime = 0;
     _lastTalkTime = 0;
+    _recvHeartTime = 0;
+    
     if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
         [self.delegate receiveCommand:command_logout withInstance:[NSString stringWithFormat:@"%d",code] withInfo:@"退出类型:LogoutType"];
     }
@@ -236,7 +238,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
         if(_recvHeartTime == 0.0 || nowTime < _recvHeartTime){
             _recvHeartTime =nowTime;
         }else if(nowTime - _recvHeartTime > HEART_TIME_OUT){
-            NSLog(@TAG"调度服务心跳返回超时");
+            NSLog(@TAG"调度服务心跳返回超时,%d,%d",nowTime,_recvHeartTime);
             [self stopTalk:logout_disconnect];
             return;
         }
@@ -446,6 +448,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
         }
             break;
         case FT_PROTO_HEARTBEAT:{ //维持心跳
+            NSLog(@TAG"%@",[NSString stringWithFormat:@"心跳：%d",_recvHeartTime]);
             _recvHeartTime = [[NSDate date] timeIntervalSince1970];
             
             _lastTalkTime =  [[NSDate date] timeIntervalSince1970]*1000;
@@ -462,6 +465,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
                                     //FT_PROTO_LEAVE
                                     //FT_PROTO_MATCHER_OFFLINE
                                     //FT_PROTO_MATCH_FAILURE*/
+            NSLog(@TAG"%@",[NSString stringWithFormat:@"咨询链接断开：%d",command]);
             LogoutType logoutType = logout_normal;
             switch (command) {
                 case FT_PROTO_DISCONNECT:{
