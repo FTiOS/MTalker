@@ -17,7 +17,7 @@
 
 #import "KeychainItemWrapper/KeychainItemWrapper.h"
 
-#define UDID @"com.cdfortis.device"
+#define UDID @"com.cdfortis.talker"
 
 @implementation MTDevice
 
@@ -97,7 +97,7 @@
 
 -(void)bindUDID{
     KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc]
-                                         initWithIdentifier:@"UUID"
+                                         initWithIdentifier:UDID
                                          accessGroup:nil];
     NSString *strUUID = [keychainItem objectForKey:(__bridge id)kSecValueData];
     

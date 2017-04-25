@@ -550,7 +550,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
     
     switch (status) {
         case TCP_STATUS_CONNECT_SUCCESS:{
-            NSLog(@TAG"TCP连接成功");
+            NSLog(@TAG"TCP连接成功 :%@",[self.loginInfo joinSubModel]);
             [self.client login:[self.loginInfo joinSubModel]];
             _csStatus = CS_Connect_Success;
         }

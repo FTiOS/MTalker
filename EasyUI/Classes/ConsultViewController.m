@@ -353,7 +353,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
         if(self.needPushPicture){
             marginX = (menuViewWidth - buttonWidth*3 - leftMargin*2.0)*0.5;
         }else{
-            marginX = (menuViewWidth - buttonWidth*2 - leftMargin*2.0)*0.5;
+            marginX = (menuViewWidth - buttonWidth*2 - leftMargin*2.0);
         }
         
         for(int i = 0; i < 4; i ++){

@@ -20,7 +20,7 @@
     [super viewDidLoad];
     //配置
     [[MTalkerClient shareTalker]loadSettings:[self settings] finishBlock:^(BOOL loadSuccess) {
-        
+        [self start:nil];
     }];
     [MTalkerClient shareTalker].delegate = self;
 }
@@ -60,15 +60,15 @@
    MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
     settings.decodeView = self.decodeView;
     settings.encodeView = self.encodeView;
-    settings.api = @"http://sdk.cdfortis.com/sdkService/busi/getDispatchAddr";
-    settings.parmas = [NSDictionary dictionaryWithObjectsAndKeys:@"suibian",@"appId",@"0",@"platformKey",nil];
+    settings.api = @"https://sdk.cdfortis.com:10443/sdkService/busi/getDispatchAddr";
+    settings.parmas = [NSDictionary dictionaryWithObjectsAndKeys:@"101",@"appId",@"0",@"platformKey",nil];
     settings.defaultVideo = YES;
     settings.keepTalkerType = YES;
     return settings;
 } 
 #pragma mark - login
 -(MTLoginInfo *)simpleLogin{
-    return [MTLoginInfo simpleLogin:@"gaofen" User:@"18200115355"];
+    return [MTLoginInfo simpleLogin:@"ajx" User:@"15000000203"];
 }
 
 #pragma mark - MTTalkerCommandDelegate

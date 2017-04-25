@@ -132,12 +132,17 @@
         return;
     }
     
+    if(doctorAccount.length<=0){
+        NSLog(@TAG"doctor account is empty");
+        return;
+    }
+    
     mobile_login_content body;
     if(account.length>0)
-    body.set_phone_num(account.UTF8String);
+        body.set_phone_num(account.UTF8String);
     body.set_need_stratey(strategy);
     if(doctorAccount.length>0)
-    body.set_specifiy_id(doctorAccount.UTF8String);
+        body.set_specifiy_id(doctorAccount.UTF8String);
     if(deviceId.length>0){
         body.set_device_id(deviceId.UTF8String);
     }

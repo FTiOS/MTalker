@@ -66,8 +66,10 @@
         consultVC.delegate = self;
         
         MTLoginInfo *loginInfo = [MTLoginInfo simpleLogin:settings.account User:settings.tel];
+        
         loginInfo.user.tokenId = user.tokenId;
         consultVC.loginInfo = loginInfo;
+        NSDictionary *temp = [loginInfo joinSubModel];
         startBlock(consultVC);
         
     }];

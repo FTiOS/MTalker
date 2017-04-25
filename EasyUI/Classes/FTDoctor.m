@@ -9,10 +9,16 @@
 #import "FTDoctor.h"
 
 @implementation FTDoctor
+@dynamic hospitalId;
+@dynamic doctorAccount;
+@dynamic doctorType;
+@dynamic avatar;
+@dynamic name;
+
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{
              @"doctorAccount":@"account",
              @"name":@"fullName"
-             };  //从这里可以看出，model中的Mydog对应我们数据源中的dog，Smallbird对应bird.twoBird
+             };  
 }
 @end

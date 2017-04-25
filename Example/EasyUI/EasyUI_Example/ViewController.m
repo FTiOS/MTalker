@@ -38,10 +38,12 @@
     EasyUISettings *settings = [[EasyUISettings alloc]init];
     
     settings.platformKey = @"0";
-    settings.appId = @"suibian";
-    settings.tel = @"18200115355";
-    settings.account = @"hjh";
-    settings.dUserId = @"12";
+    settings.appId = @"101";
+    settings.tel = @"15000000203";
+    settings.account = @"ajx";
+    settings.dUserId = @"114750537156360124";
+    settings.api = @"https://sdk.cdfortis.com";
+    settings.port = 10443;
     
     [[FTConsultUI instance] setup:settings startBlock:^(ConsultViewController *consultVC) {
         if (!consultVC) {
