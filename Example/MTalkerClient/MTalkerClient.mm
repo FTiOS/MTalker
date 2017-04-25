@@ -487,7 +487,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
         case FT_PROTO_MATCH_WAIT:{ //等待匹配医生
              NSLog(@TAG"%@",[NSString stringWithFormat:@"您排在第%d位",intValue]);
             if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
-                [self.delegate receiveCommand:command_talking withInstance:[NSString stringWithFormat:@"%d",intValue] withInfo:@"排在第几位"];
+                [self.delegate receiveCommand:command_waiting withInstance:[NSString stringWithFormat:@"%d",intValue] withInfo:@"排在第几位"];
             }
             
             NSMutableDictionary *params = [NSMutableDictionary new];

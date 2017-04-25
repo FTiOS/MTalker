@@ -194,6 +194,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     __weak ConsultViewController *weakSelf = self;
     [[FTAppService instance]getDoctorInfo:self.loginInfo.doctor.doctorAccount FinshWithBlock:^(FTDoctor * _Nullable doctor, NSError * _Nullable error) {
         weakSelf.loginInfo.doctor = doctor;
+        weakSelf.loginInfo.doctor.doctorAccount = (NSString *)doctor.doctorAccount;
         [weakSelf displayDoctorView];
     }];
 
