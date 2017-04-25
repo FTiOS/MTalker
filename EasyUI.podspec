@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasyUI'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = '咨询医生的音视频服务UI'
 
 # This description is used to generate tags and improve search results.
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
     s.dependency 'Reachability', '~> 3.2'
     s.dependency 'SDWebImage', '~> 4.0.0-beta2'
     s.dependency 'Aspects', '~>  1.4.1'
-    s.dependency 'MTalker', '~> 0.1.7'
+    s.dependency 'MTalker'
     s.dependency 'XY_NetWorkClient', '~> 1.0.6'
     s.dependency 'SDWebImage', '~> 4.0.0-beta2'
 
