@@ -566,6 +566,13 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
                 switch (logoutType) {
                     case logout_normal:{
                         [self setConsultStatus:consult_end];
+                        //1.5s后关闭
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                            [self setConsultStatus:consult_end];
+                            if(self && [self respondsToSelector:@selector(delayToHangUp)]){
+                                [self performSelector:@selector(delayToHangUp) withObject:nil afterDelay:0];
+                            }
+                        });
                     }
                         break;
                     case logout_disconnect:{
@@ -931,7 +938,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
                 break;
             case consult_doctor_offline:{ //医生离线
                 //DoctorOffline
-                [self showTip:@"等待医生的回答，医生可能繁忙，请稍后再试" duration:kShowTenMinute];
+                [self showTip:@"匹配医生失败，请稍后再试" duration:kShowTenMinute];
                 self.statusLabel.text = @"访问被意外中止";
                 [self endTimingTimer];
             }
