@@ -567,7 +567,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
                     case logout_normal:{
                         [self setConsultStatus:consult_end];
                         //1.5s后关闭
-                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                             [self setConsultStatus:consult_end];
                             if(self && [self respondsToSelector:@selector(delayToHangUp)]){
                                 [self performSelector:@selector(delayToHangUp) withObject:nil afterDelay:0];
@@ -577,7 +577,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
                         break;
                     case logout_disconnect:{
                         //5秒之前处理完其他显示
-                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                             [self setConsultStatus:consult_net_connect_fail];
                             if(self && [self respondsToSelector:@selector(delayToHangUp)]){
                                 [self performSelector:@selector(delayToHangUp) withObject:nil afterDelay:0];

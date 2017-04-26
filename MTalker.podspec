@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MTalker'
-  s.version          = '0.2.4'
+  s.version          = '0.2.6'
   s.summary          = '咨询医生的音视频服务'
 
 # This description is used to generate tags and improve search results.
