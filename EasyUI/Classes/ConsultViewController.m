@@ -792,6 +792,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     int minute = (int)_duration/60;
     int second = _duration - (int)(minute*60);
     self.statusLabel.text = [NSString stringWithFormat:@"%02d:%02d", minute, second];
+    NSLog(@"calltime :%f",self.shareTalker.talkTime);
 }
 
 - (void)startTimingTimer

@@ -62,6 +62,8 @@ static MTalkerClient *_instance;
         return;
     }
     
+     _startTalkTime = 0;
+    
     _loginInfo = loginInfo;
     
     [self.ringer playRing];//开始铃声
@@ -117,7 +119,7 @@ static MTalkerClient *_instance;
 
 //开始咨询
 -(void)startTalk{
-    
+    NSLog(@"start talker");
     [self.ringer stopRing];//停止铃声
     [self.ringer vibrate];//震动一声
     
@@ -127,20 +129,22 @@ static MTalkerClient *_instance;
     [_client avControl:param];
     [self.talker openAudio:YES];
     _isVideo = NO;
-
+    
+    NSLog(@"start startProxyStream");
     [self.talker startProxyStream:_client.proxyServerIp port:_client.proxyServerPort clientId:_client.businessId];
     NSLog(@"end startProxyStream");
+    
     _tkStatus = ST_Talking;
     
     //初始化通话时长
-    self.talkTime = 0;
+    _talkTime = 0;
     _startTalkTime = [[NSDate date] timeIntervalSince1970] * 1000;
     _lastTalkTime = _startTalkTime;
 }
 
 //停止咨询
 -(void)stopTalk:(LogoutType)code{
-    
+    NSLog(@"stop talker");
     if (self.tkStatus == ST_Default)
         return;
     
@@ -171,10 +175,14 @@ static MTalkerClient *_instance;
     _csStatus = CS_Disconnected;
     
     //初始化通话时长
-    self.talkTime = _lastTalkTime - _startTalkTime;
+    _talkTime = _lastTalkTime - _startTalkTime;
     _startTalkTime = 0;
     _lastTalkTime = 0;
     _recvHeartTime = 0;
+    
+    if (code != logout_normal) {
+        _talkTime = -1;
+    }
     
     if ([self.delegate respondsToSelector:@selector(receiveCommand:withInstance:withInfo:)]) {
         [self.delegate receiveCommand:command_logout withInstance:[NSString stringWithFormat:@"%d",code] withInfo:@"退出类型:LogoutType"];
@@ -238,7 +246,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
         if(_recvHeartTime == 0.0 || nowTime < _recvHeartTime){
             _recvHeartTime =nowTime;
         }else if(nowTime - _recvHeartTime > HEART_TIME_OUT){
-            NSLog(@TAG"调度服务心跳返回超时,%d,%d",nowTime,_recvHeartTime);
+            NSLog(@TAG"调度服务心跳返回超时,%f,%f",nowTime,_recvHeartTime);
             [self stopTalk:logout_disconnect];
             return;
         }
@@ -309,7 +317,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
 }
 
 -(NSTimeInterval)talkTime{
-    if (self.tkStatus == ST_Talking) {
+    if (_talkTime >= 0 && self.tkStatus == ST_Talking) {
         _lastTalkTime = [[NSDate date]timeIntervalSince1970]*1000;
         _talkTime = _lastTalkTime - _startTalkTime;
     }
