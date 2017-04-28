@@ -137,7 +137,7 @@ static MTalkerClient *_instance;
     _tkStatus = ST_Talking;
     
     //初始化通话时长
-    _talkTime = 0;
+    _talkTime = 0.0;
     _startTalkTime = [[NSDate date] timeIntervalSince1970] * 1000;
     _lastTalkTime = _startTalkTime;
 }
@@ -320,6 +320,9 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
     if (_talkTime >= 0 && self.tkStatus == ST_Talking) {
         _lastTalkTime = [[NSDate date]timeIntervalSince1970]*1000;
         _talkTime = _lastTalkTime - _startTalkTime;
+    }
+    if (abs(_talkTime) >2 * 60 *60 ) {
+        _talkTime = 0.0;
     }
     return _talkTime;
 }
