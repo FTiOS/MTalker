@@ -62,7 +62,7 @@ static MTalkerClient *_instance;
         return;
     }
     
-     _startTalkTime = 0;
+     _startTalkTime = 0.0;
     
     _loginInfo = loginInfo;
     
@@ -176,8 +176,8 @@ static MTalkerClient *_instance;
     
     //初始化通话时长
     _talkTime = _lastTalkTime - _startTalkTime;
-    _startTalkTime = 0;
-    _lastTalkTime = 0;
+    _startTalkTime = 0.0;
+    _lastTalkTime = 0.0;
     _recvHeartTime = 0;
     
     if (code != logout_normal) {
