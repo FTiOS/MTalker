@@ -739,7 +739,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     
     //执行业务流程
     if ([self.delegate respondsToSelector:@selector(didHangUpCall:withCallTime:)]) {
-        if (self.shareTalker.talkTime < 15) {
+        if (self.shareTalker.talkTime < 0 || _duration < 15) {
             _duration = self.shareTalker.talkTime;
         }
         [self.delegate didHangUpCall:self withCallTime:_duration];

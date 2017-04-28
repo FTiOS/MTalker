@@ -321,7 +321,7 @@ encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]
         _lastTalkTime = [[NSDate date]timeIntervalSince1970]*1000;
         _talkTime = _lastTalkTime - _startTalkTime;
     }
-    if (abs(_talkTime) >2 * 60 *60 ) {
+    if (abs(_talkTime) > 2 * 60 *60 ) {
         _talkTime = 0.0;
     }
     return _talkTime;
