@@ -108,12 +108,7 @@
     }
     return _ip;
 }
--(int)port{
-    if (_port == 0) {
-        _port = 80;
-    }
-    return _port;
-}
+
 -(NSString *)serviceName{
     if (!_serviceName) {
         _serviceName = @"sdkService";
@@ -123,7 +118,13 @@
 
 -(NSURL *)url{
     if (!_url) {
-        NSString *urlStr = [NSString stringWithFormat:@"%@:%d/%@",self.ip,self.port,self.serviceName];
+        NSString *urlStr;
+        if (self.port !=0) {
+             urlStr= [NSString stringWithFormat:@"%@:%d/%@",self.ip,self.port,self.serviceName];
+        }else{
+            urlStr= [NSString stringWithFormat:@"%@/%@",self.ip,self.serviceName];
+        }
+        
         _url = [NSURL URLWithString:urlStr];
     }
     return _url;

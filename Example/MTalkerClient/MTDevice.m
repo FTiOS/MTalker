@@ -75,7 +75,7 @@
     self.resolution=resolution;
     self.dpi=dpi;
     self.osType= [NSString stringWithFormat:@"%@",osType];
-    self.channel=@"appstore";
+    self.channel=@"sdk";
     self.osVersion = systemVersion;
     self.deviceType=model;
     self.cpu=cpu;

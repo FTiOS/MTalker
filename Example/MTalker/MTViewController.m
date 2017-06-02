@@ -60,7 +60,7 @@
    MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
     settings.decodeView = self.decodeView;
     settings.encodeView = self.encodeView;
-    settings.api = @"https://sdk.cdfortis.com:10443/sdkService/busi/getDispatchAddr";
+    settings.api = @"https://sdk.cdfortis.com/sdkService/busi/getDispatchAddr";
     settings.parmas = [NSDictionary dictionaryWithObjectsAndKeys:@"101",@"appId",@"0",@"platformKey",nil];
     settings.defaultVideo = YES;
     settings.keepTalkerType = YES;
@@ -68,7 +68,7 @@
 } 
 #pragma mark - login
 -(MTLoginInfo *)simpleLogin{
-    return [MTLoginInfo simpleLogin:@"ajx" User:@"15000000203"];
+    return [MTLoginInfo simpleLogin:@"xnzx" User:@"15000000203"];
 }
 
 #pragma mark - MTTalkerCommandDelegate

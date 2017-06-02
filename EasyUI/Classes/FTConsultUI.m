@@ -68,6 +68,7 @@
         MTLoginInfo *loginInfo = [MTLoginInfo simpleLogin:settings.account User:settings.tel];
         
         loginInfo.user.tokenId = user.tokenId;
+        NSLog(@"login_info:%@",[loginInfo joinSubModel]);
         consultVC.loginInfo = loginInfo;
         startBlock(consultVC);
         

@@ -52,7 +52,7 @@
  */
 @property(nonatomic) NSString *osType;
 /**
- * 应用渠道 默认为appstore
+ * 应用渠道 默认为sdk
  */
 @property(nonatomic) NSString *channel;
 /**

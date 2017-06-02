@@ -115,6 +115,8 @@
         return;
     }
     
+    NSLog(@"login_param:%@",loginParam);
+    
     NSError *error;
     NSData * data = [NSJSONSerialization dataWithJSONObject:loginParam options:kNilOptions error:&error];
     assert(data!=nil);

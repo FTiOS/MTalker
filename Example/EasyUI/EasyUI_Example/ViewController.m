@@ -40,16 +40,15 @@
     settings.platformKey = @"0";
     settings.appId = @"101";
     settings.tel = @"15000000203";
-    settings.account = @"ajx";
+    settings.account = @"xnzx";
     settings.dUserId = @"114750537156360124";
     settings.api = @"https://sdk.cdfortis.com";
-    settings.port = 10443;
+
     
     [[FTConsultUI instance] setup:settings startBlock:^(ConsultViewController *consultVC) {
         if (!consultVC) {
             return ;
         }
-        consultVC.loginInfo.device.deviceId = @"15000000203";
         [self presentViewController:consultVC animated:YES completion:nil];
     } finishBlock:^(ConsultViewController *consultVC, double callTime) {
         [consultVC dismissViewControllerAnimated:YES completion:nil];
