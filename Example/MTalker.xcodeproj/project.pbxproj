@@ -22,8 +22,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		21E39A26A5C17FADB5F23651 /* libPods-MTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B57A670996055E50D0BEE529 /* libPods-MTalkerClient.a */; };
 		2A5F8FA907D92EB7C0DF2887 /* libPods-MTalker_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEC5256362F594C58043359 /* libPods-MTalker_Example.a */; };
 		2EC89C04DAC7C07D71C56AFF /* libPods-MTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A21522609F37F4E819F334 /* libPods-MTalkerClient.a */; };
+		5F901B241E5AFA49F28F8ED6 /* libPods-MTalker_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8AAFA4B89440E89056B3EC /* libPods-MTalker_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -40,6 +42,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		895DF65766BE667965893FA4 /* libPods-MTalker_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5631BA9C00044BED6FBE405 /* libPods-MTalker_Tests.a */; };
+		91F306C402EFEFA49AC23628 /* libPods-MTalker_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2EDCF03C0210C7DA24DC5F /* libPods-MTalker_Tests.a */; };
 		EA7802E51E8B502C00779DED /* libFTCommandClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7802DF1E8B4A8D00779DED /* libFTCommandClient.a */; };
 		EA7802E71E8B5E5600779DED /* MTDoctor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D57771E820C4B0072B7AE /* MTDoctor.h */; };
 		EA7802E81E8B5E5F00779DED /* MTAddressMonitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF797A71E88B77B00C19A27 /* MTAddressMonitor.h */; };
@@ -149,7 +152,9 @@
 		6E4F0FBC2EFE2B54FE4D67E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B2EDCF03C0210C7DA24DC5F /* libPods-MTalker_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTalker_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5631BA9C00044BED6FBE405 /* libPods-MTalker_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTalker_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57A670996055E50D0BEE529 /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTalkerClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C437EC6C4E7902A41E2F58 /* Pods-MTalker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTalker_Example/Pods-MTalker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EA7802D71E8A621400779DED /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MTalkerClient.a"; path = "Pods/../build/Debug-iphoneos/libPods-MTalkerClient.a"; sourceTree = "<group>"; };
 		EA7802DF1E8B4A8D00779DED /* libFTCommandClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFTCommandClient.a; path = "../../../Library/Developer/Xcode/DerivedData/MTalker-djpqzqyavvfmdlcgekbljgcwqhff/Build/Products/Debug-iphonesimulator/libFTCommandClient.a"; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 		EAF798091E8A10D500C19A27 /* libPods-MTalkerClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MTalkerClient.a"; path = "Pods/../build/Debug-iphoneos/libPods-MTalkerClient.a"; sourceTree = "<group>"; };
 		EAF8EC8D1E8A5CAE0032155E /* libFTCommandClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFTCommandClient.a; path = FTCommandClient_Products/libFTCommandClient.a; sourceTree = "<group>"; };
 		EAFCBB741E92510C00BAF337 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		FE8AAFA4B89440E89056B3EC /* libPods-MTalker_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTalker_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF40B49AC46C0BADB2726603 /* Pods-MTalker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTalker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTalker_Tests/Pods-MTalker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +206,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				2A5F8FA907D92EB7C0DF2887 /* libPods-MTalker_Example.a in Frameworks */,
+				5F901B241E5AFA49F28F8ED6 /* libPods-MTalker_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +218,7 @@
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
 				895DF65766BE667965893FA4 /* libPods-MTalker_Tests.a in Frameworks */,
+				91F306C402EFEFA49AC23628 /* libPods-MTalker_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,12 +231,23 @@
 				EAD06B441E83786100DDA4CF /* AudioToolbox.framework in Frameworks */,
 				EAD06B421E8374A200DDA4CF /* AVFoundation.framework in Frameworks */,
 				2EC89C04DAC7C07D71C56AFF /* libPods-MTalkerClient.a in Frameworks */,
+				21E39A26A5C17FADB5F23651 /* libPods-MTalkerClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		505092539C8899D38CE810C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B57A670996055E50D0BEE529 /* libPods-MTalkerClient.a */,
+				FE8AAFA4B89440E89056B3EC /* libPods-MTalker_Example.a */,
+				8B2EDCF03C0210C7DA24DC5F /* libPods-MTalker_Tests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +257,7 @@
 				EA7D57601E8122150072B7AE /* MTalkerClient */,
 				6003F58B195388D20070C39A /* Products */,
 				B34C7F3875BE5B5BAB344BD1 /* Pods */,
+				505092539C8899D38CE810C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

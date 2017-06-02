@@ -511,8 +511,15 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
     MTTalkerSetting *settings = [[MTTalkerSetting alloc]init];
     settings.decodeView = self.doctorView;
     settings.encodeView = self.mySelfView;
-    settings.api = [NSString stringWithFormat:@"%@:%d/%@/busi/getDispatchAddr",[FTAppService instance].ip,[FTAppService instance].port,[FTAppService instance].serviceName];
+    NSString *api ;
+    if ([FTAppService instance].port !=0) {
+        api = [NSString stringWithFormat:@"%@:%d/%@/busi/getDispatchAddr",[FTAppService instance].ip,[FTAppService instance].port,[FTAppService instance].serviceName];
+    }else
+        api = [NSString stringWithFormat:@"%@/%@/busi/getDispatchAddr",[FTAppService instance].ip,[FTAppService instance].serviceName];
+    settings.api = api;
+    
     settings.parmas = nil;
+    
     settings.defaultVideo = YES;
     settings.keepTalkerType = YES;
     

@@ -43,7 +43,7 @@
     settings.account = @"xnzx";
     settings.dUserId = @"114750537156360124";
     settings.api = @"https://sdk.cdfortis.com";
-
+    settings.port = 443;
     
     [[FTConsultUI instance] setup:settings startBlock:^(ConsultViewController *consultVC) {
         if (!consultVC) {
