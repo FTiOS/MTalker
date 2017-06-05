@@ -16,6 +16,7 @@
     FTVideoTalker *talker;
 }
 
+
 @end
 
 @implementation ViewController
@@ -37,6 +38,8 @@
 }
 - (IBAction)doConsult:(id)sender {
 }
+
+
 
 
 

@@ -124,6 +124,7 @@ static MTalkerClient *_instance;
     [self.ringer vibrate];//震动一声
     
     FTAVControlParam * param = [[FTAVControlParam alloc]init];
+    param.videoOrientation = 270;
     param.video = NO;
     
     [_client avControl:param];
@@ -217,6 +218,7 @@ static MTalkerClient *_instance;
     if (param.screenWidth==0) {
         param.screenHeight=320;
     }
+    param.videoOrientation = 270;
     [self.client avControl:param];
     [self.talker openVideo: self.setting.encodeView
 encoderViewOrientation:[[UIApplication sharedApplication] statusBarOrientation]

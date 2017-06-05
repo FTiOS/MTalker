@@ -15,7 +15,7 @@
 @interface FTConsultButton ()
 
 {
-    UIColor *_ft_selectedColor;
+    UIColor *_ft_selectedColor; 
     UIColor *_ft_normalColor;
     UIImage *_ft_selectedImage;
     UIImage *_ft_normalImage;

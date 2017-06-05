@@ -10,6 +10,14 @@
 #import "FTConsultUI.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *tel;
+@property (weak, nonatomic) IBOutlet UITextField *account;
+@property (weak, nonatomic) IBOutlet UITextField *ip;
+@property (weak, nonatomic) IBOutlet UITextField *port;
+@property (weak, nonatomic) IBOutlet UITextField *dUserId;
+
+
 @end
 
 @implementation ViewController
@@ -39,11 +47,11 @@
     
     settings.platformKey = @"0";
     settings.appId = @"101";
-    settings.tel = @"15000000203";
-    settings.account = @"xnzx";
-    settings.dUserId = @"114750537156360124";
-    settings.api = @"https://sdk.cdfortis.com";
-    settings.port = 443;
+    settings.tel = self.tel.text;
+    settings.account = self.account.text;
+    settings.dUserId = self.dUserId.text;
+    settings.api = self.ip.text;
+    settings.port = [self.port.text intValue];
     
     [[FTConsultUI instance] setup:settings startBlock:^(ConsultViewController *consultVC) {
         if (!consultVC) {
@@ -56,7 +64,13 @@
     
 }
 
-
+- (IBAction)doTap:(id)sender {
+    [self.tel resignFirstResponder];
+    [self.dUserId resignFirstResponder];
+    [self.account resignFirstResponder];
+    [self.ip resignFirstResponder];
+    [self.port resignFirstResponder];
+}
 
 
 @end
