@@ -943,7 +943,7 @@ typedef NS_ENUM(NSInteger, Consult_status_type) {
             }
                 break;
             case consult_doctor_busy:{ //医生正在业务中
-                [self showTip:@"医生忙碌，请稍后再拨" duration:10];
+                [self showTip:@"排队中，请耐心等待或稍后再拨" duration:10];
                 self.statusLabel.text = [NSString stringWithFormat:@"在您拨号之前还有%d个用户。", (int)inLineNumber];
             }
                 break;

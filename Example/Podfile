@@ -1,7 +1,7 @@
 #use_frameworks!
 
 source 'https://github.com/rRun/xy_podSepcs.git'
-source 'https://github.com/CocoaPods/Specs.git'
+source 'http://172.20.1.210:88/r/Specs.git'
 
 workspace 'MTalker.xcworkspace'
 platform :ios, '8.0' 
