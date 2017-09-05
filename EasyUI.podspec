@@ -4,6 +4,7 @@
 #
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
+# Cmd:pod repo push rrun EasyUI.podspec --use-libraries --sources=master,rrun --allow-warnings  --verbose
 #
 
 Pod::Spec.new do |s|
