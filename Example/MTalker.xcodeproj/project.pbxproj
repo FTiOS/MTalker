@@ -22,7 +22,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		21E39A26A5C17FADB5F23651 /* libPods-MTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B57A670996055E50D0BEE529 /* libPods-MTalkerClient.a */; };
 		2A5F8FA907D92EB7C0DF2887 /* libPods-MTalker_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEC5256362F594C58043359 /* libPods-MTalker_Example.a */; };
 		2EC89C04DAC7C07D71C56AFF /* libPods-MTalkerClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A21522609F37F4E819F334 /* libPods-MTalkerClient.a */; };
 		5F901B241E5AFA49F28F8ED6 /* libPods-MTalker_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8AAFA4B89440E89056B3EC /* libPods-MTalker_Example.a */; };
@@ -44,11 +43,11 @@
 		895DF65766BE667965893FA4 /* libPods-MTalker_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5631BA9C00044BED6FBE405 /* libPods-MTalker_Tests.a */; };
 		91F306C402EFEFA49AC23628 /* libPods-MTalker_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2EDCF03C0210C7DA24DC5F /* libPods-MTalker_Tests.a */; };
 		EA7802E51E8B502C00779DED /* libFTCommandClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7802DF1E8B4A8D00779DED /* libFTCommandClient.a */; };
-		EA7802E71E8B5E5600779DED /* MTDoctor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D57771E820C4B0072B7AE /* MTDoctor.h */; };
-		EA7802E81E8B5E5F00779DED /* MTAddressMonitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAF797A71E88B77B00C19A27 /* MTAddressMonitor.h */; };
+		EA7802E71E8B5E5600779DED /* MTDoctor.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EA7D57771E820C4B0072B7AE /* MTDoctor.h */; };
+		EA7802E81E8B5E5F00779DED /* MTAddressMonitor.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EAF797A71E88B77B00C19A27 /* MTAddressMonitor.h */; };
 		EA7B2ABC1E8CF72600E4B630 /* MTDrug.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B2ABB1E8CF72600E4B630 /* MTDrug.m */; };
 		EA7D57631E8122150072B7AE /* MTalkerClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA7D57621E8122150072B7AE /* MTalkerClient.mm */; };
-		EA7D57641E8122150072B7AE /* MTalkerClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D57611E8122150072B7AE /* MTalkerClient.h */; };
+		EA7D57641E8122150072B7AE /* MTalkerClient.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EA7D57611E8122150072B7AE /* MTalkerClient.h */; };
 		EA7D57701E820A2C0072B7AE /* MTTalkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D576F1E820A2C0072B7AE /* MTTalkInfo.m */; };
 		EA7D57731E820BCA0072B7AE /* MTLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D57721E820BCA0072B7AE /* MTLoginInfo.m */; };
 		EA7D57761E820C260072B7AE /* MTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7D57751E820C260072B7AE /* MTDevice.m */; };
@@ -62,17 +61,17 @@
 		EAD06B421E8374A200DDA4CF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD06B411E8374A200DDA4CF /* AVFoundation.framework */; };
 		EAD06B441E83786100DDA4CF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD06B431E83786100DDA4CF /* AudioToolbox.framework */; };
 		EAF797A91E88B77B00C19A27 /* MTAddressMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF797A81E88B77B00C19A27 /* MTAddressMonitor.m */; };
-		EAF797E81E89039200C19A27 /* MTRinger.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3E1E8373F200DDA4CF /* MTRinger.h */; };
-		EAF797E91E8903A200C19A27 /* MTTalkInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D576E1E820A2C0072B7AE /* MTTalkInfo.h */; };
-		EAF797EA1E8903A800C19A27 /* MTDevice.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D57741E820C260072B7AE /* MTDevice.h */; };
-		EAF797EB1E8903AE00C19A27 /* MTLoginInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D57711E820BCA0072B7AE /* MTLoginInfo.h */; };
-		EAF797EC1E8903B200C19A27 /* MTUser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7D577A1E820C7A0072B7AE /* MTUser.h */; };
-		EAF797ED1E8903B600C19A27 /* MTPharmacy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A7E1E822AA200DDA4CF /* MTPharmacy.h */; };
-		EAF797EE1E8903BC00C19A27 /* MTServerAddress.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A811E822C4900DDA4CF /* MTServerAddress.h */; };
-		EAF797EF1E8903C200C19A27 /* MTTalkerSetting.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3A1E826AB100DDA4CF /* MTTalkerSetting.h */; };
-		EAF797F01E8903C800C19A27 /* MTModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06A7B1E82141700DDA4CF /* MTModel.h */; };
-		EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD06B3D1E8364D200DDA4CF /* MTTalkerCommandDelegate.h */; };
-		EAFCBB6A1E8F551300BAF337 /* MTDrug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA7B2ABA1E8CF72600E4B630 /* MTDrug.h */; };
+		EAF797E81E89039200C19A27 /* MTRinger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EAD06B3E1E8373F200DDA4CF /* MTRinger.h */; };
+		EAF797E91E8903A200C19A27 /* MTTalkInfo.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EA7D576E1E820A2C0072B7AE /* MTTalkInfo.h */; };
+		EAF797EA1E8903A800C19A27 /* MTDevice.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EA7D57741E820C260072B7AE /* MTDevice.h */; };
+		EAF797EB1E8903AE00C19A27 /* MTLoginInfo.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EA7D57711E820BCA0072B7AE /* MTLoginInfo.h */; };
+		EAF797EC1E8903B200C19A27 /* MTUser.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EA7D577A1E820C7A0072B7AE /* MTUser.h */; };
+		EAF797ED1E8903B600C19A27 /* MTPharmacy.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EAD06A7E1E822AA200DDA4CF /* MTPharmacy.h */; };
+		EAF797EE1E8903BC00C19A27 /* MTServerAddress.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EAD06A811E822C4900DDA4CF /* MTServerAddress.h */; };
+		EAF797EF1E8903C200C19A27 /* MTTalkerSetting.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EAD06B3A1E826AB100DDA4CF /* MTTalkerSetting.h */; };
+		EAF797F01E8903C800C19A27 /* MTModel.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EAD06A7B1E82141700DDA4CF /* MTModel.h */; };
+		EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EAD06B3D1E8364D200DDA4CF /* MTTalkerCommandDelegate.h */; };
+		EAFCBB6A1E8F551300BAF337 /* MTDrug.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EA7B2ABA1E8CF72600E4B630 /* MTDrug.h */; };
 		EAFCBB751E92510C00BAF337 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFCBB741E92510C00BAF337 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,27 +95,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA7D575D1E8122150072B7AE /* CopyFiles */ = {
+		EA7D575D1E8122150072B7AE /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				EAFCBB6A1E8F551300BAF337 /* MTDrug.h in CopyFiles */,
-				EA7802E81E8B5E5F00779DED /* MTAddressMonitor.h in CopyFiles */,
-				EA7802E71E8B5E5600779DED /* MTDoctor.h in CopyFiles */,
-				EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in CopyFiles */,
-				EAF797F01E8903C800C19A27 /* MTModel.h in CopyFiles */,
-				EAF797EF1E8903C200C19A27 /* MTTalkerSetting.h in CopyFiles */,
-				EAF797EE1E8903BC00C19A27 /* MTServerAddress.h in CopyFiles */,
-				EAF797ED1E8903B600C19A27 /* MTPharmacy.h in CopyFiles */,
-				EAF797EC1E8903B200C19A27 /* MTUser.h in CopyFiles */,
-				EAF797EB1E8903AE00C19A27 /* MTLoginInfo.h in CopyFiles */,
-				EAF797EA1E8903A800C19A27 /* MTDevice.h in CopyFiles */,
-				EAF797E91E8903A200C19A27 /* MTTalkInfo.h in CopyFiles */,
-				EAF797E81E89039200C19A27 /* MTRinger.h in CopyFiles */,
-				EA7D57641E8122150072B7AE /* MTalkerClient.h in CopyFiles */,
+				EAFCBB6A1E8F551300BAF337 /* MTDrug.h in Copy Files */,
+				EA7802E81E8B5E5F00779DED /* MTAddressMonitor.h in Copy Files */,
+				EA7802E71E8B5E5600779DED /* MTDoctor.h in Copy Files */,
+				EAF797F11E8903CD00C19A27 /* MTTalkerCommandDelegate.h in Copy Files */,
+				EAF797F01E8903C800C19A27 /* MTModel.h in Copy Files */,
+				EAF797EF1E8903C200C19A27 /* MTTalkerSetting.h in Copy Files */,
+				EAF797EE1E8903BC00C19A27 /* MTServerAddress.h in Copy Files */,
+				EAF797ED1E8903B600C19A27 /* MTPharmacy.h in Copy Files */,
+				EAF797EC1E8903B200C19A27 /* MTUser.h in Copy Files */,
+				EAF797EB1E8903AE00C19A27 /* MTLoginInfo.h in Copy Files */,
+				EAF797EA1E8903A800C19A27 /* MTDevice.h in Copy Files */,
+				EAF797E91E8903A200C19A27 /* MTTalkInfo.h in Copy Files */,
+				EAF797E81E89039200C19A27 /* MTRinger.h in Copy Files */,
+				EA7D57641E8122150072B7AE /* MTalkerClient.h in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -231,7 +231,6 @@
 				EAD06B441E83786100DDA4CF /* AudioToolbox.framework in Frameworks */,
 				EAD06B421E8374A200DDA4CF /* AVFoundation.framework in Frameworks */,
 				2EC89C04DAC7C07D71C56AFF /* libPods-MTalkerClient.a in Frameworks */,
-				21E39A26A5C17FADB5F23651 /* libPods-MTalkerClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +465,7 @@
 				10436321B045C6FFF6C39463 /* [CP] Check Pods Manifest.lock */,
 				EA7D575B1E8122150072B7AE /* Sources */,
 				EA7D575C1E8122150072B7AE /* Frameworks */,
-				EA7D575D1E8122150072B7AE /* CopyFiles */,
+				EA7D575D1E8122150072B7AE /* Copy Files */,
 				595280F6DE914CC8D3EE013F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
